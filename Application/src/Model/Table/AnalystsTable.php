@@ -12,6 +12,7 @@ use Cake\Validation\Validator;
  *
  * @property \Cake\ORM\Association\HasMany $Tickets
  * @property \Cake\ORM\Association\HasMany $Updates
+ * @property \Cake\ORM\Association\HasMany $WatchedTickets
  */
 class AnalystsTable extends Table
 {
@@ -34,6 +35,9 @@ class AnalystsTable extends Table
             'foreignKey' => 'analyst_id'
         ]);
         $this->hasMany('Updates', [
+            'foreignKey' => 'analyst_id'
+        ]);
+        $this->hasMany('WatchedTickets', [
             'foreignKey' => 'analyst_id'
         ]);
     }

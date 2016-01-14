@@ -76,6 +76,10 @@ class TicketsTable extends Table
             ->add('resolution_date', 'valid', ['rule' => 'date'])
             ->allowEmpty('resolution_date');
 
+        $validator
+            ->add('total_time', 'valid', ['rule' => 'numeric'])
+            ->allowEmpty('total_time');
+
         return $validator;
     }
 

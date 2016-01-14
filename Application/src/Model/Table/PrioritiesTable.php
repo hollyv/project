@@ -45,8 +45,7 @@ class PrioritiesTable extends Table
         $validator
             ->allowEmpty('name');
 
-        $validator
-            ->add('resolution_time', 'valid', ['rule' => 'numeric'])
+        $validator   
             ->allowEmpty('resolution_time');
 
         return $validator;

@@ -20,7 +20,7 @@
             <tr>
                 <td><?= $this->Number->format($priority->id) ?></td>
                 <td><?= h($priority->name) ?></td>
-                <td><?= $this->Number->format($priority->resolution_time) ?></td>
+                <td><?= h($priority->resolution_time) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $priority->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $priority->id]) ?>

@@ -18,6 +18,7 @@
                 <th><?= $this->Paginator->sort('update_text') ?></th>
                 <th><?= $this->Paginator->sort('created') ?></th>
                 <th><?= $this->Paginator->sort('analyst_id') ?></th>
+                <th><?= $this->Paginator->sort('time_booking') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -29,6 +30,7 @@
                 <td><?= h($update->update_text) ?></td>
                 <td><?= h($update->created) ?></td>
                 <td><?= $update->has('analyst') ? $this->Html->link($update->analyst->id, ['controller' => 'Analysts', 'action' => 'view', $update->analyst->id]) : '' ?></td>
+                <td><?= $this->Number->format($update->time_booking) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $update->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $update->id]) ?>

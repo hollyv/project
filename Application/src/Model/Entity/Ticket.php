@@ -18,6 +18,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\Time $created
  * @property string $ticket_type
  * @property \Cake\I18n\Time $resolution_date
+ * @property int $total_time
  * @property \App\Model\Entity\Update[] $updates
  */
 class Ticket extends Entity

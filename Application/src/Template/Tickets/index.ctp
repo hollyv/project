@@ -29,12 +29,12 @@
             <?php foreach ($tickets as $ticket): ?>
             <tr>
                 <td><?= $this->Number->format($ticket->id) ?></td>
-                <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->id, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
+                <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->username, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
                 <td><?= h($ticket->status) ?></td>
                 <td><?= h($ticket->title) ?></td>
                 <td><?= h($ticket->description) ?></td>
                 <td><?= h($ticket->category) ?></td>
-                <td><?= $ticket->has('analyst') ? $this->Html->link($ticket->analyst->id, ['controller' => 'Analysts', 'action' => 'view', $ticket->analyst->id]) : '' ?></td>
+                <td><?= $ticket->has('analyst') ? $this->Html->link($ticket->analyst->username, ['controller' => 'Analysts', 'action' => 'view', $ticket->analyst->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $ticket->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $ticket->id]) ?>

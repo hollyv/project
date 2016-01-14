@@ -32,7 +32,7 @@ class AnalystsController extends AppController
     public function view($id = null)
     {
         $analyst = $this->Analysts->get($id, [
-            'contain' => ['Tickets', 'Updates']
+            'contain' => ['Tickets', 'Updates', 'WatchedTickets']
         ]);
         $this->set('analyst', $analyst);
         $this->set('_serialize', ['analyst']);

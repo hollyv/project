@@ -66,8 +66,7 @@ class CustomersTable extends Table
 
         $validator
             ->add('phone', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('phone', 'create')
-            ->notEmpty('phone');
+            ->allowEmpty('phone');
 
         return $validator;
     }

@@ -13,6 +13,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\Time $created
  * @property int $analyst_id
  * @property \App\Model\Entity\Analyst $analyst
+ * @property int $time_booking
  */
 class Update extends Entity
 {

@@ -21,7 +21,8 @@ class DepartmentsTableTest extends TestCase
         'app.customers',
         'app.tickets',
         'app.analysts',
-        'app.updates'
+        'app.updates',
+        'app.watched_tickets'
     ];
 
     /**

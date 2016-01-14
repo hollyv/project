@@ -20,7 +20,8 @@ class UpdatesControllerTest extends IntegrationTestCase
         'app.tickets',
         'app.customers',
         'app.departments',
-        'app.analysts'
+        'app.analysts',
+        'app.watched_tickets'
     ];
 
     /**

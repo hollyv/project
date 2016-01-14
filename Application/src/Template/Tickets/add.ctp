@@ -23,6 +23,7 @@
             echo $this->Form->input('analyst_id', ['options' => $analysts]);
             echo $this->Form->input('ticket_type');
             echo $this->Form->input('resolution_date', ['empty' => true, 'default' => '']);
+            echo $this->Form->input('total_time');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

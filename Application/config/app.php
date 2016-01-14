@@ -217,7 +217,7 @@ return [
             //'port' => 'nonstandard_port_number',
             'username' => 'root',
             'password' => 'Computing1',
-            'database' => 'cake_helpdesk',
+            'database' => 'numatic_helpdesk',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'cacheMetadata' => true,

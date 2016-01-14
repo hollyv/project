@@ -12,6 +12,8 @@
         <li><?= $this->Html->link(__('New Ticket'), ['controller' => 'Tickets', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Updates'), ['controller' => 'Updates', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Update'), ['controller' => 'Updates', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Watched Tickets'), ['controller' => 'WatchedTickets', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Watched Ticket'), ['controller' => 'WatchedTickets', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="analysts form large-9 medium-8 columns content">

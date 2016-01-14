@@ -12,18 +12,18 @@
     </ul>
 </nav>
 <div class="customers view large-9 medium-8 columns content">
-    <h3><?= h($customer->id) ?></h3>
+    <h3><?= h($customer->username) ?></h3>
     <table class="vertical-table">
         <tr>
             <th><?= __('Username') ?></th>
             <td><?= h($customer->username) ?></td>
         </tr>
         <tr>
-            <th><?= __('Firstname') ?></th>
+            <th><?= __('First Name') ?></th>
             <td><?= h($customer->firstname) ?></td>
         </tr>
         <tr>
-            <th><?= __('Lastname') ?></th>
+            <th><?= __('Last Name') ?></th>
             <td><?= h($customer->lastname) ?></td>
         </tr>
         <tr>
@@ -58,6 +58,7 @@
                 <th><?= __('Created') ?></th>
                 <th><?= __('Ticket Type') ?></th>
                 <th><?= __('Resolution Date') ?></th>
+                <th><?= __('Total Time') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($customer->tickets as $tickets): ?>
@@ -72,6 +73,7 @@
                 <td><?= h($tickets->created) ?></td>
                 <td><?= h($tickets->ticket_type) ?></td>
                 <td><?= h($tickets->resolution_date) ?></td>
+                <td><?= h($tickets->total_time) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Tickets', 'action' => 'view', $tickets->id]) ?>
 

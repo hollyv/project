@@ -22,6 +22,7 @@ class UpdatesFixture extends TestFixture
         'update_text' => ['type' => 'string', 'length' => 500, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'analyst_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'time_booking' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_indexes' => [
             'ticket_id' => ['type' => 'index', 'columns' => ['ticket_id'], 'length' => []],
             'analyst_id' => ['type' => 'index', 'columns' => ['analyst_id'], 'length' => []],
@@ -48,8 +49,9 @@ class UpdatesFixture extends TestFixture
             'id' => 1,
             'ticket_id' => 1,
             'update_text' => 'Lorem ipsum dolor sit amet',
-            'created' => '2016-01-10 18:05:24',
-            'analyst_id' => 1
+            'created' => '2016-01-14 16:08:55',
+            'analyst_id' => 1,
+            'time_booking' => 1
         ],
     ];
 }

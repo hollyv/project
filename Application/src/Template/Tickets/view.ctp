@@ -18,7 +18,7 @@
     <table class="vertical-table">
         <tr>
             <th><?= __('Customer') ?></th>
-            <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->id, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
+            <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->username, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
         </tr>
         <tr>
             <th><?= __('Status') ?></th>
@@ -38,15 +38,19 @@
         </tr>
         <tr>
             <th><?= __('Analyst') ?></th>
-            <td><?= $ticket->has('analyst') ? $this->Html->link($ticket->analyst->id, ['controller' => 'Analysts', 'action' => 'view', $ticket->analyst->id]) : '' ?></td>
+            <td><?= $ticket->has('analyst') ? $this->Html->link($ticket->analyst->username, ['controller' => 'Analysts', 'action' => 'view', $ticket->analyst->id]) : '' ?></td>
         </tr>
         <tr>
             <th><?= __('Ticket Type') ?></th>
             <td><?= h($ticket->ticket_type) ?></td>
         </tr>
         <tr>
-            <th><?= __('Id') ?></th>
+            <th><?= __('Ticket Id') ?></th>
             <td><?= $this->Number->format($ticket->id) ?></td>
+        </tr>
+        <tr>
+            <th><?= __('Total Time') ?></th>
+            <td><?= $this->Number->format($ticket->total_time) ?></td>
         </tr>
         <tr>
             <th><?= __('Created') ?></th>
@@ -67,6 +71,7 @@
                 <th><?= __('Update Text') ?></th>
                 <th><?= __('Created') ?></th>
                 <th><?= __('Analyst Id') ?></th>
+                <th><?= __('Time Booking') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($ticket->updates as $updates): ?>
@@ -76,6 +81,7 @@
                 <td><?= h($updates->update_text) ?></td>
                 <td><?= h($updates->created) ?></td>
                 <td><?= h($updates->analyst_id) ?></td>
+                <td><?= h($updates->time_booking) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Updates', 'action' => 'view', $updates->id]) ?>
 

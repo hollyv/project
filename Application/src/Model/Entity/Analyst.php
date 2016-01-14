@@ -16,6 +16,7 @@ use Cake\ORM\Entity;
  * @property string $supportteam
  * @property \App\Model\Entity\Ticket[] $tickets
  * @property \App\Model\Entity\Update[] $updates
+ * @property \App\Model\Entity\WatchedTicket[] $watched_tickets
  */
 class Analyst extends Entity
 {
@@ -39,4 +40,6 @@ class Analyst extends Entity
         $hasher = new DefaultPasswordHasher();
         return $hasher->hash($value);
     }
+
+    
 }

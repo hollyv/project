@@ -22,6 +22,7 @@
             echo $this->Form->input('ticket_id', ['options' => $tickets]);
             echo $this->Form->input('update_text');
             echo $this->Form->input('analyst_id', ['options' => $analysts]);
+            echo $this->Form->input('time_booking');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

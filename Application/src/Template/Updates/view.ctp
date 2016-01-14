@@ -31,6 +31,10 @@
             <td><?= $this->Number->format($update->id) ?></td>
         </tr>
         <tr>
+            <th><?= __('Time Booking') ?></th>
+            <td><?= $this->Number->format($update->time_booking) ?></td>
+        </tr>
+        <tr>
             <th><?= __('Created') ?></th>
             <td><?= h($update->created) ?></tr>
         </tr>

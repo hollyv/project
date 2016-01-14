@@ -57,6 +57,10 @@ class UpdatesTable extends Table
         $validator
             ->allowEmpty('update_text');
 
+        $validator
+            ->add('time_booking', 'valid', ['rule' => 'numeric'])
+            ->allowEmpty('time_booking');
+
         return $validator;
     }
 

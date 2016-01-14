@@ -27,6 +27,7 @@ class TicketsFixture extends TestFixture
         'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'ticket_type' => ['type' => 'string', 'length' => 50, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
         'resolution_date' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+        'total_time' => ['type' => 'integer', 'length' => 20, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_indexes' => [
             'customer_id' => ['type' => 'index', 'columns' => ['customer_id'], 'length' => []],
             'analyst_id' => ['type' => 'index', 'columns' => ['analyst_id'], 'length' => []],
@@ -57,9 +58,10 @@ class TicketsFixture extends TestFixture
             'description' => 'Lorem ipsum dolor sit amet',
             'category' => 'Lorem ipsum dolor sit amet',
             'analyst_id' => 1,
-            'created' => '2016-01-10 18:05:02',
+            'created' => '2016-01-14 16:07:13',
             'ticket_type' => 'Lorem ipsum dolor sit amet',
-            'resolution_date' => '2016-01-10'
+            'resolution_date' => '2016-01-14',
+            'total_time' => 1
         ],
     ];
 }
