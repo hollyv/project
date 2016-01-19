@@ -41,7 +41,8 @@ $cakeDescription = 'Helpdesk Portal';
             </li>
         </ul>
         <section class="top-bar-section">
-              Helpdesk Portal
+              <div id="logo"><img style="height:20%; width:20%;" src="webroot/img/Logo.png" alt="Numatic Logo" draggable="false"></div>
+              
             <ul class="right">
            
             </ul>

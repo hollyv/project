@@ -169,3 +169,113 @@ Stack Trace:
 #17 {main}
 
 
+2016-01-19 20:50:54 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::webroot() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'webroot',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/index.php/tickets/webroot/img/Numatic.png
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
+#4 {main}
+
+
+2016-01-19 20:50:59 Error: [Cake\Controller\Exception\MissingActionException] Action CustomersController::webroot() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'CustomersController',
+  'action' => 'webroot',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/index.php/customers/webroot/img/Numatic.png
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\CustomersController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
+#4 {main}
+
+
+2016-01-19 20:51:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Webroot could not be found.
+Exception Attributes: array (
+  'class' => 'Webroot',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /tickets/index.php/webroot/img/Numatic.png
+Stack Trace:
+#0 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
+#2 {main}
+
+
+2016-01-19 20:51:04 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::webroot() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'webroot',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/index.php/tickets/webroot/img/Numatic.png
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
+#4 {main}
+
+
+2016-01-19 20:51:07 Error: [Cake\Controller\Exception\MissingActionException] Action CustomersController::webroot() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'CustomersController',
+  'action' => 'webroot',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/index.php/customers/webroot/img/Numatic.png
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\CustomersController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
+#4 {main}
+
+
+2016-01-19 20:52:00 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::webroot() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'webroot',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/index.php/tickets/webroot/img/Numatic.png
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
+#4 {main}
+
+
+2016-01-19 20:53:14 Error: [Cake\Controller\Exception\MissingActionException] Action CustomersController::webroot() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'CustomersController',
+  'action' => 'webroot',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/index.php/customers/webroot/img/Numatic.png
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\CustomersController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
+#4 {main}
+
+

@@ -364,11 +364,14 @@ pre {
 }
 
 .top-bar.expanded .title-area {
-    background: #01545b;
+    background: #333333;
 }
 
 .top-bar.expanded, .top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
-    background: #116d76;
+    border-top: 20px #000000 solid;
+    background: #333333;
+    border-bottom: 5px #029eea solid;
+
 }
 
 .top-bar-section li:not(.has-form) a:not(.button):hover {
@@ -385,7 +388,7 @@ pre {
 }
 
 #actions-sidebar {
-    background: #fafafa;
+    background: #B6B7BC;
 }
 
 .index table {
@@ -416,9 +419,9 @@ table thead tr {
 table tr th {
     padding: 0.5625rem 0.625rem;
     font-size: 0.875rem;
-    color: #1798A5;
+    color: #029eea;
     text-align: left;
-    border-bottom: 2px solid #1798A5;
+    border-bottom: 2px solid #029eea;
 }
 
 table tr:nth-of-type(even) {
@@ -432,7 +435,7 @@ fieldset {
 }
 
 fieldset legend {
-    border-bottom: 2px solid #1798A5;
+    border-bottom: 2px solid #029eea;
     width: 100%;
     line-height: 2rem;
 }
@@ -444,12 +447,12 @@ fieldset legend {
 }
 
 .form button:hover, .form button:focus {
-    background: #BE840B;
+    background: #0277ea;
     box-shadow: none;
 }
 
 button {
-    background: #966600;
+    background: #029eea;
 }
 
 div.message {
