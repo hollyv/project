@@ -4,8 +4,8 @@
         <li><?= $this->Html->link(__('New Update'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Tickets'), ['controller' => 'Tickets', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Ticket'), ['controller' => 'Tickets', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Analysts'), ['controller' => 'Analysts', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Analyst'), ['controller' => 'Analysts', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="updates index large-9 medium-8 columns content">
@@ -29,7 +29,7 @@
                 <td><?= $update->has('ticket') ? $this->Html->link($update->ticket->title, ['controller' => 'Tickets', 'action' => 'view', $update->ticket->id]) : '' ?></td>
                 <td><?= h($update->update_text) ?></td>
                 <td><?= h($update->created) ?></td>
-                <td><?= $update->has('analyst') ? $this->Html->link($update->analyst->id, ['controller' => 'Analysts', 'action' => 'view', $update->analyst->id]) : '' ?></td>
+                <td><?= $update->has('user') ? $this->Html->link($update->user->id, ['controller' => 'Users', 'action' => 'view', $update->user->id]) : '' ?></td>
                 <td><?= $this->Number->format($update->time_booking) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $update->id]) ?>

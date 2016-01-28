@@ -34,17 +34,38 @@ $cakeDescription = 'Helpdesk Portal';
     <?= $this->fetch('script') ?>
 </head>
 <body>
+    <div id="top">  
+        <div id="user">
+            <ul id="adminMenu">
+                <li>
+                    Hi,
+                    <?= $loguser = $this->request->session()->read('Auth.User.firstname'); ?>
+                </li>
+                <li>
+                    <a href="/tickets/users/logout"><font color= 'white'>Sign Out</a>
+                </li>
+            </ul>
+    </div>
+    </div>
     <nav class="top-bar expanded" data-topbar role="navigation">
+       
+        <?php echo $this->Html->image('Logo.png', array('alt' => 'Numatic Logo', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'style' => 'height:21%; width:21%; margin-left: 20px;')); ?>
+
+
+<!--        <div id="logo"><img style="height:20%; width:20%; margin-left: 20px;" src="webroot/img/Logo.png" alt="Numatic Logo" draggable="false" ></div>
+ dynamic title 
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
                 <h1><a href=""><?= $this->fetch('title') ?></a></h1>
             </li>
         </ul>
+
+    -->
         <section class="top-bar-section">
-              <div id="logo"><img style="height:20%; width:20%;" src="webroot/img/Logo.png" alt="Numatic Logo" draggable="false"></div>
+             
               
             <ul class="right">
-           
+            
             </ul>
         </section>
     </nav>

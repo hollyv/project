@@ -16,7 +16,8 @@ class PrioritiesControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'app.priorities'
+        'app.priorities',
+        'app.tickets'
     ];
 
     /**

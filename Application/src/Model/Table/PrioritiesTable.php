@@ -10,6 +10,7 @@ use Cake\Validation\Validator;
 /**
  * Priorities Model
  *
+ * @property \Cake\ORM\Association\HasMany $Tickets
  */
 class PrioritiesTable extends Table
 {
@@ -28,6 +29,9 @@ class PrioritiesTable extends Table
         $this->displayField('name');
         $this->primaryKey('id');
 
+        $this->hasMany('Tickets', [
+            'foreignKey' => 'priority_id'
+        ]);
     }
 
     /**
@@ -45,7 +49,7 @@ class PrioritiesTable extends Table
         $validator
             ->allowEmpty('name');
 
-        $validator   
+        $validator
             ->allowEmpty('resolution_time');
 
         return $validator;

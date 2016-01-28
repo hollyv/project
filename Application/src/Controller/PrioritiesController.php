@@ -32,7 +32,7 @@ class PrioritiesController extends AppController
     public function view($id = null)
     {
         $priority = $this->Priorities->get($id, [
-            'contain' => []
+            'contain' => ['Tickets']
         ]);
         $this->set('priority', $priority);
         $this->set('_serialize', ['priority']);

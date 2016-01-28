@@ -8,6 +8,8 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Priorities'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Tickets'), ['controller' => 'Tickets', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Ticket'), ['controller' => 'Tickets', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="priorities form large-9 medium-8 columns content">

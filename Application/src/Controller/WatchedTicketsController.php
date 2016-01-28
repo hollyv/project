@@ -19,7 +19,7 @@ class WatchedTicketsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Analysts', 'Tickets']
+            'contain' => ['Users', 'Tickets']
         ];
         $this->set('watchedTickets', $this->paginate($this->WatchedTickets));
         $this->set('_serialize', ['watchedTickets']);
@@ -35,7 +35,7 @@ class WatchedTicketsController extends AppController
     public function view($id = null)
     {
         $watchedTicket = $this->WatchedTickets->get($id, [
-            'contain' => ['Analysts', 'Tickets']
+            'contain' => ['Users', 'Tickets']
         ]);
         $this->set('watchedTicket', $watchedTicket);
         $this->set('_serialize', ['watchedTicket']);
@@ -58,9 +58,9 @@ class WatchedTicketsController extends AppController
                 $this->Flash->error(__('The watched ticket could not be saved. Please, try again.'));
             }
         }
-        $analysts = $this->WatchedTickets->Analysts->find('list', ['limit' => 200]);
+        $users = $this->WatchedTickets->Users->find('list', ['limit' => 200]);
         $tickets = $this->WatchedTickets->Tickets->find('list', ['limit' => 200]);
-        $this->set(compact('watchedTicket', 'analysts', 'tickets'));
+        $this->set(compact('watchedTicket', 'users', 'tickets'));
         $this->set('_serialize', ['watchedTicket']);
     }
 
@@ -85,9 +85,9 @@ class WatchedTicketsController extends AppController
                 $this->Flash->error(__('The watched ticket could not be saved. Please, try again.'));
             }
         }
-        $analysts = $this->WatchedTickets->Analysts->find('list', ['limit' => 200]);
+        $users = $this->WatchedTickets->Users->find('list', ['limit' => 200]);
         $tickets = $this->WatchedTickets->Tickets->find('list', ['limit' => 200]);
-        $this->set(compact('watchedTicket', 'analysts', 'tickets'));
+        $this->set(compact('watchedTicket', 'users', 'tickets'));
         $this->set('_serialize', ['watchedTicket']);
     }
 

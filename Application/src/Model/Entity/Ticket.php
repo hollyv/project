@@ -11,10 +11,12 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\Customer $customer
  * @property string $status
  * @property string $title
+ * @property int $priority_id
+ * @property \App\Model\Entity\Priority $priority
  * @property string $description
  * @property string $category
  * @property int $analyst_id
- * @property \App\Model\Entity\Analyst $analyst
+ * @property \App\Model\Entity\User $user
  * @property \Cake\I18n\Time $created
  * @property string $ticket_type
  * @property \Cake\I18n\Time $resolution_date

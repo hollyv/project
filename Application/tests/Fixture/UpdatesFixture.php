@@ -29,7 +29,7 @@ class UpdatesFixture extends TestFixture
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'anaylsts' => ['type' => 'foreign', 'columns' => ['analyst_id'], 'references' => ['analysts', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
+            'anaylsts' => ['type' => 'foreign', 'columns' => ['analyst_id'], 'references' => ['users', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
             'tickets2' => ['type' => 'foreign', 'columns' => ['ticket_id'], 'references' => ['tickets', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
         ],
         '_options' => [
@@ -49,7 +49,7 @@ class UpdatesFixture extends TestFixture
             'id' => 1,
             'ticket_id' => 1,
             'update_text' => 'Lorem ipsum dolor sit amet',
-            'created' => '2016-01-14 16:08:55',
+            'created' => '2016-01-28 11:58:37',
             'analyst_id' => 1,
             'time_booking' => 1
         ],

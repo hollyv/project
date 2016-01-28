@@ -1,0 +1,90 @@
+2016-01-28 13:38:37 Notice: Deprecated (16384): SessionHelper has been deprecated. Use request->session() instead. in [C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Helper\SessionHelper.php, line 39]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\View\Helper\SessionHelper::__construct() - CORE\src\View\Helper\SessionHelper.php, line 39
+Cake\View\HelperRegistry::_create() - CORE\src\View\HelperRegistry.php, line 142
+Cake\Core\ObjectRegistry::load() - CORE\src\Core\ObjectRegistry.php, line 93
+Cake\View\HelperRegistry::__isset() - CORE\src\View\HelperRegistry.php, line 66
+Cake\View\View::__get() - CORE\src\View\View.php, line 866
+include - APP/Template\Layout\default.ctp, line 46
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 624
+Cake\View\View::render() - CORE\src\View\View.php, line 583
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-28 13:40:12 Notice: Deprecated (16384): SessionHelper has been deprecated. Use request->session() instead. in [C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Helper\SessionHelper.php, line 39]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\View\Helper\SessionHelper::__construct() - CORE\src\View\Helper\SessionHelper.php, line 39
+Cake\View\HelperRegistry::_create() - CORE\src\View\HelperRegistry.php, line 142
+Cake\Core\ObjectRegistry::load() - CORE\src\Core\ObjectRegistry.php, line 93
+Cake\View\HelperRegistry::__isset() - CORE\src\View\HelperRegistry.php, line 66
+Cake\View\View::__get() - CORE\src\View\View.php, line 866
+include - APP/Template\Layout\default.ctp, line 46
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 624
+Cake\View\View::render() - CORE\src\View\View.php, line 583
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-28 13:43:41 Notice: Notice (8): Undefined variable: session in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 46]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Layout\default.ctp, line 46
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 624
+Cake\View\View::render() - CORE\src\View\View.php, line 583
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-28 13:44:09 Notice: Deprecated (16384): SessionHelper has been deprecated. Use request->session() instead. in [C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Helper\SessionHelper.php, line 39]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\View\Helper\SessionHelper::__construct() - CORE\src\View\Helper\SessionHelper.php, line 39
+Cake\View\HelperRegistry::_create() - CORE\src\View\HelperRegistry.php, line 142
+Cake\Core\ObjectRegistry::load() - CORE\src\Core\ObjectRegistry.php, line 93
+Cake\View\HelperRegistry::__isset() - CORE\src\View\HelperRegistry.php, line 66
+Cake\View\View::__get() - CORE\src\View\View.php, line 866
+include - APP/Template\Layout\default.ctp, line 46
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 624
+Cake\View\View::render() - CORE\src\View\View.php, line 583
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-28 14:30:45 Notice: Notice (8): Array to string conversion in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Layout\default.ctp, line 48
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 624
+Cake\View\View::render() - CORE\src\View\View.php, line 583
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+

@@ -8,7 +8,8 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $name
- * @property int $resolution_time
+ * @property string $resolution_time
+ * @property \App\Model\Entity\Ticket[] $tickets
  */
 class Priority extends Entity
 {

@@ -1,136 +1,19 @@
-2016-01-14 16:14:12 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`numatic_helpdesk`.`watched_tickets`, CONSTRAINT `anaylst3` FOREIGN KEY (`analyst_id`) REFERENCES `analysts` (`id`))
-Request URL: /tickets/index.php/analysts/delete/2
+2016-01-28 13:05:01 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::logout() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'logout',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/logout
 Stack Trace:
-#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
-#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
-#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
-#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
-#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
-#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Analyst), Object(ArrayObject))
-#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
-#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
-#9 C:\wamp\www\tickets\src\Controller\AnalystsController.php(98): Cake\ORM\Table->delete(Object(App\Model\Entity\Analyst))
-#10 [internal function]: App\Controller\AnalystsController->delete('2')
-#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
-#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AnalystsController))
-#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#15 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#16 {main}
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
 
 
-2016-01-14 16:15:37 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`numatic_helpdesk`.`updates`, CONSTRAINT `tickets2` FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`id`))
-Request URL: /tickets/index.php/tickets/delete/2
-Stack Trace:
-#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
-#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
-#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
-#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
-#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
-#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Ticket), Object(ArrayObject))
-#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
-#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
-#9 C:\wamp\www\tickets\src\Controller\TicketsController.php(105): Cake\ORM\Table->delete(Object(App\Model\Entity\Ticket))
-#10 [internal function]: App\Controller\TicketsController->delete('2')
-#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
-#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
-#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#15 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#16 {main}
-
-
-2016-01-14 16:16:32 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`numatic_helpdesk`.`updates`, CONSTRAINT `tickets2` FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`id`))
-Request URL: /tickets/index.php/tickets/delete/3
-Stack Trace:
-#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
-#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
-#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
-#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
-#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
-#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Ticket), Object(ArrayObject))
-#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
-#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
-#9 C:\wamp\www\tickets\src\Controller\TicketsController.php(105): Cake\ORM\Table->delete(Object(App\Model\Entity\Ticket))
-#10 [internal function]: App\Controller\TicketsController->delete('3')
-#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
-#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
-#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#15 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#16 {main}
-
-
-2016-01-14 16:17:00 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`numatic_helpdesk`.`tickets`, CONSTRAINT `customer` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`))
-Request URL: /tickets/index.php/customers/delete/2
-Stack Trace:
-#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
-#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
-#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
-#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
-#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
-#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Customer), Object(ArrayObject))
-#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
-#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
-#9 C:\wamp\www\tickets\src\Controller\CustomersController.php(103): Cake\ORM\Table->delete(Object(App\Model\Entity\Customer))
-#10 [internal function]: App\Controller\CustomersController->delete('2')
-#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
-#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\CustomersController))
-#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#15 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#16 {main}
-
-
-2016-01-14 16:19:27 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`numatic_helpdesk`.`updates`, CONSTRAINT `tickets2` FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`id`))
-Request URL: /tickets/index.php/tickets/delete/3
-Stack Trace:
-#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
-#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
-#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
-#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
-#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
-#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Ticket), Object(ArrayObject))
-#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
-#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
-#9 C:\wamp\www\tickets\src\Controller\TicketsController.php(105): Cake\ORM\Table->delete(Object(App\Model\Entity\Ticket))
-#10 [internal function]: App\Controller\TicketsController->delete('3')
-#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
-#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
-#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#15 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#16 {main}
-
-
-2016-01-14 16:20:57 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`numatic_helpdesk`.`updates`, CONSTRAINT `tickets2` FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`id`))
-Request URL: /tickets/index.php/tickets/delete/2
-Stack Trace:
-#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
-#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
-#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
-#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
-#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
-#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Ticket), Object(ArrayObject))
-#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
-#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
-#9 C:\wamp\www\tickets\src\Controller\TicketsController.php(105): Cake\ORM\Table->delete(Object(App\Model\Entity\Ticket))
-#10 [internal function]: App\Controller\TicketsController->delete('2')
-#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
-#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
-#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#15 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#16 {main}
-
-
-2016-01-14 16:48:56 Error: Fatal Error (1): Call to undefined function App\Model\Table\allowEmpty() in [C:\wamp\www\tickets\src\Model\Table\CustomersTable.php, line 69]
+2016-01-28 13:43:41 Error: Fatal Error (1): Call to a member function read() on a non-object in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 46]
 Trace:
 Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
 Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
@@ -138,144 +21,302 @@ Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHa
 
 
 
-2016-01-14 16:48:56 Error: [Cake\Error\FatalErrorException] Call to undefined function App\Model\Table\allowEmpty()
-Request URL: /tickets/index.php/customers/add
+2016-01-28 13:43:41 Error: [Cake\Error\FatalErrorException] Call to a member function read() on a non-object
+Request URL: /tickets/users/login
 Stack Trace:
-#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\wamp\\www\\tic...', 69)
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 46)
 #1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
 #2 {main}
 
 
-2016-01-14 18:12:59 Error: [PDOException] SQLSTATE[01000]: Warning: 1265 Data truncated for column 'role' at row 1
-Request URL: /tickets/index.php/analysts/add
-Stack Trace:
-#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
-#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
-#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
-#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
-#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1530): Cake\Database\Query->execute()
-#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->_insert(Object(App\Model\Entity\Analyst), Array)
-#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1377): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Analyst), Object(ArrayObject))
-#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
-#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1378): Cake\Database\Connection->transactional(Object(Closure))
-#10 C:\wamp\www\tickets\src\Controller\AnalystsController.php(51): Cake\ORM\Table->save(Object(App\Model\Entity\Analyst))
-#11 [internal function]: App\Controller\AnalystsController->add()
-#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
-#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AnalystsController))
-#15 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#16 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#17 {main}
-
-
-2016-01-19 20:50:54 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::webroot() could not be found, or is not accessible.
+2016-01-28 13:55:15 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
 Exception Attributes: array (
-  'controller' => 'TicketsController',
-  'action' => 'webroot',
-  'prefix' => '',
+  'class' => 'AuthHelper',
   'plugin' => NULL,
 )
-Request URL: /tickets/index.php/tickets/webroot/img/Numatic.png
+Request URL: /tickets/priorities/view/1
 Stack Trace:
-#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
-#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#4 {main}
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(866): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\wamp\www\tickets\src\Template\Layout\default.ctp(46): Cake\View\View->__get('Auth')
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(624): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(583): Cake\View\View->renderLayout('', 'default')
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrioritiesController))
+#11 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
 
 
-2016-01-19 20:50:59 Error: [Cake\Controller\Exception\MissingActionException] Action CustomersController::webroot() could not be found, or is not accessible.
-Exception Attributes: array (
-  'controller' => 'CustomersController',
-  'action' => 'webroot',
-  'prefix' => '',
-  'plugin' => NULL,
-)
-Request URL: /tickets/index.php/customers/webroot/img/Numatic.png
+2016-01-28 14:15:10 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 14:15:10 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /tickets/users
 Stack Trace:
-#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\CustomersController))
-#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#4 {main}
-
-
-2016-01-19 20:51:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Webroot could not be found.
-Exception Attributes: array (
-  'class' => 'Webroot',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /tickets/index.php/webroot/img/Numatic.png
-Stack Trace:
-#0 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
 #2 {main}
 
 
-2016-01-19 20:51:04 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::webroot() could not be found, or is not accessible.
+2016-01-28 14:15:21 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 14:15:21 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /tickets/users
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 14:15:24 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 14:15:25 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /tickets/users
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 14:15:48 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 14:15:49 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /tickets/users
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 14:17:37 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 14:17:37 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /tickets/users
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 14:28:05 Error: Fatal Error (4): syntax error, unexpected '{', expecting ',' or ';' in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 14:28:05 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '{', expecting ',' or ';'
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 14:28:28 Error: Fatal Error (4): syntax error, unexpected '{', expecting ',' or ';' in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 14:28:28 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '{', expecting ',' or ';'
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 14:36:38 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 49]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 14:36:39 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 49)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 14:37:35 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 49]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 14:37:36 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 49)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 14:38:02 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 49]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 14:38:02 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 49)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 15:11:42 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 15:11:42 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 15:12:06 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 15:12:06 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 15:12:40 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\tickets\src\Template\Layout\default.ctp, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 15:12:40 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-28 15:21:55 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::logout() could not be found, or is not accessible.
 Exception Attributes: array (
   'controller' => 'TicketsController',
-  'action' => 'webroot',
+  'action' => 'logout',
   'prefix' => '',
   'plugin' => NULL,
 )
-Request URL: /tickets/index.php/tickets/webroot/img/Numatic.png
+Request URL: /tickets/tickets/logout
 Stack Trace:
 #0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
 #1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
 #2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#4 {main}
+#3 {main}
 
 
-2016-01-19 20:51:07 Error: [Cake\Controller\Exception\MissingActionException] Action CustomersController::webroot() could not be found, or is not accessible.
+2016-01-28 16:17:38 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::signout() could not be found, or is not accessible.
 Exception Attributes: array (
-  'controller' => 'CustomersController',
-  'action' => 'webroot',
+  'controller' => 'UsersController',
+  'action' => 'signout',
   'prefix' => '',
   'plugin' => NULL,
 )
-Request URL: /tickets/index.php/customers/webroot/img/Numatic.png
+Request URL: /tickets/users/signout
 Stack Trace:
 #0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\CustomersController))
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
 #2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#4 {main}
+#3 {main}
 
 
-2016-01-19 20:52:00 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::webroot() could not be found, or is not accessible.
+2016-01-28 16:17:51 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::signout() could not be found, or is not accessible.
 Exception Attributes: array (
-  'controller' => 'TicketsController',
-  'action' => 'webroot',
+  'controller' => 'UsersController',
+  'action' => 'signout',
   'prefix' => '',
   'plugin' => NULL,
 )
-Request URL: /tickets/index.php/tickets/webroot/img/Numatic.png
+Request URL: /tickets/users/signout
 Stack Trace:
 #0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
 #2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#4 {main}
+#3 {main}
 
 
-2016-01-19 20:53:14 Error: [Cake\Controller\Exception\MissingActionException] Action CustomersController::webroot() could not be found, or is not accessible.
-Exception Attributes: array (
-  'controller' => 'CustomersController',
-  'action' => 'webroot',
-  'prefix' => '',
-  'plugin' => NULL,
-)
-Request URL: /tickets/index.php/customers/webroot/img/Numatic.png
+2016-01-28 18:35:03 Error: Fatal Error (4): syntax error, unexpected ':', expecting ')' in [C:\wamp\www\tickets\src\Template\Users\login.ctp, line 18]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-28 18:35:03 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ':', expecting ')'
+Request URL: /tickets/users/login
 Stack Trace:
-#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\CustomersController))
-#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#3 C:\wamp\www\tickets\index.php(16): require('C:\\wamp\\www\\tic...')
-#4 {main}
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 18)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
 
 

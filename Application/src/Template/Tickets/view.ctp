@@ -7,8 +7,10 @@
         <li><?= $this->Html->link(__('New Ticket'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Customers'), ['controller' => 'Customers', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Customer'), ['controller' => 'Customers', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Analysts'), ['controller' => 'Analysts', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Analyst'), ['controller' => 'Analysts', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Priority'), ['controller' => 'Priorities', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Updates'), ['controller' => 'Updates', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Update'), ['controller' => 'Updates', 'action' => 'add']) ?> </li>
     </ul>
@@ -18,7 +20,7 @@
     <table class="vertical-table">
         <tr>
             <th><?= __('Customer') ?></th>
-            <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->username, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
+            <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->id, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
         </tr>
         <tr>
             <th><?= __('Status') ?></th>
@@ -29,6 +31,10 @@
             <td><?= h($ticket->title) ?></td>
         </tr>
         <tr>
+            <th><?= __('Priority') ?></th>
+            <td><?= $ticket->has('priority') ? $this->Html->link($ticket->priority->name, ['controller' => 'Priorities', 'action' => 'view', $ticket->priority->id]) : '' ?></td>
+        </tr>
+        <tr>
             <th><?= __('Description') ?></th>
             <td><?= h($ticket->description) ?></td>
         </tr>
@@ -37,15 +43,15 @@
             <td><?= h($ticket->category) ?></td>
         </tr>
         <tr>
-            <th><?= __('Analyst') ?></th>
-            <td><?= $ticket->has('analyst') ? $this->Html->link($ticket->analyst->username, ['controller' => 'Analysts', 'action' => 'view', $ticket->analyst->id]) : '' ?></td>
+            <th><?= __('User') ?></th>
+            <td><?= $ticket->has('user') ? $this->Html->link($ticket->user->id, ['controller' => 'Users', 'action' => 'view', $ticket->user->id]) : '' ?></td>
         </tr>
         <tr>
             <th><?= __('Ticket Type') ?></th>
             <td><?= h($ticket->ticket_type) ?></td>
         </tr>
         <tr>
-            <th><?= __('Ticket Id') ?></th>
+            <th><?= __('Id') ?></th>
             <td><?= $this->Number->format($ticket->id) ?></td>
         </tr>
         <tr>

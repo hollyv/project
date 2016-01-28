@@ -11,7 +11,8 @@ use Cake\Validation\Validator;
  * Tickets Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Customers
- * @property \Cake\ORM\Association\BelongsTo $Analysts
+ * @property \Cake\ORM\Association\BelongsTo $Priorities
+ * @property \Cake\ORM\Association\BelongsTo $Users
  * @property \Cake\ORM\Association\HasMany $Updates
  */
 class TicketsTable extends Table
@@ -36,7 +37,10 @@ class TicketsTable extends Table
         $this->belongsTo('Customers', [
             'foreignKey' => 'customer_id'
         ]);
-        $this->belongsTo('Analysts', [
+        $this->belongsTo('Priorities', [
+            'foreignKey' => 'priority_id'
+        ]);
+        $this->belongsTo('Users', [
             'foreignKey' => 'analyst_id',
             'joinType' => 'INNER'
         ]);
@@ -93,7 +97,8 @@ class TicketsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['customer_id'], 'Customers'));
-        $rules->add($rules->existsIn(['analyst_id'], 'Analysts'));
+        $rules->add($rules->existsIn(['priority_id'], 'Priorities'));
+        $rules->add($rules->existsIn(['analyst_id'], 'Users'));
         return $rules;
     }
 }

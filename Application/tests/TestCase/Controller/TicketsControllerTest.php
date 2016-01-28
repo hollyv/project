@@ -18,7 +18,9 @@ class TicketsControllerTest extends IntegrationTestCase
     public $fixtures = [
         'app.tickets',
         'app.customers',
-        'app.analysts',
+        'app.departments',
+        'app.priorities',
+        'app.users',
         'app.updates'
     ];
 

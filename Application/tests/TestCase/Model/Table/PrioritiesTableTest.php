@@ -17,7 +17,8 @@ class PrioritiesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.priorities'
+        'app.priorities',
+        'app.tickets'
     ];
 
     /**

@@ -2,18 +2,20 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\Auth\DefaultPasswordHasher;
 
 /**
- * WatchedTicket Entity.
+ * User Entity.
  *
  * @property int $id
- * @property int $analyst_id
- * @property \App\Model\Entity\User $user
- * @property int $ticket_id
- * @property \App\Model\Entity\Ticket $ticket
- * @property string $comment
+ * @property string $username
+ * @property string $password
+ * @property string $firstname
+ * @property string $lastname
+ * @property string $role
+ * @property string $supportteam
  */
-class WatchedTicket extends Entity
+class User extends Entity
 {
 
     /**
@@ -29,4 +31,10 @@ class WatchedTicket extends Entity
         '*' => true,
         'id' => false,
     ];
+
+       protected function _setPassword($value)
+    {
+        $hasher = new DefaultPasswordHasher();
+        return $hasher->hash($value);
+    }
 }

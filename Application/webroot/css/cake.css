@@ -12,11 +12,11 @@ a {
 }
 
 .side-nav li a:not(.button) {
-    color: #15848F;
+    color: #000000;
 }
 
 .side-nav li a:not(.button):hover {
-    color: #15848F;
+    color: #0277ea;
 }
 
 header {
@@ -27,6 +27,35 @@ header {
     line-height: 64px;
     padding: 16px 0px;
     box-shadow: 0px 1px rgba(0, 0, 0, 0.24);
+}
+
+#top{
+    height: 30px;
+    background-color: #000000;
+}
+
+#user{
+    float: right;
+    color: #ffffff;
+    padding-right: 10px;
+}
+
+ul#adminMenu li{
+    display: inline;
+    border-right: 1px #029eea solid;
+    padding: 0px 5px 5px 10px;
+    font-size: 17px;
+
+}
+
+#logIn{
+    color: #000000;
+    font-size: 60px;
+    padding: 20px;
+}
+
+#henry{
+    float: left;
 }
 
 header .header-title {
@@ -368,7 +397,6 @@ pre {
 }
 
 .top-bar.expanded, .top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
-    border-top: 20px #000000 solid;
     background: #333333;
     border-bottom: 5px #029eea solid;
 
@@ -380,7 +408,7 @@ pre {
 }
 
 .side-nav li.heading {
-    color: #1798A5;
+    color: #029eea;
     font-size: 0.875rem;
     font-weight: bold;
     text-transform: uppercase;

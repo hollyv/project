@@ -19,7 +19,7 @@ class UpdatesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Tickets', 'Analysts']
+            'contain' => ['Tickets', 'Users']
         ];
         $this->set('updates', $this->paginate($this->Updates));
         $this->set('_serialize', ['updates']);
@@ -35,7 +35,7 @@ class UpdatesController extends AppController
     public function view($id = null)
     {
         $update = $this->Updates->get($id, [
-            'contain' => ['Tickets', 'Analysts']
+            'contain' => ['Tickets', 'Users']
         ]);
         $this->set('update', $update);
         $this->set('_serialize', ['update']);
@@ -59,8 +59,8 @@ class UpdatesController extends AppController
             }
         }
         $tickets = $this->Updates->Tickets->find('list', ['limit' => 200]);
-        $analysts = $this->Updates->Analysts->find('list', ['limit' => 200]);
-        $this->set(compact('update', 'tickets', 'analysts'));
+        $users = $this->Updates->Users->find('list', ['limit' => 200]);
+        $this->set(compact('update', 'tickets', 'users'));
         $this->set('_serialize', ['update']);
     }
 
@@ -86,8 +86,8 @@ class UpdatesController extends AppController
             }
         }
         $tickets = $this->Updates->Tickets->find('list', ['limit' => 200]);
-        $analysts = $this->Updates->Analysts->find('list', ['limit' => 200]);
-        $this->set(compact('update', 'tickets', 'analysts'));
+        $users = $this->Updates->Users->find('list', ['limit' => 200]);
+        $this->set(compact('update', 'tickets', 'users'));
         $this->set('_serialize', ['update']);
     }
 

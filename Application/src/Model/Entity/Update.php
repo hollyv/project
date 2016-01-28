@@ -12,7 +12,7 @@ use Cake\ORM\Entity;
  * @property string $update_text
  * @property \Cake\I18n\Time $created
  * @property int $analyst_id
- * @property \App\Model\Entity\Analyst $analyst
+ * @property \App\Model\Entity\User $user
  * @property int $time_booking
  */
 class Update extends Entity

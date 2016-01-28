@@ -17,10 +17,11 @@ class WatchedTicketsControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.watched_tickets',
-        'app.analysts',
+        'app.users',
         'app.tickets',
         'app.customers',
         'app.departments',
+        'app.priorities',
         'app.updates'
     ];
 

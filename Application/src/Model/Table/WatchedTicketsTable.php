@@ -10,7 +10,7 @@ use Cake\Validation\Validator;
 /**
  * WatchedTickets Model
  *
- * @property \Cake\ORM\Association\BelongsTo $Analysts
+ * @property \Cake\ORM\Association\BelongsTo $Users
  * @property \Cake\ORM\Association\BelongsTo $Tickets
  */
 class WatchedTicketsTable extends Table
@@ -30,7 +30,7 @@ class WatchedTicketsTable extends Table
         $this->displayField('id');
         $this->primaryKey('id');
 
-        $this->belongsTo('Analysts', [
+        $this->belongsTo('Users', [
             'foreignKey' => 'analyst_id',
             'joinType' => 'INNER'
         ]);
@@ -67,7 +67,7 @@ class WatchedTicketsTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['analyst_id'], 'Analysts'));
+        $rules->add($rules->existsIn(['analyst_id'], 'Users'));
         $rules->add($rules->existsIn(['ticket_id'], 'Tickets'));
         return $rules;
     }

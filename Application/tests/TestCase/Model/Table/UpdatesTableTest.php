@@ -21,8 +21,8 @@ class UpdatesTableTest extends TestCase
         'app.tickets',
         'app.customers',
         'app.departments',
-        'app.analysts',
-        'app.watched_tickets'
+        'app.priorities',
+        'app.users'
     ];
 
     /**

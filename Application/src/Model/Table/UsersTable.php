@@ -1,19 +1,17 @@
 <?php
 namespace App\Model\Table;
 
-use App\Model\Entity\Customer;
+use App\Model\Entity\User;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Customers Model
+ * Users Model
  *
- * @property \Cake\ORM\Association\BelongsTo $Departments
- * @property \Cake\ORM\Association\HasMany $Tickets
  */
-class CustomersTable extends Table
+class UsersTable extends Table
 {
 
     /**
@@ -26,17 +24,10 @@ class CustomersTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('customers');
+        $this->table('users');
         $this->displayField('id');
         $this->primaryKey('id');
 
-        $this->belongsTo('Departments', [
-            'foreignKey' => 'department_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->hasMany('Tickets', [
-            'foreignKey' => 'customer_id'
-        ]);
     }
 
     /**
@@ -52,7 +43,12 @@ class CustomersTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->allowEmpty('username');
+            ->requirePresence('username', 'create')
+            ->notEmpty('username');
+
+        $validator
+            ->requirePresence('password', 'create')
+            ->notEmpty('password');
 
         $validator
             ->allowEmpty('firstname');
@@ -61,12 +57,10 @@ class CustomersTable extends Table
             ->allowEmpty('lastname');
 
         $validator
-            ->add('email', 'valid', ['rule' => 'email'])
-            ->allowEmpty('email');
+            ->allowEmpty('role');
 
         $validator
-            ->add('phone', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('phone');
+            ->allowEmpty('supportteam');
 
         return $validator;
     }
@@ -81,8 +75,6 @@ class CustomersTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['username']));
-        $rules->add($rules->isUnique(['email']));
-        $rules->add($rules->existsIn(['department_id'], 'Departments'));
         return $rules;
     }
 }

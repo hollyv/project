@@ -19,7 +19,7 @@ class TicketsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Customers', 'Analysts']
+            'contain' => ['Customers', 'Priorities', 'Users']
         ];
         $this->set('tickets', $this->paginate($this->Tickets));
         $this->set('_serialize', ['tickets']);
@@ -35,7 +35,7 @@ class TicketsController extends AppController
     public function view($id = null)
     {
         $ticket = $this->Tickets->get($id, [
-            'contain' => ['Customers', 'Analysts', 'Updates']
+            'contain' => ['Customers', 'Priorities', 'Users', 'Updates']
         ]);
         $this->set('ticket', $ticket);
         $this->set('_serialize', ['ticket']);
@@ -59,8 +59,9 @@ class TicketsController extends AppController
             }
         }
         $customers = $this->Tickets->Customers->find('list', ['limit' => 200]);
-        $analysts = $this->Tickets->Analysts->find('list', ['limit' => 200]);
-        $this->set(compact('ticket', 'customers', 'analysts'));
+        $priorities = $this->Tickets->Priorities->find('list', ['limit' => 200]);
+        $users = $this->Tickets->Users->find('list', ['limit' => 200]);
+        $this->set(compact('ticket', 'customers', 'priorities', 'users'));
         $this->set('_serialize', ['ticket']);
     }
 
@@ -86,8 +87,9 @@ class TicketsController extends AppController
             }
         }
         $customers = $this->Tickets->Customers->find('list', ['limit' => 200]);
-        $analysts = $this->Tickets->Analysts->find('list', ['limit' => 200]);
-        $this->set(compact('ticket', 'customers', 'analysts'));
+        $priorities = $this->Tickets->Priorities->find('list', ['limit' => 200]);
+        $users = $this->Tickets->Users->find('list', ['limit' => 200]);
+        $this->set(compact('ticket', 'customers', 'priorities', 'users'));
         $this->set('_serialize', ['ticket']);
     }
 

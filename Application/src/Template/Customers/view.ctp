@@ -12,18 +12,18 @@
     </ul>
 </nav>
 <div class="customers view large-9 medium-8 columns content">
-    <h3><?= h($customer->username) ?></h3>
+    <h3><?= h($customer->id) ?></h3>
     <table class="vertical-table">
         <tr>
             <th><?= __('Username') ?></th>
             <td><?= h($customer->username) ?></td>
         </tr>
         <tr>
-            <th><?= __('First Name') ?></th>
+            <th><?= __('Firstname') ?></th>
             <td><?= h($customer->firstname) ?></td>
         </tr>
         <tr>
-            <th><?= __('Last Name') ?></th>
+            <th><?= __('Lastname') ?></th>
             <td><?= h($customer->lastname) ?></td>
         </tr>
         <tr>
@@ -52,6 +52,7 @@
                 <th><?= __('Customer Id') ?></th>
                 <th><?= __('Status') ?></th>
                 <th><?= __('Title') ?></th>
+                <th><?= __('Priority Id') ?></th>
                 <th><?= __('Description') ?></th>
                 <th><?= __('Category') ?></th>
                 <th><?= __('Analyst Id') ?></th>
@@ -67,6 +68,7 @@
                 <td><?= h($tickets->customer_id) ?></td>
                 <td><?= h($tickets->status) ?></td>
                 <td><?= h($tickets->title) ?></td>
+                <td><?= h($tickets->priority_id) ?></td>
                 <td><?= h($tickets->description) ?></td>
                 <td><?= h($tickets->category) ?></td>
                 <td><?= h($tickets->analyst_id) ?></td>

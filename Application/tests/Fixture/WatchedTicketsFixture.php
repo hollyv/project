@@ -27,7 +27,7 @@ class WatchedTicketsFixture extends TestFixture
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'anaylst3' => ['type' => 'foreign', 'columns' => ['analyst_id'], 'references' => ['analysts', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
+            'anaylst3' => ['type' => 'foreign', 'columns' => ['analyst_id'], 'references' => ['users', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
             'tickets3' => ['type' => 'foreign', 'columns' => ['ticket_id'], 'references' => ['tickets', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
         ],
         '_options' => [

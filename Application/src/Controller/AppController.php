@@ -39,10 +39,25 @@ class AppController extends Controller
      */
     public function initialize()
     {
-        parent::initialize();
+       $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [
+            'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                        
+                        'password' => 'password'
+                    ]
+                ]
+            ],
+            'loginAction' => [
+                'controller' => 'Users',
+                'action' => 'login'
+            ]
+        ]);
 
-        $this->loadComponent('RequestHandler');
-        $this->loadComponent('Flash');
+        // Allow the display action so our pages controller
+        // continues to work.
+        $this->Auth->allow(['display']);
     }
 
     /**

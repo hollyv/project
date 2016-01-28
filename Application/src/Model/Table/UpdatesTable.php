@@ -11,7 +11,7 @@ use Cake\Validation\Validator;
  * Updates Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Tickets
- * @property \Cake\ORM\Association\BelongsTo $Analysts
+ * @property \Cake\ORM\Association\BelongsTo $Users
  */
 class UpdatesTable extends Table
 {
@@ -36,7 +36,7 @@ class UpdatesTable extends Table
             'foreignKey' => 'ticket_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsTo('Analysts', [
+        $this->belongsTo('Users', [
             'foreignKey' => 'analyst_id',
             'joinType' => 'INNER'
         ]);
@@ -74,7 +74,7 @@ class UpdatesTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['ticket_id'], 'Tickets'));
-        $rules->add($rules->existsIn(['analyst_id'], 'Analysts'));
+        $rules->add($rules->existsIn(['analyst_id'], 'Users'));
         return $rules;
     }
 }
