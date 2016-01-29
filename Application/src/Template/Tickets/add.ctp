@@ -18,7 +18,12 @@
         <legend><?= __('Add Ticket') ?></legend>
         <?php
             echo $this->Form->input('customer_id', ['options' => $customers, 'empty' => true]);
-            echo $this->Form->input('status');
+            echo 'Status';
+            echo $this->Form->select(
+                'status',
+                ['Open','Pending','Resolved', 'Closed'],
+                ['empty' => '(choose one)']
+                );
             echo $this->Form->input('title');
             echo $this->Form->input('priority_id', ['options' => $priorities, 'empty' => true]);
             echo $this->Form->input('description');

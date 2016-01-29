@@ -42,15 +42,20 @@ $cakeDescription = 'Helpdesk Portal';
                     <?= $loguser = $this->request->session()->read('Auth.User.firstname'); ?>
                 </li>
                 <li>
+                    <a href="/tickets/pages/help"><font color= 'white'>Help</a>
+                </li>
+                <li>
                     <a href="/tickets/users/logout"><font color= 'white'>Sign Out</a>
                 </li>
+               
             </ul>
     </div>
     </div>
     <nav class="top-bar expanded" data-topbar role="navigation">
        
-        <?php echo $this->Html->image('Logo.png', array('alt' => 'Numatic Logo', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'style' => 'height:21%; width:21%; margin-left: 20px;')); ?>
-
+       <div id='headerlogo'>
+         <?php echo $this->Html->image('Logo.png', array('alt' => 'Numatic Logo', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'style' => 'margin-left: 20px;')); ?>
+        </div>
 
 <!--        <div id="logo"><img style="height:20%; width:20%; margin-left: 20px;" src="webroot/img/Logo.png" alt="Numatic Logo" draggable="false" ></div>
  dynamic title 
@@ -62,11 +67,11 @@ $cakeDescription = 'Helpdesk Portal';
 
     -->
         <section class="top-bar-section">
-             
-              
-            <ul class="right">
-            
-            </ul>
+
+            <div id='newticket'>
+               <a href="/tickets/tickets/add"><font color= 'white'>+ New Ticket</a> 
+            </div>
+
         </section>
     </nav>
     <?= $this->Flash->render() ?>
