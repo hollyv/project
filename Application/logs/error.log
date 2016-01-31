@@ -692,3 +692,1499 @@ Stack Trace:
 #2 {main}
 
 
+2016-01-30 19:46:34 Error: [InvalidArgumentException] Cannot get an empty property
+Request URL: /tickets/tickets/add
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\EntityTrait.php(729): Cake\ORM\Entity->get('')
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\EntityTrait.php(700): Cake\ORM\Entity->_nestedErrors('')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(502): Cake\ORM\Entity->errors('')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(487): Cake\View\Form\EntityContext->error('')
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(683): Cake\View\Form\EntityContext->hasError('')
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1003): Cake\View\Helper\FormHelper->error('', NULL)
+#6 C:\wamp\www\tickets\src\Template\Tickets\add.ctp(43): Cake\View\Helper\FormHelper->input('')
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#13 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-01-30 20:47:28 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`helpdesk`.`updates`, CONSTRAINT `tickets2` FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`id`))
+Request URL: /tickets/tickets/delete/3
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Ticket), Object(ArrayObject))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\wamp\www\tickets\src\Controller\TicketsController.php(107): Cake\ORM\Table->delete(Object(App\Model\Entity\Ticket))
+#10 [internal function]: App\Controller\TicketsController->delete('3')
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-01-30 20:47:41 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`helpdesk`.`updates`, CONSTRAINT `tickets2` FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`id`))
+Request URL: /tickets/tickets/delete/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Ticket), Object(ArrayObject))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\wamp\www\tickets\src\Controller\TicketsController.php(107): Cake\ORM\Table->delete(Object(App\Model\Entity\Ticket))
+#10 [internal function]: App\Controller\TicketsController->delete('2')
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-01-30 20:56:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 27]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-30 20:56:21 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 27)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-30 20:57:22 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 27]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-30 20:57:22 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 27)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-30 20:58:11 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 27]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-30 20:58:11 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 27)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-30 20:59:30 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 27]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-30 20:59:31 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 27)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 08:19:40 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`helpdesk`.`tickets`, CONSTRAINT `anaylst` FOREIGN KEY (`analyst_id`) REFERENCES `users` (`id`))
+Request URL: /tickets/users/delete/4
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\User), Object(ArrayObject))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\wamp\www\tickets\src\Controller\UsersController.php(98): Cake\ORM\Table->delete(Object(App\Model\Entity\User))
+#10 [internal function]: App\Controller\UsersController->delete('4')
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-01-31 08:19:55 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`helpdesk`.`tickets`, CONSTRAINT `anaylst` FOREIGN KEY (`analyst_id`) REFERENCES `users` (`id`))
+Request URL: /tickets/users/delete/3
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\User), Object(ArrayObject))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\wamp\www\tickets\src\Controller\UsersController.php(98): Cake\ORM\Table->delete(Object(App\Model\Entity\User))
+#10 [internal function]: App\Controller\UsersController->delete('3')
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-01-31 08:20:02 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`helpdesk`.`watched_tickets`, CONSTRAINT `anaylst3` FOREIGN KEY (`analyst_id`) REFERENCES `users` (`id`))
+Request URL: /tickets/users/delete/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\User), Object(ArrayObject))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\wamp\www\tickets\src\Controller\UsersController.php(98): Cake\ORM\Table->delete(Object(App\Model\Entity\User))
+#10 [internal function]: App\Controller\UsersController->delete('2')
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-01-31 09:26:19 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\wamp\www\tickets\src\Controller\UsersController.php, line 26]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 09:26:20 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /tickets/users/logout
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 26)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 09:26:20 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\wamp\www\tickets\src\Controller\UsersController.php, line 26]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 09:26:20 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /tickets/users/logout
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 26)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 10:50:08 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::users() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-01-31 10:52:28 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 134]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 10:52:28 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 134)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 10:55:31 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 134]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 10:55:32 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 134)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 10:55:40 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 134]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 10:55:40 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 134)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 10:58:00 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::assigned() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'assigned',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-01-31 12:02:34 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\wamp\www\tickets\src\Controller\UsersController.php, line 25]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 12:02:34 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '{'
+Request URL: /tickets/users/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 25)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 12:02:34 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\wamp\www\tickets\src\Controller\UsersController.php, line 25]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 12:02:35 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '{'
+Request URL: /tickets/users/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 25)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 12:04:01 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\wamp\www\tickets\src\Controller\UsersController.php, line 25]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 12:04:01 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '{'
+Request URL: /tickets/users/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 25)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 12:04:01 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\wamp\www\tickets\src\Controller\UsersController.php, line 25]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 12:04:02 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '{'
+Request URL: /tickets/users/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 25)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 12:04:54 Error: Fatal Error (1): Call to undefined function App\Controller\isAuthorized() in [C:\wamp\www\tickets\src\Controller\UsersController.php, line 25]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 12:04:54 Error: [Cake\Error\FatalErrorException] Call to undefined function App\Controller\isAuthorized()
+Request URL: /tickets/users/view/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\wamp\\www\\tic...', 25)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 12:04:54 Error: Fatal Error (1): Call to undefined function App\Controller\isAuthorized() in [C:\wamp\www\tickets\src\Controller\UsersController.php, line 25]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 12:04:54 Error: [Cake\Error\FatalErrorException] Call to undefined function App\Controller\isAuthorized()
+Request URL: /tickets/users/view/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\wamp\\www\\tic...', 25)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 12:21:05 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::users() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/user/df
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-01-31 12:21:47 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::users() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-01-31 12:21:51 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::users() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/assigned/df
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-01-31 12:21:58 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::dfdsf() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'dfdsf',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/dfdsf
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-01-31 12:22:17 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::users() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/assigned/df
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-01-31 12:35:48 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::users() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/assigned/df
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-01-31 12:35:54 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::asyhtyh() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'asyhtyh',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/asyhtyh/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-01-31 12:36:05 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::users() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/assigned/df
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-01-31 12:40:30 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\users.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\users.ctp',
+)
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-01-31 12:47:01 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 143]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 12:47:02 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 143)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 12:47:02 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 143]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 12:47:02 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 143)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 12:47:25 Error: [BadMethodCallException] Unknown finder method "assigned"
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(933): Cake\ORM\Table->callFinder('assigned', Object(Cake\ORM\Query), Array)
+#1 C:\wamp\www\tickets\src\Controller\TicketsController.php(135): Cake\ORM\Table->find('assigned', Array)
+#2 [internal function]: App\Controller\TicketsController->users()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-01-31 12:51:41 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\users.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\users.ctp',
+)
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-01-31 12:56:09 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\users.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\users.ctp',
+)
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-01-31 12:57:41 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\users.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\users.ctp',
+)
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-01-31 13:02:18 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\users.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\users.ctp',
+)
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-01-31 13:02:40 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 7]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 7
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:48:02 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 118]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 13:48:02 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING)
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 118)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 13:48:02 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 118]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 13:48:02 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING)
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 118)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 14:56:51 Error: Fatal Error (4): syntax error, unexpected '<', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 19]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 14:56:51 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '<', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 19)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 14:57:31 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 14:57:31 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 144)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 14:57:36 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 14:57:36 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 144)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:01:23 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Template\Pages\home.ctp, line 11]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:01:23 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 11)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:02:08 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:02:08 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 144)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:14:53 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 119]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:14:53 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 119)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:14:53 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 119]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:14:54 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 119)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:15:13 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 123]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:15:13 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 123)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:15:14 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 123]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:15:14 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 123)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:15:28 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 124]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:15:28 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 124)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:15:29 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 124]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:15:29 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 124)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:15:45 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 120]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:15:45 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 120)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:15:45 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 120]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:15:46 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 120)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:16:15 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN) in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 108]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:16:15 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'return' (T_RETURN)
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 108)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:16:15 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN) in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 108]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:16:15 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'return' (T_RETURN)
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 108)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:24:09 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 127]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:24:10 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 127)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:24:10 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 127]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:24:10 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 127)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:29:46 Error: [InvalidArgumentException] Cannot convert value to string
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\StringType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(70): Cake\Database\Statement\StatementDecorator->cast(Array, 'string')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(105): Cake\Database\Statement\PDOStatement->bindValue('c0', Array, NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', Array, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(290): Cake\Database\Log\LoggingStatement->bindValue('c0', Array, NULL)
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\ValueBinder.php(125): Cake\Database\Statement\StatementDecorator->bind(Array, Array)
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(269): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#12 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#16 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#17 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#18 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#19 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-01-31 15:30:18 Error: [InvalidArgumentException] You have contained 'users' but that association was bound as 'Users'.
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(250): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\TicketsTable), 'users', Array, Array)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(359): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\TicketsTable))
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(337): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\TicketsTable))
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(897): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\TicketsTable), true)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(853): Cake\ORM\Query->_transformQuery()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(121): Cake\ORM\Query->sql()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(216): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(268): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#13 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#16 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#17 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#18 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#19 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#20 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 {main}
+
+
+2016-01-31 15:30:37 Error: [InvalidArgumentException] Cannot convert value to string
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\StringType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(70): Cake\Database\Statement\StatementDecorator->cast(Array, 'string')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(105): Cake\Database\Statement\PDOStatement->bindValue('c0', Array, NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', Array, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(290): Cake\Database\Log\LoggingStatement->bindValue('c0', Array, NULL)
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\ValueBinder.php(125): Cake\Database\Statement\StatementDecorator->bind(Array, Array)
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(269): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#12 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#16 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#17 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#18 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#19 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-01-31 15:32:32 Error: [InvalidArgumentException] Cannot convert value to string
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\StringType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(70): Cake\Database\Statement\StatementDecorator->cast(Array, 'string')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(105): Cake\Database\Statement\PDOStatement->bindValue('c0', Array, NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', Array, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(290): Cake\Database\Log\LoggingStatement->bindValue('c0', Array, NULL)
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\ValueBinder.php(125): Cake\Database\Statement\StatementDecorator->bind(Array, Array)
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(269): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#12 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#16 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#17 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#18 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#19 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-01-31 15:35:04 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tickets.user_id' in 'on clause'
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#16 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-01-31 15:35:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tickets.user_id' in 'on clause'
+Request URL: /tickets/tickets/assigned
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#16 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-01-31 15:43:56 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 124]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:43:56 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 124)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:43:56 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 124]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:43:57 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 124)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:44:15 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 120]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:44:15 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 120)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:44:15 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 120]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:44:15 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 120)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:44:47 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 125]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:44:47 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 125)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:44:47 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 125]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:44:47 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 125)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:45:06 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 125]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:45:06 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 125)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:45:07 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 125]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 15:45:07 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 125)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 15:50:25 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tickets.analyst_username' in 'on clause'
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#16 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-01-31 15:51:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'on clause'
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#16 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-01-31 15:52:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Users__username' in 'on clause'
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#9 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#16 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-01-31 15:54:04 Error: [InvalidArgumentException] Cannot convert value to string
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\StringType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(70): Cake\Database\Statement\StatementDecorator->cast(Array, 'string')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(105): Cake\Database\Statement\PDOStatement->bindValue('c0', Array, NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', Array, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(290): Cake\Database\Log\LoggingStatement->bindValue('c0', Array, NULL)
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\ValueBinder.php(125): Cake\Database\Statement\StatementDecorator->bind(Array, Array)
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(269): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#12 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#16 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#17 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#18 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#19 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-01-31 15:54:16 Error: [InvalidArgumentException] Cannot convert value to string
+Request URL: /tickets/tickets/assigned/patd
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\StringType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(70): Cake\Database\Statement\StatementDecorator->cast(Array, 'string')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(105): Cake\Database\Statement\PDOStatement->bindValue('c0', Array, NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', Array, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(290): Cake\Database\Log\LoggingStatement->bindValue('c0', Array, NULL)
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\ValueBinder.php(125): Cake\Database\Statement\StatementDecorator->bind(Array, Array)
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(269): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#12 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#16 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#17 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#18 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#19 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-01-31 15:54:24 Error: [InvalidArgumentException] Cannot convert value to string
+Request URL: /tickets/tickets/assigned/1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\StringType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(70): Cake\Database\Statement\StatementDecorator->cast(Array, 'string')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(105): Cake\Database\Statement\PDOStatement->bindValue('c0', Array, NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', Array, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(290): Cake\Database\Log\LoggingStatement->bindValue('c0', Array, NULL)
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\ValueBinder.php(125): Cake\Database\Statement\StatementDecorator->bind(Array, Array)
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(269): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#12 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#16 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#17 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#18 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#19 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-01-31 16:00:18 Error: [InvalidArgumentException] Cannot convert value to string
+Request URL: /tickets/tickets/assigned/tester
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\StringType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(70): Cake\Database\Statement\StatementDecorator->cast(Array, 'string')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(105): Cake\Database\Statement\PDOStatement->bindValue('c0', Array, 'string')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', Array, 'string')
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(290): Cake\Database\Log\LoggingStatement->bindValue('c0', Array, 'string')
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\ValueBinder.php(125): Cake\Database\Statement\StatementDecorator->bind(Array, Array)
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(269): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(131): Cake\ORM\Query->all()
+#12 C:\wamp\www\tickets\src\Template\Tickets\users.ctp(7): Cake\ORM\Query->getIterator()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include('C:\\wamp\\www\\tic...')
+#14 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#15 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#16 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#17 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#18 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#19 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-01-31 16:17:17 Error: Fatal Error (4): syntax error, unexpected '"/assigned/tester"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 17]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 16:17:17 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '"/assigned/tester"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 17)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 16:17:40 Error: Fatal Error (4): syntax error, unexpected '"/assigned/tester"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 17]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 16:17:40 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '"/assigned/tester"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 17)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 16:17:59 Error: Fatal Error (4): syntax error, unexpected ''/assigned/tester'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 17]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 16:17:59 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ''/assigned/tester'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 17)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 16:25:07 Error: Fatal Error (4): syntax error, unexpected ''/assigned/tester'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 17]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 16:25:07 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ''/assigned/tester'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 17)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 16:53:55 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 22]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 16:53:55 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 22)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-01-31 16:56:57 Error: Fatal Error (4): syntax error, unexpected ';', expecting ']' in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 27]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-01-31 16:56:57 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ';', expecting ']'
+Request URL: /tickets/tickets
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 27)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

@@ -1,46 +1,9 @@
-<?php
+<nav class="large-3 medium-4 columns" id="actions-sidebar">
+    <ul class="side-nav">
+        <li class="heading"><?= __('Actions') ?></li>
+        <li><?= $this->Html->link(__('List Tickets'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Customer'), ['controller' => 'Customers', 'action' => 'add']) ?></li>
+     </ul>
+</nav>
 
-use Cake\Cache\Cache;
-use Cake\Core\Configure;
-use Cake\Datasource\ConnectionManager;
-use Cake\Error\Debugger;
-use Cake\Network\Exception\NotFoundException;
-
-$this->layout = false;
-
-if (!Configure::read('debug')):
-    throw new NotFoundException();
-endif;
-
-$cakeDescription = 'Helpdesk Portal';
-?>
-<!DOCTYPE html>
-<html>
-<head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $cakeDescription ?>
-    </title>
-    <?= $this->Html->meta('icon') ?>
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
-</head>
-<body class="home">
-    <header>
-        <div class="header-image">
-            <?= $this->Html->image('numtext.png') ?>
-            <h1>Helpdesk Portal</h1>
-        </div>
-    </header>
-    <div id="content">
-     
-        
-         
- 
-
-    
-    </div>
-  
-</body>
-</html>

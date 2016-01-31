@@ -16,6 +16,20 @@ class UsersController extends AppController
      *
      * @return void
      */
+    public function isAuthorized($user)
+    {
+       
+        // All registered users can view
+        if (in_array($this->request->action, ['index','login', 'logout'])) {
+          return true;
+        }
+        //Flash error if they don't have permission
+        if ($user['role'] !== 'Manager'){
+            $this->Flash->error(__('You do not have permission to perform this action.'));
+        }
+        return parent::isAuthorized($user);
+    }
+
     public function index()
     {
         $this->set('users', $this->paginate($this->Users));

@@ -11,9 +11,26 @@
         <li><?= $this->Html->link(__('List Updates'), ['controller' => 'Updates', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Update'), ['controller' => 'Updates', 'action' => 'add']) ?></li>
     </ul>
-</nav>
+</nav><div id="ticketbar">
+    <?= 
+    $this->Html->link('My Tickets', [
+    'controller' => 'Tickets',
+    'action' => 'users',
+    $loguser = $this->request->session()->read('Auth.User.username'),
+    ]); ?>
+
+    
+    </div>
+   
+   
 <div class="tickets index large-9 medium-8 columns content">
+
     <h3><?= __('Tickets') ?></h3>
+    
+
+    
+  
+
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>

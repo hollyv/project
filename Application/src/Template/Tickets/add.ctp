@@ -21,15 +21,25 @@
             echo 'Status';
             echo $this->Form->select(
                 'status',
-                ['Open','Pending','Resolved', 'Closed'],
+                ['Open' => 'Open', 'Pending' => 'Pending', 'Resolved' => 'Resolved', 'Closed' => 'Closed'],
                 ['empty' => '(choose one)']
                 );
             echo $this->Form->input('title');
             echo $this->Form->input('priority_id', ['options' => $priorities, 'empty' => true]);
             echo $this->Form->input('description');
-            echo $this->Form->input('category');
+            echo 'Category';
+            echo $this->Form->select(
+                'category',
+                ['Hardware' => 'Hardware', 'Software' => 'Software'],
+                ['empty' => '(choose one)']
+                );
             echo $this->Form->input('analyst_id', ['options' => $users]);
-            echo $this->Form->input('ticket_type');
+            echo 'Ticket Type';
+             echo $this->Form->select(
+                'ticket_type',
+                ['Incident' => 'Incident'],
+                ['empty' => '(choose one)']
+                );
             echo $this->Form->input('resolution_date', ['empty' => true, 'default' => '']);
             echo $this->Form->input('total_time');
         ?>

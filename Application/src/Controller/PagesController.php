@@ -35,6 +35,18 @@ class PagesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When the view file could not
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
+
+    public function isAuthorized($user)
+    {
+       
+        // All registered users can view
+        if (in_array($this->request->action, ['display'])) {
+          return true;
+        }
+
+        return parent::isAuthorized($user);
+    }
+
     public function display()
     {
         $path = func_get_args();

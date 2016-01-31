@@ -41,6 +41,7 @@ class AppController extends Controller
     {
        $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
+            'authorize' => ['Controller'],
             'authenticate' => [
                 'Form' => [
                     'fields' => [
@@ -58,6 +59,17 @@ class AppController extends Controller
         // Allow the display action so our pages controller
         // continues to work.
         $this->Auth->allow(['display']);
+    }
+
+     public function isAuthorized($user)
+    {
+        
+        if (isset($user['role']) && $user['role'] === 'Manager') {
+            return true;
+        }
+
+        // Default deny
+        return false;
     }
 
     /**

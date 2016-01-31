@@ -16,6 +16,16 @@ class PrioritiesController extends AppController
      *
      * @return void
      */
+
+      public function isAuthorized($user)
+    {
+        // All registered users can view
+        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete'])) {
+          return true;
+        }
+        return parent::isAuthorized($user);
+    }
+
     public function index()
     {
         $this->set('priorities', $this->paginate($this->Priorities));

@@ -434,3 +434,866 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-01-30 19:06:58 Notice: Notice (8): Use of undefined constant Open - assumed 'Open' in [C:\wamp\www\tickets\src\Template\Tickets\add.ctp, line 24]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\add.ctp, line 24
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-30 19:06:58 Notice: Notice (8): Use of undefined constant Pending - assumed 'Pending' in [C:\wamp\www\tickets\src\Template\Tickets\add.ctp, line 24]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\add.ctp, line 24
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-30 19:06:58 Notice: Notice (8): Use of undefined constant Resolved - assumed 'Resolved' in [C:\wamp\www\tickets\src\Template\Tickets\add.ctp, line 24]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\add.ctp, line 24
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-30 19:06:58 Notice: Notice (8): Use of undefined constant Closed - assumed 'Closed' in [C:\wamp\www\tickets\src\Template\Tickets\add.ctp, line 24]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\add.ctp, line 24
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 12:40:30 Notice: Notice (8): Array to string conversion in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 130]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::users() - APP/Controller\TicketsController.php, line 130
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:02:40 Notice: Notice (8): Undefined variable: bookmarks in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 7]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 7
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:05:07 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:05:07 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:05:07 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:05:07 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:05:07 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 11]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 11
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:05:07 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 11]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 11
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:05:07 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:05:07 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:16:41 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:16:41 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:16:41 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:16:41 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:16:41 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 11]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 11
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:16:41 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 11]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 11
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:16:41 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:16:41 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:20:28 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:20:28 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:20:28 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:20:28 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 10]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:20:28 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 11]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 11
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:20:28 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 11]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 11
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:20:28 Notice: Notice (8): Undefined variable: bookmark in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 13:20:28 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\users.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\users.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 14:57:31 Notice: Notice (8): Undefined variable: tickets in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::countQuery() - APP/Controller\TicketsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+Cake\View\View::requestAction() - CORE\src\Routing\RequestActionTrait.php, line 152
+include - APP/Template\Pages\home.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PagesController::display() - APP/Controller\PagesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 14:57:36 Notice: Notice (8): Undefined variable: tickets in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::countQuery() - APP/Controller\TicketsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+Cake\View\View::requestAction() - CORE\src\Routing\RequestActionTrait.php, line 152
+include - APP/Template\Pages\home.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PagesController::display() - APP/Controller\PagesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:01:23 Notice: Notice (8): Undefined variable: tickets in [C:\wamp\www\tickets\src\Template\Pages\home.ctp, line 11]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Pages\home.ctp, line 11
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PagesController::display() - APP/Controller\PagesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:02:08 Notice: Notice (8): Undefined variable: tickets in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::countQuery() - APP/Controller\TicketsController.php, line 144
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+Cake\View\View::requestAction() - CORE\src\Routing\RequestActionTrait.php, line 152
+include - APP/Template\Pages\home.ctp, line 10
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+App\Controller\PagesController::display() - APP/Controller\PagesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:22:22 Notice: Notice (8): Undefined variable: users in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 109]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::findAssigned() - APP/Model\Table\TicketsTable.php, line 109
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1758
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 933
+App\Controller\TicketsController::users() - APP/Controller\TicketsController.php, line 135
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:22:22 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 109]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::findAssigned() - APP/Model\Table\TicketsTable.php, line 109
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1758
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 933
+App\Controller\TicketsController::users() - APP/Controller\TicketsController.php, line 135
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:22:23 Notice: Notice (8): Undefined variable: users in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 109]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::findAssigned() - APP/Model\Table\TicketsTable.php, line 109
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1758
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 933
+App\Controller\TicketsController::users() - APP/Controller\TicketsController.php, line 135
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:22:23 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 109]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::findAssigned() - APP/Model\Table\TicketsTable.php, line 109
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1758
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 933
+App\Controller\TicketsController::users() - APP/Controller\TicketsController.php, line 135
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:22:36 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 109]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::findAssigned() - APP/Model\Table\TicketsTable.php, line 109
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1758
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 933
+App\Controller\TicketsController::users() - APP/Controller\TicketsController.php, line 135
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:22:36 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 109]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::findAssigned() - APP/Model\Table\TicketsTable.php, line 109
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1758
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 933
+App\Controller\TicketsController::users() - APP/Controller\TicketsController.php, line 135
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:23:03 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 109]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::findAssigned() - APP/Model\Table\TicketsTable.php, line 109
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1758
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 933
+App\Controller\TicketsController::users() - APP/Controller\TicketsController.php, line 135
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:23:03 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 109]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::findAssigned() - APP/Model\Table\TicketsTable.php, line 109
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1758
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 933
+App\Controller\TicketsController::users() - APP/Controller\TicketsController.php, line 135
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:54:55 Notice: Notice (8): Undefined index: Users in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 113]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::App\Model\Table\{closure}() - APP/Model\Table\TicketsTable.php, line 113
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 872
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 823
+Cake\ORM\Query::getIterator() - CORE\src\Datasource\QueryTrait.php, line 131
+include - APP/Template\Tickets\users.ctp, line 7
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:55:28 Notice: Notice (8): Undefined index: Users in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 113]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::App\Model\Table\{closure}() - APP/Model\Table\TicketsTable.php, line 113
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 872
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 823
+Cake\ORM\Query::getIterator() - CORE\src\Datasource\QueryTrait.php, line 131
+include - APP/Template\Tickets\users.ctp, line 7
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:55:45 Notice: Notice (8): Undefined offset: 1 in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 113]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::App\Model\Table\{closure}() - APP/Model\Table\TicketsTable.php, line 113
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 872
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 823
+Cake\ORM\Query::getIterator() - CORE\src\Datasource\QueryTrait.php, line 131
+include - APP/Template\Tickets\users.ctp, line 7
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 15:55:55 Notice: Notice (8): Undefined offset: 0 in [C:\wamp\www\tickets\src\Model\Table\TicketsTable.php, line 113]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Model\Table\TicketsTable::App\Model\Table\{closure}() - APP/Model\Table\TicketsTable.php, line 113
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_execute() - CORE\src\ORM\Query.php, line 872
+Cake\ORM\Query::_all() - CORE\src\Datasource\QueryTrait.php, line 272
+Cake\ORM\Query::all() - CORE\src\ORM\Query.php, line 823
+Cake\ORM\Query::getIterator() - CORE\src\Datasource\QueryTrait.php, line 131
+include - APP/Template\Tickets\users.ctp, line 7
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 16:25:24 Notice: Notice (8): Undefined variable: link in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 18]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\index.ctp, line 18
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 16:25:36 Notice: Notice (8): Undefined variable: link in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 18]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\index.ctp, line 18
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 16:27:39 Notice: Notice (8): Undefined variable: link in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 18]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\index.ctp, line 18
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 16:27:44 Notice: Notice (8): Undefined variable: link in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 18]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\index.ctp, line 18
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 16:40:01 Notice: Notice (8): Undefined variable: link in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 18]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\index.ctp, line 18
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 16:40:01 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 19]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\index.ctp, line 19
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 16:54:17 Notice: Notice (8): Undefined variable: link in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 18]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\index.ctp, line 18
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 16:54:56 Notice: Notice (8): Undefined variable: link in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 18]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\index.ctp, line 18
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 16:55:22 Notice: Notice (8): Undefined variable: link in [C:\wamp\www\tickets\src\Template\Tickets\index.ctp, line 18]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\index.ctp, line 18
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-01-31 20:00:27 Notice: Strict (2048): Declaration of App\Controller\PagesController::beforeFilter() should be compatible with Cake\Controller\Controller::beforeFilter(Cake\Event\Event $event) in [C:\wamp\www\tickets\src\Controller\PagesController.php, line 29]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Controller\PagesController.php, line 29
+Composer\Autoload\includeFile - ROOT\vendor\composer\ClassLoader.php, line 412
+Composer\Autoload\ClassLoader::loadClass() - ROOT\vendor\composer\ClassLoader.php, line 301
+spl_autoload_call - [internal], line ??
+class_exists - [internal], line ??
+Cake\Core\App::_classExistsInBase() - CORE\src\Core\App.php, line 87
+Cake\Core\App::className() - CORE\src\Core\App.php, line 64
+Cake\Routing\Filter\ControllerFactoryFilter::_getController() - CORE\src\Routing\Filter\ControllerFactoryFilter.php, line 82
+Cake\Routing\Filter\ControllerFactoryFilter::beforeDispatch() - CORE\src\Routing\Filter\ControllerFactoryFilter.php, line 50
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 145
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 389
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 355
+Cake\Routing\Dispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 62
+[main] - ROOT\webroot\index.php, line 37
+
+
+

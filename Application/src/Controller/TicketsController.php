@@ -16,6 +16,18 @@ class TicketsController extends AppController
      *
      * @return void
      */
+        public function isAuthorized($user)
+    {
+        // All registered users can view
+        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete'])) {
+          return true;
+        return parent::isAuthorized($user);
+    }
+
+
+    return parent::isAuthorized($user);
+}     
+
     public function index()
     {
         $this->paginate = [
@@ -23,6 +35,7 @@ class TicketsController extends AppController
         ];
         $this->set('tickets', $this->paginate($this->Tickets));
         $this->set('_serialize', ['tickets']);
+
     }
 
     /**
@@ -112,5 +125,26 @@ class TicketsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
+    public function users(){
+        //getting all passed parameters
+        $users = $this->request->params['pass'];
 
- }
+        // Use the BookmarksTable to find tagged bookmarks.
+        $tickets = $this->Tickets->find('assigned', [
+        'users' => $users
+    ]);
+        $this->set([
+        'tickets' => $tickets,
+        'users' => $users
+    ]);
+
+    }
+
+    public function countQuery(){
+     $query = $tickets->find('all', [
+        'conditions' => ['Tickets.priority_id IS' => 'High']
+    ]);
+    $number = $query->count();
+    return $number;
+    }
+}
