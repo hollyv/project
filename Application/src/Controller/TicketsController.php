@@ -129,7 +129,7 @@ class TicketsController extends AppController
         //getting all passed parameters
         $users = $this->request->params['pass'];
 
-        // Use the BookmarksTable to find tagged bookmarks.
+        // Use the TicketsTable to find tickets by users.
         $tickets = $this->Tickets->find('assigned', [
         'users' => $users
     ]);
@@ -137,7 +137,14 @@ class TicketsController extends AppController
         'tickets' => $tickets,
         'users' => $users
     ]);
+    }
 
+    public function status() {
+
+        $tickets = $this->Tickets->find('all', array(
+            'conditions'=>array('Tickets.status'=>'Pending')
+            ));
+        $this->set('tickets', $tickets);
     }
 
     public function countQuery(){
@@ -147,4 +154,7 @@ class TicketsController extends AppController
     $number = $query->count();
     return $number;
     }
+
+
+
 }

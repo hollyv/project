@@ -104,19 +104,17 @@ class TicketsTable extends Table
 
     public function findAssigned(Query $query, array $options)
     {
-     
-
         return $this->find()
-             ->distinct(['Tickets.id'])
-             ->matching('Users', function ($q) use ($options) {
+            ->distinct(['Tickets.id'])
+            ->matching('Users', function ($q) use ($options) {
                 if (empty($options['users'])) {
                    return $q->where(['Users.username IS' => 'tester']);
                 }
             return $q->where(['Users.username IN' => $options['users']]);
         });
-        
-
     }
+
+ 
 
 
 
