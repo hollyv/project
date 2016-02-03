@@ -83,6 +83,69 @@ ul#adminMenu li{
     background-color: #B6B7BC;
 }
 
+#ticketbar_links{
+    padding: 5px;
+}
+
+#search{
+    width:80%;
+    float: left;
+    background-color: #029eea;
+    height: 60px;
+    margin-left: 10%;
+}
+
+#search_text{
+    float: left;
+}
+
+#searchbar{
+    width:30%;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#search_contents{
+    padding: 1%;
+    padding-left: 30%;
+
+}
+
+#chart_div{
+    float: right;
+}
+
+#chart_div2{
+    float: right;
+}
+
+#chart_div3{
+    float: right;
+}
+
+#myticketsChart{
+    height:500px;
+    width:500px;
+    float: right;
+    border: solid 5px #B6B7BC;
+}
+#priority_kpi{
+    color: #000000;
+    border: solid 5px #B6B7BC;
+    width: 25%;
+    padding: 10px;
+    float: left;
+}
+
+input[type="submit"]{
+    box-shadow: none;
+    background: #ffffff;
+    box-shadow: none;
+    text-transform: uppercase;
+    color: #000000;
+}
+
 
 #headerlogo{
     float: left;

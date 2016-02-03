@@ -118,4 +118,11 @@ class WatchedTicketsController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+
+    public function search($id = null) {
+        $watchedTickets = $this->WatchedTickets->find('all', array(
+            'conditions'=>array('WatchedTickets.analyst_id'=>$id)
+            ));
+        $this->set('watchedTickets', $watchedTickets);
+    }
 }

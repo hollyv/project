@@ -56,16 +56,6 @@ $cakeDescription = 'Helpdesk Portal';
        <div id='headerlogo'>
          <?php echo $this->Html->image('Logo.png', array('alt' => 'Numatic Logo', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'style' => 'margin-left: 20px;')); ?>
         </div>
-
-<!--        <div id="logo"><img style="height:20%; width:20%; margin-left: 20px;" src="webroot/img/Logo.png" alt="Numatic Logo" draggable="false" ></div>
- dynamic title 
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-
-    -->
         <section class="top-bar-section">
 
             <div id='newticket'>

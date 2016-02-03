@@ -37,7 +37,7 @@
             echo 'Ticket Type';
              echo $this->Form->select(
                 'ticket_type',
-                ['Incident' => 'Incident'],
+                ['Incident' => 'Incident', 'Request' => 'Request', 'Problem' => 'Problem Management'],
                 ['empty' => '(choose one)']
                 );
             echo $this->Form->input('resolution_date', ['empty' => true, 'default' => '']);

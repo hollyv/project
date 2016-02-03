@@ -141,10 +141,56 @@ class TicketsController extends AppController
 
     public function status() {
 
-        $tickets = $this->Tickets->find('all', array(
+          $tickets = $this->Tickets->find('all', array(
             'conditions'=>array('Tickets.status'=>'Pending')
+          ));
+
+          $this->set('tickets', $tickets);
+    }
+
+    public function search() {
+
+      $entered = $_POST["search"];
+
+        $tickets = $this->Tickets->find('all', array(
+            'conditions'=>array('Tickets.id'=>$entered)
             ));
+
         $this->set('tickets', $tickets);
+    }
+
+    public function homepage() {
+
+    $totalTickets = $this->Tickets->find('all');
+
+    $highTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.priority_id'=>'1')
+    ));
+
+    $medTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.priority_id'=>'2')
+    ));
+
+    $lowTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.priority_id'=>'3')
+    ));
+
+    $ongoingTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.priority_id'=>'4')
+    ));
+
+    $high = $highTickets->count();
+    $medium = $medTickets->count();
+    $low = $lowTickets->count();
+    $ongoing = $ongoingTickets->count();
+    $total = $totalTickets->count();
+
+    $this->set(['high'=> $high,
+                'medium' => $medium,
+                'low' => $low,
+                'ongoing' => $ongoing,
+                'total'=> $total]);
+
     }
 
     public function countQuery(){

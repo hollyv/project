@@ -12,6 +12,7 @@
         <li><?= $this->Html->link(__('New Update'), ['controller' => 'Updates', 'action' => 'add']) ?></li>
     </ul>
 </nav><div id="ticketbar">
+    <div id="ticketbar_links">
     <?= 
     $this->Html->link('My Tickets', [
     'controller' => 'Tickets',
@@ -19,17 +20,26 @@
     $loguser = $this->request->session()->read('Auth.User.username'),
     ]); ?>
 
-    
+    <?= 
+    $this->Html->link('All Unclosed Tickets', [
+    'controller' => 'Tickets',
+    'action' => 'status',
+    ]); ?>
+
+    <?= 
+    $this->Html->link('My Watched Tickets', [
+    'controller' => 'WatchedTickets',
+    'action' => 'search',
+    $loguser = $this->request->session()->read('Auth.User.id'),
+    ]); ?>
+    </div>
     </div>
    
    
 <div class="tickets index large-9 medium-8 columns content">
 
     <h3><?= __('Tickets') ?></h3>
-    
 
-    
-  
 
     <table cellpadding="0" cellspacing="0">
         <thead>
@@ -70,5 +80,17 @@
             <?= $this->Paginator->next(__('next') . ' >') ?>
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
+    </div> 
+
+    <div id="search">
+       <div id="search_contents">
+    <form action="/tickets/tickets/search" method="post">
+    <div id="search_text"> Search Tickets: </div>
+    <div id="searchbar"><input type="text" name="search" value="Enter ticket id or a keyword"></div>
+    <div id="search_button"><input type="submit" value="Go"></div>
     </div>
+    </form> 
 </div>
+
+</div>
+
