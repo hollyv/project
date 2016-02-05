@@ -8,8 +8,6 @@
     <article>
         <!-- Use the HtmlHelper to create a link -->
         <h4><?= $this->Html->link($ticket->title) ?></h4>
-
-
         <!-- Use the TextHelper to format text -->
   
     </article>

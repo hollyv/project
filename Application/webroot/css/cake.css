@@ -83,10 +83,6 @@ ul#adminMenu li{
     background-color: #B6B7BC;
 }
 
-#ticketbar_links{
-    padding: 5px;
-}
-
 #search{
     width:80%;
     float: left;
@@ -133,9 +129,16 @@ ul#adminMenu li{
 #priority_kpi{
     color: #000000;
     border: solid 5px #B6B7BC;
-    width: 25%;
+    width: 30%;
     padding: 10px;
     float: left;
+}
+
+#current{
+    background-color: #A3A4A9;
+    border-radius: 40px;
+
+
 }
 
 input[type="submit"]{
@@ -254,6 +257,28 @@ ul.pagination .disabled:hover a {
 
 button {
     background: #8D6E65;
+}
+    
+ul#ticket_list li{
+    display: inline;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+ul#ticket_list {
+    padding-top: 5px;
+}
+
+#search_results{
+    border-bottom: 2px #B6B7BC solid;
+}
+
+#search_results:hover{
+   background-color:#E1E2E3;
+}
+
+input[type="text"]::-moz-placeholder {
+    color: #000000;
 }
 
 .form button:hover, .form button:focus {

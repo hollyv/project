@@ -151,16 +151,22 @@ class TicketsController extends AppController
     public function search() {
 
       $entered = $_POST["search"];
+      $wildcardVar = "%" . $entered . "%";
 
-        $tickets = $this->Tickets->find('all', array(
-            'conditions'=>array('Tickets.id'=>$entered)
-            ));
+        $foundTickets = $this->Tickets->find()
+          ->where(['Tickets.id'=>$entered])
+          ->orWhere(['Tickets.title LIKE' => $wildcardVar])
+          ->orWhere(['Tickets.description LIKE' => $wildcardVar]);
 
-        $this->set('tickets', $tickets);
+
+        $this->set(['foundTickets' => $foundTickets,
+                    'entered'=>$entered]);
+        $this->set('tickets', $this->paginate($this->Tickets));
+        $this->set('_serialize', ['tickets']);
     }
 
     public function homepage() {
-
+    $loguser = $this->request->session()->read('Auth.User.id');
     $totalTickets = $this->Tickets->find('all');
 
     $highTickets = $this->Tickets->find('all', array(
@@ -179,17 +185,70 @@ class TicketsController extends AppController
        'conditions'=>array('Tickets.priority_id'=>'4')
     ));
 
+    $myTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.analyst_id'=>$loguser)
+    ));
+
+    $myHighTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.analyst_id'=>$loguser,
+                            'Tickets.priority_id'=>'1')
+    ));
+
+    $myMedTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.analyst_id'=>$loguser,
+                            'Tickets.priority_id'=>'2')
+    ));
+
+    $myLowTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.analyst_id'=>$loguser,
+                            'Tickets.priority_id'=>'3')
+    ));
+
+    $myOngoingTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.analyst_id'=>$loguser,
+                            'Tickets.priority_id'=>'4')
+    ));
+
+    $incidentTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.ticket_type'=>'Incident')
+    ));
+
+    $requestTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.ticket_type'=>'Request')
+    ));
+
+    $problemTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.ticket_type'=>'Problem')
+    ));
+
+
     $high = $highTickets->count();
     $medium = $medTickets->count();
     $low = $lowTickets->count();
     $ongoing = $ongoingTickets->count();
     $total = $totalTickets->count();
+    $mytotal = $myTickets->count();
+    $myHigh = $myHighTickets->count();
+    $myMed = $myMedTickets->count();
+    $myLow = $myLowTickets->count();
+    $myOngoing = $myOngoingTickets->count();
+    $incident = $incidentTickets->count();
+    $problem = $problemTickets->count();
+    $request = $requestTickets->count();
 
     $this->set(['high'=> $high,
                 'medium' => $medium,
                 'low' => $low,
                 'ongoing' => $ongoing,
-                'total'=> $total]);
+                'total'=> $total,
+                'mytotal'=>$mytotal,
+                'myHigh'=>$myHigh,
+                'myMed'=>$myMed,
+                'myLow'=>$myLow,
+                'myOngoing'=>$myOngoing,
+                'incident'=>$incident,
+                'problem'=>$problem,
+                'request'=>$request]);
 
     }
 

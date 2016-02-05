@@ -8,10 +8,11 @@ use Cake\Network\Exception\NotFoundException;
 
 $this->layout = false;
 
-
 if (!Configure::read('debug')):
     throw new NotFoundException();
 endif;
+
+
 
 $description = 'Helpdesk Portal';
 ?>

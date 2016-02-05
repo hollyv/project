@@ -13,29 +13,32 @@
     </ul>
 </nav><div id="ticketbar">
     <div id="ticketbar_links">
-    <?= 
-    $this->Html->link('My Tickets', [
-    'controller' => 'Tickets',
-    'action' => 'users',
-    $loguser = $this->request->session()->read('Auth.User.username'),
-    ]); ?>
+        <ul id="ticket_list">
+            <li>
+            <?= 
+            $this->Html->link('My Tickets', [
+            'controller' => 'Tickets',
+            'action' => 'users',
+            $loguser = $this->request->session()->read('Auth.User.username'),
+            ]); ?></li>
 
-    <?= 
-    $this->Html->link('All Unclosed Tickets', [
-    'controller' => 'Tickets',
-    'action' => 'status',
-    ]); ?>
+            <li>
+            <?= 
+            $this->Html->link('All Unclosed Tickets', [
+            'controller' => 'Tickets',
+            'action' => 'status',
+            ]); ?></li>
 
-    <?= 
-    $this->Html->link('My Watched Tickets', [
-    'controller' => 'WatchedTickets',
-    'action' => 'search',
-    $loguser = $this->request->session()->read('Auth.User.id'),
-    ]); ?>
+            <li>
+            <?= 
+            $this->Html->link('My Watched Tickets', [
+            'controller' => 'WatchedTickets',
+            'action' => 'search',
+            $loguser = $this->request->session()->read('Auth.User.id'),
+            ]); ?></lI>
+        </ul>
     </div>
     </div>
-   
-   
 <div class="tickets index large-9 medium-8 columns content">
 
     <h3><?= __('Tickets') ?></h3>
@@ -86,7 +89,7 @@
        <div id="search_contents">
     <form action="/tickets/tickets/search" method="post">
     <div id="search_text"> Search Tickets: </div>
-    <div id="searchbar"><input type="text" name="search" value="Enter ticket id or a keyword"></div>
+    <div id="searchbar"><input type="text" name="search" placeholder="Enter a ticket id / keyword" ></div>
     <div id="search_button"><input type="submit" value="Go"></div>
     </div>
     </form> 

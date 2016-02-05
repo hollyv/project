@@ -7,6 +7,9 @@
                 ['confirm' => __('Are you sure you want to delete # {0}?', $customer->id)]
             )
         ?></li>
+        <div id= "current"> <li><?= $this->Html->link(__('Home'), ['action' => 'homepage']) ?></li></div>
+        <li><?= $this->Html->link(__('Reports'), ['action' => 'homepage']) ?></li>
+        <li><?= $this->Html->link(__('Tickets'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Customers'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Departments'), ['controller' => 'Departments', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Department'), ['controller' => 'Departments', 'action' => 'add']) ?></li>

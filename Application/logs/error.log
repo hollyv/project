@@ -3417,3 +3417,808 @@ Stack Trace:
 #2 {main}
 
 
+2016-02-03 22:29:53 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 207]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-03 22:29:54 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 207)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-03 22:30:19 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 207]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-03 22:30:20 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 207)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-03 22:30:44 Error: Fatal Error (4): syntax error, unexpected '$high' (T_VARIABLE) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 211]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-03 22:30:44 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$high' (T_VARIABLE)
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 211)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-03 22:30:53 Error: Fatal Error (4): syntax error, unexpected '$medium' (T_VARIABLE) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 212]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-03 22:30:53 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$medium' (T_VARIABLE)
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 212)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-03 22:31:07 Error: Fatal Error (4): syntax error, unexpected '$medium' (T_VARIABLE) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 212]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-03 22:31:08 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$medium' (T_VARIABLE)
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 212)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 16:30:14 Error: [BadMethodCallException] Unknown finder method "count"
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(933): Cake\ORM\Table->callFinder('count', Object(Cake\ORM\Query), Array)
+#1 C:\wamp\www\tickets\src\Controller\TicketsController.php(168): Cake\ORM\Table->find('count', Array)
+#2 [internal function]: App\Controller\TicketsController->homepage()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 16:36:08 Error: [BadMethodCallException] Unknown finder method "count"
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(933): Cake\ORM\Table->callFinder('count', Object(Cake\ORM\Query), Array)
+#1 C:\wamp\www\tickets\src\Controller\TicketsController.php(164): Cake\ORM\Table->find('count')
+#2 [internal function]: App\Controller\TicketsController->homepage()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 16:38:42 Error: [BadMethodCallException] Unknown finder method "count"
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(933): Cake\ORM\Table->callFinder('count', Object(Cake\ORM\Query), Array)
+#1 C:\wamp\www\tickets\src\Controller\TicketsController.php(164): Cake\ORM\Table->find('count')
+#2 [internal function]: App\Controller\TicketsController->homepage()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:07:19 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:08:12 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:09:55 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:11:14 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::help() could not be found, or is not accessible.
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-04 17:12:41 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:15:08 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:15:12 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:18:04 Error: Fatal Error (1): Class 'App\Controller\Configure' not found in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:18:04 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Configure' not found
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp\\www\\tic...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:18:05 Error: Fatal Error (1): Class 'App\Controller\Configure' not found in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:18:05 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Configure' not found
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp\\www\\tic...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:18:29 Error: Fatal Error (1): Class 'App\Controller\Configure' not found in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:18:29 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Configure' not found
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp\\www\\tic...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:18:29 Error: Fatal Error (1): Class 'App\Controller\Configure' not found in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:18:30 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Configure' not found
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp\\www\\tic...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:18:41 Error: Fatal Error (1): Class 'App\Controller\Configure' not found in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:18:41 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Configure' not found
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp\\www\\tic...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:18:41 Error: Fatal Error (1): Class 'App\Controller\Configure' not found in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:18:42 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Configure' not found
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp\\www\\tic...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:18:50 Error: Fatal Error (1): Class 'App\Controller\Configure' not found in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:18:50 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Configure' not found
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp\\www\\tic...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:18:51 Error: Fatal Error (1): Class 'App\Controller\Configure' not found in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 5]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:18:51 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Configure' not found
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\wamp\\www\\tic...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:30:40 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::help() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'help',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-04 17:31:11 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::help() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'help',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-04 17:32:45 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::help() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'help',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-04 17:32:55 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::help() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'help',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-04 17:33:34 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::help() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'help',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-04 17:35:22 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:35:51 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:35:56 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:35:58 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::help() could not be found, or is not accessible.
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-04 17:36:26 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::help() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'help',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-04 17:37:00 Error: [Cake\Controller\Exception\MissingActionException] Action PagesController::help() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'help',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-04 17:39:00 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\wamp\www\tickets\src\Controller\PagesController.php, line 77]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:39:01 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 77)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:39:01 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\wamp\www\tickets\src\Controller\PagesController.php, line 77]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:39:01 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 77)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:46:37 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp\www\tickets\src\Template\Pages\help.ctp, line 1]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:46:37 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 1)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:47:03 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp\www\tickets\src\Template\Pages\help.ctp, line 1]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:47:03 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 1)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:47:08 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:47:43 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp\www\tickets\src\Template\Pages\help.ctp, line 1]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:47:43 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 1)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:49:34 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp\www\tickets\src\Template\Pages\help.ctp, line 1]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-04 17:49:34 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /tickets/pages/help
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 1)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-04 17:50:13 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 17:51:29 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-04 20:52:05 Error: [Cake\Network\Exception\NotFoundException] Not Found
+Request URL: /tickets/users/login
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(970): include()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(930): Cake\View\View->_evaluate('C:\\wamp\\www\\tic...', Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(578): Cake\View\View->_render('C:\\wamp\\www\\tic...')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-05 16:41:21 Warning: Warning (4096): Argument 1 passed to Cake\Utility\Text::toList() must be of the type array, string given, called in C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Helper\TextHelper.php on line 367 and defined in [C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Utility\Text.php, line 721]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\Utility\Text::toList() - CORE\src\Utility\Text.php, line 721
+Cake\View\Helper\TextHelper::toList() - CORE\src\View\Helper\TextHelper.php, line 367
+include - APP/Template\Tickets\search.ctp, line 44
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-02-05 16:41:21 Warning: Warning (2): array_pop() expects parameter 1 to be array, string given in [C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Utility\Text.php, line 730]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+array_pop - [internal], line ??
+Cake\Utility\Text::toList() - CORE\src\Utility\Text.php, line 730
+Cake\View\Helper\TextHelper::toList() - CORE\src\View\Helper\TextHelper.php, line 367
+include - APP/Template\Tickets\search.ctp, line 44
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-02-05 16:41:59 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [C:\wamp\www\tickets\src\Template\Tickets\search.ctp, line 44]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-05 16:42:00 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /tickets/tickets/search
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 44)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-05 20:03:00 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/tickets/view
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\TicketsController.php(52): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\TicketsController->view()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-02-05 20:24:26 Error: Fatal Error (4): syntax error, unexpected '%' in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 157]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-05 20:24:26 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '%'
+Request URL: /tickets/tickets/search
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 157)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-05 20:24:39 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 160]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-05 20:24:40 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /tickets/tickets/search
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 160)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-05 20:26:09 Error: Fatal Error (4): syntax error, unexpected '$entered' (T_VARIABLE), expecting ']' in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 157]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-05 20:26:09 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$entered' (T_VARIABLE), expecting ']'
+Request URL: /tickets/tickets/search
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 157)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-05 20:36:20 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR) in [C:\wamp\www\tickets\src\Template\Tickets\search.ctp, line 52]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-05 20:36:20 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+Request URL: /tickets/tickets/search
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 52)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-05 20:44:06 Error: [Cake\Controller\Exception\MissingActionException] Action CustomersController::homepage() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'CustomersController',
+  'action' => 'homepage',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/customers/homepage
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\CustomersController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-05 20:44:39 Error: [Cake\Controller\Exception\MissingActionException] Action CustomersController::homepage() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'CustomersController',
+  'action' => 'homepage',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/customers/homepage
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\CustomersController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-05 20:45:48 Error: [Cake\Controller\Exception\MissingActionException] Action CustomersController::homepage() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'CustomersController',
+  'action' => 'homepage',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/customers/homepage
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\CustomersController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+

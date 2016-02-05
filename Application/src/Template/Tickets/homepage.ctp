@@ -1,16 +1,20 @@
  <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Tickets'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Customer'), ['controller' => 'Customers', 'action' => 'add']) ?></li>
+        <div id= "current"> <li><?= $this->Html->link(__('Home'), ['action' => 'homepage']) ?></li></div>
+        <li><?= $this->Html->link(__('Reports'), ['action' => 'homepage']) ?></li>
+        <li><?= $this->Html->link(__('Tickets'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Analysts'), ['controller' => 'Users', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Departments'), ['controller' => 'Departments', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?></li>
      </ul>
 </nav>
 <section>
 <fieldset>
 <h1>Key Performance Indicators </h1>
  	<div id="priority_kpi">
-		<h4>Tickets by Priority</h4>
+		<h4>My Tickets by Priority</h4>
 	<table>
 		<tr>
 			<th>Priority</th>
@@ -18,7 +22,7 @@
 		</tr>
 		<tr>
 			<td>High:</td>
-			<td><?= h($high) ?></td>
+			<td><?= h($myHigh) ?></td>
 		</tr>
 		<tr>
 			<td>Medium:</td>
@@ -34,7 +38,7 @@
 		</tr>
 		<tr>
 			<td>Total:</td>
-			<td><?= h($total) ?></td>
+			<td><?= h($mytotal) ?></td>
 		</tr>
 	</table>
 	</div>	
@@ -74,9 +78,9 @@
             data2.addColumn('string', 'Topping');
             data2.addColumn('number', 'Slices');
             data2.addRows([
-              ['Incident', 3],
-              ['Request', 1],
-              ['Problem', 15]
+              ['Incident', <?= h($incident) ?> ],
+              ['Request', <?= h($request) ?> ],
+              ['Problem', <?= h($problem) ?> ]
             ]);
 
             var data3 = new google.visualization.DataTable();
