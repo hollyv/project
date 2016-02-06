@@ -20,6 +20,7 @@
 </nav>
 <div class="tickets view large-9 medium-8 columns content">
     <h3><?= h($ticket->title) ?></h3>
+    <?= $this->Html->link(__('Assign Ticket'), ['controller' => 'Tickets', 'action' => 'assign', $ticket->id]) ?>
     <table class="vertical-table">
         <tr>
             <th><?= __('Customer') ?></th>
@@ -71,7 +72,8 @@
         </tr>
     </table>
     <div class="related">
-        <h4><?= __('Related Updates') ?></h4>
+        <h4><?= __('Ticket Updates') ?></h4>
+        <div id="update"><?= $this->Html->link(__('+ New Update'), ['controller' => 'Updates', 'action' => 'add']) ?></div>
         <?php if (!empty($ticket->updates)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>

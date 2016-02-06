@@ -19,7 +19,7 @@ class WatchedTicketsController extends AppController
       public function isAuthorized($user)
     {
         // All registered users can view
-        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete'])) {
+        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete','search'])) {
           return true;
         }
         return parent::isAuthorized($user);

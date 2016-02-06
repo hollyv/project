@@ -19,7 +19,7 @@ class TicketsController extends AppController
         public function isAuthorized($user)
     {
         // All registered users can view
-        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete'])) {
+        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete','homepage','assign','search','status','users'])) {
           return true;
         return parent::isAuthorized($user);
     }
@@ -139,10 +139,30 @@ class TicketsController extends AppController
     ]);
     }
 
+    public function assign($id = null){
+      $ticket = $this->Tickets->get($id, [
+            'contain' => []
+        ]);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
+            if ($this->Tickets->save($ticket)) {
+                $this->Flash->success(__('The ticket has been saved.'));
+                return $this->redirect(['action' => 'index']);
+            } else {
+                $this->Flash->error(__('The ticket could not be saved. Please, try again.'));
+            }
+        }
+        $customers = $this->Tickets->Customers->find('list', ['limit' => 200]);
+        $priorities = $this->Tickets->Priorities->find('list', ['limit' => 200]);
+        $users = $this->Tickets->Users->find('list', ['limit' => 200]);
+        $this->set(compact('ticket', 'customers', 'priorities', 'users'));
+        $this->set('_serialize', ['ticket']);
+    }
+
     public function status() {
 
           $tickets = $this->Tickets->find('all', array(
-            'conditions'=>array('Tickets.status'=>'Pending')
+            'conditions'=>array('Tickets.status !=' =>'Closed')
           ));
 
           $this->set('tickets', $tickets);

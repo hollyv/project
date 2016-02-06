@@ -26,15 +26,15 @@
 		</tr>
 		<tr>
 			<td>Medium:</td>
-			<td><?= h($medium) ?></td>
+			<td><?= h($myMed) ?></td>
 		</tr>
 		<tr>
 			<td>Low:</td>
-			<td><?= h($low) ?></td>
+			<td><?= h($myLow) ?></td>
 		</tr>
 		<tr>
 			<td>On Going:</td>
-			<td><?= h($ongoing) ?></td>
+			<td><?= h($myOngoing) ?></td>
 		</tr>
 		<tr>
 			<td>Total:</td>
