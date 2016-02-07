@@ -17,7 +17,7 @@
     <fieldset>
         <legend><?= __('Add Ticket') ?></legend>
         <?php
-            echo $this->Form->input('customer_id', ['options' => $customers, 'empty' => true]);
+            echo $this->Form->input('customer', ['options' => $customers, 'empty' => true]);
             echo 'Status';
             echo $this->Form->select(
                 'status',

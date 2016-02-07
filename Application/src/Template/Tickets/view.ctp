@@ -24,7 +24,7 @@
     <table class="vertical-table">
         <tr>
             <th><?= __('Customer') ?></th>
-            <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->id, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
+            <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->username, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
         </tr>
         <tr>
             <th><?= __('Status') ?></th>
@@ -48,7 +48,7 @@
         </tr>
         <tr>
             <th><?= __('User') ?></th>
-            <td><?= $ticket->has('user') ? $this->Html->link($ticket->user->id, ['controller' => 'Users', 'action' => 'view', $ticket->user->id]) : '' ?></td>
+            <td><?= $ticket->has('user') ? $this->Html->link($ticket->user->username, ['controller' => 'Users', 'action' => 'view', $ticket->user->id]) : '' ?></td>
         </tr>
         <tr>
             <th><?= __('Ticket Type') ?></th>

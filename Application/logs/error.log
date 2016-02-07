@@ -4334,3 +4334,198 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-02-07 14:58:28 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`helpdesk`.`tickets`, CONSTRAINT `anaylst` FOREIGN KEY (`analyst_id`) REFERENCES `users` (`id`))
+Request URL: /tickets/users/delete/6
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1713): Cake\Database\Query->execute()
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1645): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\User), Object(ArrayObject))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1650): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\wamp\www\tickets\src\Controller\UsersController.php(112): Cake\ORM\Table->delete(Object(App\Model\Entity\User))
+#10 [internal function]: App\Controller\UsersController->delete('6')
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#14 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-02-07 18:17:29 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php, line 232]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\View\Widget\SelectBoxWidget::_renderOptions() - CORE\src\View\Widget\SelectBoxWidget.php, line 232
+Cake\View\Widget\SelectBoxWidget::_renderContent() - CORE\src\View\Widget\SelectBoxWidget.php, line 164
+Cake\View\Widget\SelectBoxWidget::render() - CORE\src\View\Widget\SelectBoxWidget.php, line 116
+Cake\View\Helper\FormHelper::widget() - CORE\src\View\Helper\FormHelper.php, line 2533
+Cake\View\Helper\FormHelper::select() - CORE\src\View\Helper\FormHelper.php, line 1870
+Cake\View\Helper\FormHelper::_getInput() - CORE\src\View\Helper\FormHelper.php, line 1100
+Cake\View\Helper\FormHelper::input() - CORE\src\View\Helper\FormHelper.php, line 1021
+include - APP/Template\Tickets\add.ctp, line 36
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-02-07 18:20:41 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php, line 232]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\View\Widget\SelectBoxWidget::_renderOptions() - CORE\src\View\Widget\SelectBoxWidget.php, line 232
+Cake\View\Widget\SelectBoxWidget::_renderContent() - CORE\src\View\Widget\SelectBoxWidget.php, line 164
+Cake\View\Widget\SelectBoxWidget::render() - CORE\src\View\Widget\SelectBoxWidget.php, line 116
+Cake\View\Helper\FormHelper::widget() - CORE\src\View\Helper\FormHelper.php, line 2533
+Cake\View\Helper\FormHelper::select() - CORE\src\View\Helper\FormHelper.php, line 1870
+Cake\View\Helper\FormHelper::_getInput() - CORE\src\View\Helper\FormHelper.php, line 1100
+Cake\View\Helper\FormHelper::input() - CORE\src\View\Helper\FormHelper.php, line 1021
+include - APP/Template\Tickets\add.ctp, line 36
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-02-07 18:22:28 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "users"
+Request URL: /tickets/users/view/testing1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1187): Cake\ORM\Query->firstOrFail()
+#1 C:\wamp\www\tickets\src\Controller\UsersController.php(50): Cake\ORM\Table->get('testing1', Array)
+#2 [internal function]: App\Controller\UsersController->view('testing1')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-07 18:22:51 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "users"
+Request URL: /tickets/users/view/testing1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1187): Cake\ORM\Query->firstOrFail()
+#1 C:\wamp\www\tickets\src\Controller\UsersController.php(50): Cake\ORM\Table->get('testing1', Array)
+#2 [internal function]: App\Controller\UsersController->view('testing1')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-07 18:23:53 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/tickets/view/2
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\TicketsController.php(52): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\TicketsController->view('2')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-02-07 18:24:07 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/tickets/view/4
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\TicketsController.php(52): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\TicketsController->view('4')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-02-07 18:24:56 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "users" with primary key [NULL]
+Request URL: /tickets/users/view/testing1
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UsersController.php(50): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UsersController->view('testing1')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-02-07 18:25:11 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "users"
+Request URL: /tickets/users/view/testing1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1187): Cake\ORM\Query->firstOrFail()
+#1 C:\wamp\www\tickets\src\Controller\UsersController.php(50): Cake\ORM\Table->get('testing1', Array)
+#2 [internal function]: App\Controller\UsersController->view('testing1')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-07 18:25:42 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "users"
+Request URL: /tickets/users/view/testing1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1187): Cake\ORM\Query->firstOrFail()
+#1 C:\wamp\www\tickets\src\Controller\UsersController.php(50): Cake\ORM\Table->get('testing1', Array)
+#2 [internal function]: App\Controller\UsersController->view('testing1')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-07 18:26:22 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "users"
+Request URL: /tickets/users/view/testing1
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1187): Cake\ORM\Query->firstOrFail()
+#1 C:\wamp\www\tickets\src\Controller\UsersController.php(50): Cake\ORM\Table->get('testing1', Array)
+#2 [internal function]: App\Controller\UsersController->view('testing1')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-07 19:15:24 Warning: Warning (4096): Argument 2 passed to Cake\View\Helper\FormHelper::input() must be of the type array, string given, called in C:\wamp\www\tickets\src\Template\Users\add.ctp on line 17 and defined in [C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 976]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+Cake\View\Helper\FormHelper::input() - CORE\src\View\Helper\FormHelper.php, line 976
+include - APP/Template\Users\add.ctp, line 17
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-02-07 19:15:24 Error: Fatal Error (1): Unsupported operand types in [C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 986]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-07 19:15:25 Error: [Cake\Error\FatalErrorException] Unsupported operand types
+Request URL: /tickets/users/add
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Unsupported ope...', 'C:\\wamp\\www\\tic...', 986)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

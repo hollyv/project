@@ -277,6 +277,10 @@ ul#ticket_list {
    background-color:#E1E2E3;
 }
 
+td{
+    overflow: hidden;
+}
+
 input[type="text"]::-moz-placeholder {
     color: #000000;
 }

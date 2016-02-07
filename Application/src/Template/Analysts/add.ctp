@@ -20,7 +20,7 @@
             echo $this->Form->input('firstname');
             echo $this->Form->input('lastname');
             echo $this->Form->input('role');
-            echo $this->Form->input('supportteam');
+            echo $this->Form->input('Support Team','supportteam');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
