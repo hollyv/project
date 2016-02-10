@@ -52,14 +52,16 @@ Router::scope(
 
 Router::scope('/', function ($routes) {
     // Connect the default home and /pages/* routes.
-    $routes->connect('/', [
+ 
+     $routes->connect('/', [
         'controller' => 'Tickets',
         'action' => 'homepage'
     ]);
-    /**$routes->connect('/pages/*', [
+   /** $routes->connect('/pages/*', [
         'controller' => 'Pages',
         'action' => 'display'
     ]);**/
+  
 
     // Connect the conventions based default routes.
     $routes->fallbacks('InflectedRoute');

@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
 
 /**
  * Tickets Controller
@@ -149,6 +150,12 @@ class TicketsController extends AppController
             $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
             if ($this->Tickets->save($ticket)) {
                 $this->Flash->success(__('The ticket has been saved.'));
+                //email confirmation
+                 $email = new Email('default');
+                 $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk Application'])
+                 ->to('holly.voysey@students.plymouth.ac.uk')
+                 ->subject('test')
+                 ->send('request data' . $ticket["title"]);
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('The ticket could not be saved. Please, try again.'));
@@ -273,6 +280,20 @@ class TicketsController extends AppController
                 'request'=>$request]);
 
     }
+
+    public function kpi(){
+    
+
+        $email = new Email('default');
+        $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk Application'])
+        ->to('holly.voysey@students.plymouth.ac.uk')
+        ->subject('test')
+        ->send('My message');
+    
+
+    }
+
+     
 
     public function countQuery(){
      $query = $tickets->find('all', [

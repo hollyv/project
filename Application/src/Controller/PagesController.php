@@ -47,7 +47,7 @@ class PagesController extends AppController
         return parent::isAuthorized($user);
     }
 
-    public function display()
+    /**public function display()
     {
         $path = func_get_args();
 
@@ -73,7 +73,7 @@ class PagesController extends AppController
             }
             throw new NotFoundException();
         }
- }
+ }**/
         public function help()
     {
 

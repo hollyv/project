@@ -39,4 +39,7 @@
             <td><?= h($update->created) ?></tr>
         </tr>
     </table>
+
+    
+
 </div>

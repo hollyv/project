@@ -59,7 +59,7 @@
             <?php foreach ($tickets as $ticket): ?>
             <tr>
                 <td><?= $this->Number->format($ticket->id) ?></td>
-                <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->id, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
+                <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->username, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
                 <td><?= h($ticket->status) ?></td>
                 <td><?= h($ticket->title) ?></td>
                 <td><?= $ticket->has('priority') ? $this->Html->link($ticket->priority->name, ['controller' => 'Priorities', 'action' => 'view', $ticket->priority->id]) : '' ?></td>

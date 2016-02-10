@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
+
 /**
  * Customers Controller
  *
@@ -33,6 +34,9 @@ class CustomersController extends AppController
         $this->set('customers', $this->paginate($this->Customers));
         $this->set('_serialize', ['customers']);
     }
+
+
+   
 
     /**
      * View method

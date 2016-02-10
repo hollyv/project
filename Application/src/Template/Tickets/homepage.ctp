@@ -82,7 +82,7 @@
               ['Request', <?= h($request) ?> ],
               ['Problem', <?= h($problem) ?> ]
             ]);
-
+            /**
             var data3 = new google.visualization.DataTable();
             data3.addColumn('string', 'Year');
             data3.addColumn('number', 'Sales');
@@ -92,7 +92,7 @@
               ['2005', 1170, 460],
               ['2006',  860, 580],
               ['2007', 1030, 540]
-            ]);
+            ]);**/
 
             // Set chart options
             var options = {'title':'Tickets by Priority',
@@ -102,18 +102,18 @@
             var options2 = {'title':'Ticket Type',
                            'width':400,
                            'height':300};
-            // Set chart options
+            /** Set chart options
             var options3 = {'title':'Line chart',
                            'width':400,
                            'height':300};
-
+            **/
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
             chart.draw(data, options);
             var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));
             chart2.draw(data2, options2);
-            var chart3 = new google.visualization.LineChart(document.getElementById('chart_div3'));
-            chart3.draw(data3, options3);
+            //var chart3 = new google.visualization.LineChart(document.getElementById('chart_div3'));
+            //chart3.draw(data3, options3);
 
           }
         </script>
@@ -123,7 +123,7 @@
         <!--Divs that will hold the charts-->
         <div id="chart_div"></div>
         <div id="chart_div2"></div>
-        <div id="chart_div3"></div>
+        <!--<div id="chart_div3"></div>-->
       </body>
     </html>
 </fieldset> 
