@@ -5218,3 +5218,201 @@ Stack Trace:
 #2 {main}
 
 
+2016-02-15 15:01:24 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "updates" with primary key [NULL]
+Request URL: /tickets/updates/view
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UpdatesController.php(48): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UpdatesController->view()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-02-15 15:01:30 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "updates"
+Request URL: /tickets/updates/view/9
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1187): Cake\ORM\Query->firstOrFail()
+#1 C:\wamp\www\tickets\src\Controller\UpdatesController.php(48): Cake\ORM\Table->get('9', Array)
+#2 [internal function]: App\Controller\UpdatesController->view('9')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-15 15:12:46 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 65]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-15 15:12:46 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /tickets/updates/add/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 65)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-15 15:12:46 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 65]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-15 15:12:47 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /tickets/updates/add/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 65)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-15 16:01:59 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /tickets/tickets/view/2
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\TicketsController.php(61): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\TicketsController->view('2')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-02-15 16:02:46 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /tickets/tickets/view/2
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\TicketsController.php(61): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\TicketsController->view('2')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-02-15 16:04:21 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /tickets/tickets/view/2
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\TicketsController.php(61): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\TicketsController->view('2')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-02-15 16:10:03 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /tickets/tickets/view/2
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\TicketsController.php(62): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\TicketsController->view('2')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-02-15 16:10:06 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /tickets/tickets/view/2?page=3
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\TicketsController.php(62): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\TicketsController->view('2')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-02-15 16:33:50 Error: [InvalidArgumentException] Cannot convert value to integer
+Request URL: /tickets/tickets/add
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\IntegerType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(70): Cake\Database\Statement\StatementDecorator->cast(Array, 'integer')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(105): Cake\Database\Statement\PDOStatement->bindValue('c0', Array, 'integer')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', Array, 'integer')
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(290): Cake\Database\Log\LoggingStatement->bindValue('c0', Array, 'integer')
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\ValueBinder.php(125): Cake\Database\Statement\StatementDecorator->bind(Array, Array)
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(269): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(395): Cake\ORM\Query->all()
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(406): Cake\ORM\Query->first()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1187): Cake\ORM\Query->firstOrFail()
+#14 C:\wamp\www\tickets\src\Controller\TicketsController.php(77): Cake\ORM\Table->get(Array)
+#15 [internal function]: App\Controller\TicketsController->add()
+#16 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#17 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#19 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-02-15 16:34:13 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "tickets"
+Request URL: /tickets/tickets/add
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1187): Cake\ORM\Query->firstOrFail()
+#1 C:\wamp\www\tickets\src\Controller\TicketsController.php(77): Cake\ORM\Table->get(Array)
+#2 [internal function]: App\Controller\TicketsController->add()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#6 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-15 16:34:38 Error: [InvalidArgumentException] Cannot convert value to integer
+Request URL: /tickets/tickets/add
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\TypeConverterTrait.php(37): Cake\Database\Type\IntegerType->toDatabase(Array, Object(Cake\Database\Driver\Mysql))
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\PDOStatement.php(70): Cake\Database\Statement\StatementDecorator->cast(Array, 'integer')
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(105): Cake\Database\Statement\PDOStatement->bindValue('c0', Array, 'integer')
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(97): Cake\Database\Statement\StatementDecorator->bindValue('c0', Array, 'integer')
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(290): Cake\Database\Log\LoggingStatement->bindValue('c0', Array, 'integer')
+#5 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\ValueBinder.php(125): Cake\Database\Statement\StatementDecorator->bind(Array, Array)
+#6 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Connection.php(269): Cake\Database\ValueBinder->attachTo(Object(Cake\Database\Log\LoggingStatement))
+#7 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Database\Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#8 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(872): Cake\Database\Query->execute()
+#9 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#10 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Query.php(823): Cake\ORM\Query->_all()
+#11 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(395): Cake\ORM\Query->all()
+#12 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(406): Cake\ORM\Query->first()
+#13 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\ORM\Table.php(1187): Cake\ORM\Query->firstOrFail()
+#14 C:\wamp\www\tickets\src\Controller\TicketsController.php(77): Cake\ORM\Table->get(Array)
+#15 [internal function]: App\Controller\TicketsController->add()
+#16 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#17 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#19 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-02-15 16:44:54 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\wamp\www\tickets\src\Template\Tickets\add.ctp, line 18]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-15 16:44:54 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /tickets/tickets/add
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\wamp\\www\\tic...', 18)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

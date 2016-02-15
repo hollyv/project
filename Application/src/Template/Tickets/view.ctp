@@ -10,9 +10,13 @@
         <li><?= $this->Html->link(__('Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?></li>
     </ul>
 </nav>
+
 <div class="tickets view large-9 medium-8 columns content">
-    <h3><?= h($ticket->title) ?></h3>
     <?= $this->Html->link(__('Assign Ticket'), ['controller' => 'Tickets', 'action' => 'assign', $ticket->id]) ?>
+    <h3><?= h($ticket->title) ?></h3>
+    
+    <div id="ticket_view">
+        <h5>  Ticket Details</h5>
     <table class="vertical-table">
         <tr>
             <th><?= __('Customer') ?></th>
@@ -63,37 +67,36 @@
             <td><?= h($ticket->resolution_date) ?></tr>
         </tr>
     </table>
+</div>
     <div class="related">
         <h4><?= __('Ticket Updates') ?></h4>
-        <div id="update"><?= $this->Html->link(__('+ New Update'), ['controller' => 'Updates', 'action' => 'add']) ?></div>
+        <div id="update"><?= $this->Html->link(__('+ New Update'), ['controller' => 'Updates', 'action' => 'add', $ticket->id]) ?></div>
         <?php if (!empty($ticket->updates)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th><?= __('Update Text') ?></th>
-                <th><?= __('Created') ?></th>
-                <th><?= __('Analyst Id') ?></th>
-                <th><?= __('Time Booking') ?></th>
-                <th class="actions"><?= __('Actions') ?></th>
-            </tr>
             <?php foreach ($ticket->updates as $updates): ?>
             <?php if (!empty($updates->update_text)): ?>
-            <tr>
-                <td><?= h($updates->update_text) ?></td>
-                <td><?= h($updates->created) ?></td>
-                <td><?= h($updates->analyst_id) ?></td>
-                <td><?= h($updates->time_booking) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Updates', 'action' => 'view', $updates->id]) ?>
-
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Updates', 'action' => 'edit', $updates->id]) ?>
-
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Updates', 'action' => 'delete', $updates->id], ['confirm' => __('Are you sure you want to delete # {0}?', $updates->id)]) ?>
-
-                </td>
-            </tr>
+            <div id="update_list">
+            
+            
+            <h5><?= h($updates->analyst_id) ?><?= h($updates->created) ?></h5>
+            <?= h($updates->update_text) ?>
+            
+            </p>
+            </div>
             <?php endif; ?>
             <?php endforeach; ?>
-        </table>
+            <div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('next') . ' >') ?>
+        </ul>
+        <p><?= $this->Paginator->counter() ?></p>
+    </div> 
+       
     <?php endif; ?>
     </div>
 </div>
+
+
+
+

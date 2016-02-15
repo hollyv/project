@@ -55,14 +55,14 @@ class UpdatesController extends AppController
      *
      * @return void Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function add($id = null)
     {
         $update = $this->Updates->newEntity();
         if ($this->request->is('post')) {
             $update = $this->Updates->patchEntity($update, $this->request->data);
             if ($this->Updates->save($update)) {
                 $this->Flash->success(__('The update has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Tickets', 'action' => 'view', $id]);
             } else {
                 $this->Flash->error(__('The update could not be saved. Please, try again.'));
             }
@@ -71,6 +71,8 @@ class UpdatesController extends AppController
         $users = $this->Updates->Users->find('list', ['limit' => 200]);
         $this->set(compact('update', 'tickets', 'users'));
         $this->set('_serialize', ['update']);
+        $this->set('id', $id);
+        
     }
 
     /**

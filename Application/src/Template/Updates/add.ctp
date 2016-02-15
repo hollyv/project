@@ -13,7 +13,8 @@
     <fieldset>
         <legend><?= __('Add Update') ?></legend>
         <?php
-            echo $this->Form->input('ticket_id', ['options' => $tickets]);
+            //echo $this->Form->input('ticket_id', ['options' => $tickets]);
+            echo $this->Form->hidden('ticket_id', ['value' => $id]);
             echo $this->Form->input('update_text');
             $loguser = $this->request->session()->read('Auth.User.id');
             echo $this->Form->hidden('analyst_id', ['value' => $loguser]);

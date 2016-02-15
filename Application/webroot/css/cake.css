@@ -269,6 +269,13 @@ ul#ticket_list {
     padding-top: 5px;
 }
 
+#update_list {
+    background-color: #F0F0F1;
+    width:70%;
+    color: #000000;
+   
+}
+
 #search_results{
     border-bottom: 2px #B6B7BC solid;
 }
@@ -551,6 +558,13 @@ pre {
 .index table {
     margin-top: 0rem;
     border: 0;
+}
+
+#ticket_view{
+    width:250px;
+    float:right;
+    border: 2px #B6B7BC solid;
+
 }
 
 table {

@@ -27,7 +27,7 @@ class CustomersTable extends Table
         parent::initialize($config);
 
         $this->table('customers');
-        $this->displayField('id');
+        $this->displayField('username');
         $this->primaryKey('id');
 
         $this->belongsTo('Departments', [

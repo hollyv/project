@@ -53,8 +53,15 @@ class TicketsController extends AppController
         $ticket = $this->Tickets->get($id, [
             'contain' => ['Customers', 'Priorities', 'Users', 'Updates']
         ]);
+
+        $this->paginate = [
+            'contain' => ['Updates'],
+         ];
+
+        $this->set('updates', $this->paginate($this->Tickets));
         $this->set('ticket', $ticket);
         $this->set('_serialize', ['ticket']);
+
     }
 
     /**
@@ -65,6 +72,7 @@ class TicketsController extends AppController
     public function add()
     {
         $ticket = $this->Tickets->newEntity();
+
         if ($this->request->is('post')) {
             $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
             if ($this->Tickets->save($ticket)) {
