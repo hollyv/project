@@ -1,21 +1,13 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Home'), ['controller' => 'Tickets', 'action' => 'homepage']) ?></li>
-        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets', 'action' => 'homepage']) ?></li>
-        <li><?= $this->Html->link(__('Tickets'), ['controller' => 'Tickets', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Edit Ticket'), ['action' => 'edit', $ticket->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Ticket'), ['action' => 'delete', $ticket->id], ['confirm' => __('Are you sure you want to delete # {0}?', $ticket->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Tickets'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Ticket'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Customers'), ['controller' => 'Customers', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Customer'), ['controller' => 'Customers', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Priority'), ['controller' => 'Priorities', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Updates'), ['controller' => 'Updates', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Update'), ['controller' => 'Updates', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Home'), ['controller' => 'Tickets','action' => 'homepage']) ?></li>
+        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'homepage']) ?></li>
+        <div id= "current"><li><?= $this->Html->link(__('Tickets'), ['controller' => 'Tickets','action' => 'index']) ?></li></div>
+        <li><?= $this->Html->link(__('Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Analysts'), ['controller' => 'Users', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Departments'), ['controller' => 'Departments', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="tickets view large-9 medium-8 columns content">
@@ -77,8 +69,6 @@
         <?php if (!empty($ticket->updates)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th><?= __('Id') ?></th>
-                <th><?= __('Ticket Id') ?></th>
                 <th><?= __('Update Text') ?></th>
                 <th><?= __('Created') ?></th>
                 <th><?= __('Analyst Id') ?></th>
@@ -86,9 +76,8 @@
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($ticket->updates as $updates): ?>
+            <?php if (!empty($updates->update_text)): ?>
             <tr>
-                <td><?= h($updates->id) ?></td>
-                <td><?= h($updates->ticket_id) ?></td>
                 <td><?= h($updates->update_text) ?></td>
                 <td><?= h($updates->created) ?></td>
                 <td><?= h($updates->analyst_id) ?></td>
@@ -102,6 +91,7 @@
 
                 </td>
             </tr>
+            <?php endif; ?>
             <?php endforeach; ?>
         </table>
     <?php endif; ?>

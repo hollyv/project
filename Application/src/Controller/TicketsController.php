@@ -146,6 +146,8 @@ class TicketsController extends AppController
       $ticket = $this->Tickets->get($id, [
             'contain' => []
         ]);
+      $user = $ticket["analyst_id"];
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
             if ($this->Tickets->save($ticket)) {
@@ -155,7 +157,7 @@ class TicketsController extends AppController
                  $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk Application'])
                  ->to('holly.voysey@students.plymouth.ac.uk')
                  ->subject('test')
-                 ->send('request data' . $ticket["title"]);
+                 ->send('request data' . $user->email);
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('The ticket could not be saved. Please, try again.'));
@@ -277,7 +279,8 @@ class TicketsController extends AppController
                 'myOngoing'=>$myOngoing,
                 'incident'=>$incident,
                 'problem'=>$problem,
-                'request'=>$request]);
+                'request'=>$request
+                ]);
 
     }
 
