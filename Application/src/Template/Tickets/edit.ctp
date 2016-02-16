@@ -11,14 +11,15 @@
     </ul>
 </nav>
 <div class="tickets form large-9 medium-8 columns content">
-    <?= $this->Form->create($ticket) ?>
-    <fieldset>
-        <li><?= $this->Form->postLink(
+    <li><?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $ticket->id],
                 ['confirm' => __('Are you sure you want to delete # {0}?', $ticket->id)]
             )
         ?></li>
+        <?= $this->Form->create($ticket) ?>
+    <fieldset>
+        
         <legend><?= __('Edit Ticket') ?></legend>
         <?php
             echo $this->Form->input('customer_id', ['options' => $customers, 'empty' => true]);

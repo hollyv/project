@@ -72,16 +72,35 @@ class TicketsController extends AppController
     public function add()
     {
         $ticket = $this->Tickets->newEntity();
-
         if ($this->request->is('post')) {
             $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
             if ($this->Tickets->save($ticket)) {
                 $this->Flash->success(__('The ticket has been saved.'));
+
+                      $query = $this->Tickets->find()->contain([
+                            'Customers' => function ($q) {
+                               return $q
+                                    ->select(['email'])
+                                    ->distinct(['email'])
+                                    ->where(['Tickets.customer_id'=> $this->request->data('customer_id')]);
+                            }
+                        ]);
+                      $row = $query->first();
+
+                $emailadd = $row->customer->email;
+                //email
+                $email = new Email('default');
+                 $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk'])
+                 ->to($emailadd)
+                 ->subject('test')
+                 ->send($row->customer->email . $selectedCustomer);
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('The ticket could not be saved. Please, try again.'));
             }
         }
+
+
         $customers = $this->Tickets->Customers->find('list', ['limit' => 200]);
         $priorities = $this->Tickets->Priorities->find('list', ['limit' => 200]);
         $users = $this->Tickets->Users->find('list', ['limit' => 200]);
@@ -203,6 +222,18 @@ class TicketsController extends AppController
         $this->set('tickets', $this->paginate($this->Tickets));
         $this->set('_serialize', ['tickets']);
     }
+
+    public function advsearch() {
+
+      $ticket = $this->Tickets->newEntity();
+
+    
+
+        
+        $this->set('tickets', $this->paginate($this->Tickets));
+        $this->set('_serialize', ['tickets']);
+    }
+  
 
     public function homepage() {
     $loguser = $this->request->session()->read('Auth.User.id');
