@@ -75,6 +75,30 @@ class UpdatesController extends AppController
         
     }
 
+    public function ticket($id = null)
+    {
+
+        $results = $this->Updates->find()->contain([
+            'Users' => function ($q) {
+                return $q
+                        ->select(['username']);
+            }
+        ]);
+        $results->orderDesc('created');
+
+        $details = $this->Updates->find()->contain([
+            'Tickets' => function ($q) {
+                return $q
+                        ->select(['description']);
+            }
+        ]);
+
+
+        $this->set('results', $results);
+        $this->set('details', $details);
+        $this->set('id', $id);
+    }
+
     /**
      * Edit method
      *

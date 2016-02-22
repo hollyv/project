@@ -58,9 +58,14 @@ class TicketsController extends AppController
             'contain' => ['Updates'],
          ];
 
+         
+
+
+
         $this->set('updates', $this->paginate($this->Tickets));
         $this->set('ticket', $ticket);
         $this->set('_serialize', ['ticket']);
+
 
     }
 

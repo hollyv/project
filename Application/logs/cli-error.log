@@ -10,3 +10,39 @@ Stack Trace:
 #4 {main}
 
 
+2016-02-20 21:18:08 Error: [Cake\Console\Exception\MissingShellException] Shell class for "Sdf" could not be found.
+Exception Attributes: array (
+  'class' => 'Sdf',
+)
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(209): Cake\Console\ShellDispatcher->findShell('sdf')
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#3 C:\wamp\www\tickets\bin\cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#4 {main}
+
+
+2016-02-20 21:18:38 Error: [Cake\Console\Exception\MissingShellException] Shell class for "Testsuite" could not be found.
+Exception Attributes: array (
+  'class' => 'Testsuite',
+)
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(209): Cake\Console\ShellDispatcher->findShell('testsuite')
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#3 C:\wamp\www\tickets\bin\cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#4 {main}
+
+
+2016-02-20 21:18:52 Error: [Cake\Console\Exception\MissingShellException] Shell class for "Test" could not be found.
+Exception Attributes: array (
+  'class' => 'Test',
+)
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(209): Cake\Console\ShellDispatcher->findShell('test')
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(179): Cake\Console\ShellDispatcher->_dispatch(Array)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(126): Cake\Console\ShellDispatcher->dispatch(Array)
+#3 C:\wamp\www\tickets\bin\cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#4 {main}
+
+

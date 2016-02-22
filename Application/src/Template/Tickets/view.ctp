@@ -68,18 +68,19 @@
         </tr>
     </table>
 </div>
-    <div class="related">
+   <div class="related">
         <h4><?= __('Ticket Updates') ?></h4>
         <div id="update"><?= $this->Html->link(__('+ New Update'), ['controller' => 'Updates', 'action' => 'add', $ticket->id]) ?></div>
         <?php if (!empty($ticket->updates)): ?>
+
             <?php foreach ($ticket->updates as $updates): ?>
             <?php if (!empty($updates->update_text)): ?>
             <div id="update_list">
             
-            
             <h5><?= h($updates->analyst_id) ?><?= h($updates->created) ?></h5>
             <?= h($updates->update_text) ?>
-            
+            <?= h($updates->update_text) ?>
+
             </p>
             </div>
             <?php endif; ?>
@@ -96,7 +97,3 @@
     <?php endif; ?>
     </div>
 </div>
-
-
-
-
