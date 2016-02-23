@@ -62,7 +62,7 @@ class UpdatesController extends AppController
             $update = $this->Updates->patchEntity($update, $this->request->data);
             if ($this->Updates->save($update)) {
                 $this->Flash->success(__('The update has been saved.'));
-                return $this->redirect(['controller' => 'Tickets', 'action' => 'view', $id]);
+                return $this->redirect(['controller' => 'Updates', 'action' => 'ticket', $id]);
             } else {
                 $this->Flash->error(__('The update could not be saved. Please, try again.'));
             }
@@ -89,7 +89,7 @@ class UpdatesController extends AppController
         $details = $this->Updates->find()->contain([
             'Tickets' => function ($q) {
                 return $q
-                        ->select(['description']);
+                        ->select(['description', 'status', 'title','category', 'ticket_type', 'created','resolution_date']);
             }
         ]);
 

@@ -7285,3 +7285,80 @@ Stack Trace:
 #2 {main}
 
 
+2016-02-23 19:06:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Update could not be found.
+Exception Attributes: array (
+  'class' => 'Update',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /tickets/update/view/2
+Stack Trace:
+#0 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-23 19:27:36 Error: Fatal Error (1): Call to a member function has() on a non-object in [C:\wamp\www\tickets\src\Template\Updates\ticket.ctp, line 34]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-23 19:27:36 Error: [Cake\Error\FatalErrorException] Call to a member function has() on a non-object
+Request URL: /tickets/updates/ticket/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 34)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-23 19:30:09 Error: Fatal Error (1): Call to a member function has() on a non-object in [C:\wamp\www\tickets\src\Template\Updates\ticket.ctp, line 47]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-23 19:30:10 Error: [Cake\Error\FatalErrorException] Call to a member function has() on a non-object
+Request URL: /tickets/updates/ticket/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 47)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-23 19:31:13 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\wamp\www\tickets\src\Template\Updates\ticket.ctp, line 39]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-23 19:31:13 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /tickets/updates/ticket/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 39)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-23 19:35:11 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\tickets\src\Template\Updates\ticket.ctp, line 20]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-23 19:35:12 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ';'
+Request URL: /tickets/updates/ticket/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 20)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
