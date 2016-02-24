@@ -97,8 +97,9 @@ class TicketsController extends AppController
                 $email = new Email('default');
                  $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk'])
                  ->to($emailadd)
-                 ->subject('test')
-                 ->send($row->customer->email);
+                 ->subject('Numatic Helpdesk System - New Ticket')
+                 ->send();
+                 
                }
                 return $this->redirect(['action' => 'index']);
             } else {

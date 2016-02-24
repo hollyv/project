@@ -40,7 +40,7 @@
 <div class="tickets index large-9 medium-8 columns content">
 
     <h3><?= __('Tickets') ?></h3>
-    <li><?= $this->Html->link(__('New Ticket'), ['action' => 'add']) ?></li>
+    <li><?= $this->Html->link(__('+ New Ticket'), ['action' => 'add']) ?></li>
 
     <table cellpadding="0" cellspacing="0">
         <thead>

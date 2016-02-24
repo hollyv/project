@@ -35,7 +35,7 @@
         </tr>
         <tr>
             <th><?= __('Status') ?></th>
-            <td><?= $status ?></td>
+            <td><?= $ticket ?></td>
         </tr>
         <tr>
             <th><?= __('Title') ?></th>

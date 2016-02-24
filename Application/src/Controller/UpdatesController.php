@@ -93,7 +93,12 @@ class UpdatesController extends AppController
             }
         ]);
 
-
+        $this->loadModel('Tickets');
+        $ticketDetails = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.id'=>$id)
+         ));
+        $ticket=$ticketDetails->first();
+        $this->set('ticket',$ticket);
         $this->set('results', $results);
         $this->set('details', $details);
         $this->set('id', $id);
