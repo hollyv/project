@@ -43,9 +43,14 @@
                 );
             echo $this->Form->input('resolution_date', ['empty' => true, 'default' => '']);
             echo $this->Form->input('total_time');
+            echo 'Email Customer';
+             echo $this->Form->select(
+                'email_option',
+                ['Yes' => 'Yes', 'No' => 'No']               
+                );
         ?>
 
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    </fieldset>   
+        <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>

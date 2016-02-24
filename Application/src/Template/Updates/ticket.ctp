@@ -94,6 +94,7 @@
             <h5><?= h($q->user->username) ?>  <?= h($q->created) ?></h5>
             <p>
             <?= h($q->update_text) ?>
+            <?= h($q->time_booking) ?>
             </p>
             </div>
             <?php endif; ?>

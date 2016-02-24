@@ -81,7 +81,7 @@ class TicketsController extends AppController
             $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
             if ($this->Tickets->save($ticket)) {
                 $this->Flash->success(__('The ticket has been saved.'));
-
+                      if ($this->request->data('email_option') == "Yes"){
                       $query = $this->Tickets->find()->contain([
                             'Customers' => function ($q) {
                                return $q
@@ -98,7 +98,8 @@ class TicketsController extends AppController
                  $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk'])
                  ->to($emailadd)
                  ->subject('test')
-                 ->send($row->customer->email . $selectedCustomer);
+                 ->send($row->customer->email);
+               }
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('The ticket could not be saved. Please, try again.'));

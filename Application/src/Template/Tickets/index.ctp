@@ -62,7 +62,23 @@
                 <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->username, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
                 <td><?= h($ticket->status) ?></td>
                 <td><?= h($ticket->title) ?></td>
-                <td><?= $ticket->has('priority') ? $this->Html->link($ticket->priority->name, ['controller' => 'Priorities', 'action' => 'view', $ticket->priority->id]) : '' ?></td>
+                <?php 
+                if($ticket->priority->id == 1){
+                    $color = "#FF0000";
+                }
+                elseif($ticket->priority->id == 2){
+                    $color = "#FFA500";
+                }
+                elseif($ticket->priority->id == 3){
+                    $color = "#329932";
+                }
+                else{
+                   $color = "#3232FF"; 
+                }
+            
+                ?>
+                <td><div id="priorityCircle"style="background-color:<?php echo $color ?>" ></div>
+                    <?= $ticket->has('priority') ? $this->Html->link($ticket->priority->name, ['controller' => 'Priorities', 'action' => 'view', $ticket->priority->id]) : '' ?></td>
                 <td><?= h($ticket->description) ?></td>
                 <td><?= h($ticket->category) ?></td>
                 <td class="actions">
