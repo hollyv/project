@@ -191,7 +191,7 @@ class TicketsController extends AppController
                  $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk Application'])
                  ->to('holly.voysey@students.plymouth.ac.uk')
                  ->subject('test')
-                 ->send('request data' . $user->email);
+                 ->send('request data' );
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('The ticket could not be saved. Please, try again.'));

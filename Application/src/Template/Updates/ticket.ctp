@@ -10,20 +10,17 @@
         <li><?= $this->Html->link(__('Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?></li>
     </ul>
 </nav>
+            <?php $time = 0;?>
+            <?php foreach ($results as $q): ?>
+            
+            <?php if (($q->ticket_id)== $id): ?>
+            <?php $time = $time + $q->time_booking; ?>
+            <?php endif; ?>
+            <?php endforeach; ?>
 
-     <?php foreach ($details as $d): ?>
-    <?php if (($d->ticket_id)== $id): 
-        $status = $d->ticket->status;
-        $title = $d->ticket->title;
-        $description = $d->ticket->description;
-        $category = $d->ticket->category;
-        $type = $d->ticket->ticket_type;
-        $created = $d->ticket->created;
-        $resolution_date = $d->ticket->resolution_date; ?>
- 
    <div class="tickets view large-9 medium-8 columns content">
     <?= $this->Html->link(__('Assign Ticket'), ['controller' => 'Tickets', 'action' => 'assign', $id]) ?>
-    <h3><?= h($d->ticket->title) ?></h3>
+    <h3><?= $ticket->title?></h3>
     
     <div id="ticket_view">
         <h5>  Ticket Details</h5>
@@ -31,57 +28,54 @@
 
         <tr>
             <th><?= __('Customer') ?></th>
-            <td></td>
+            <td><?= $ticket->customer->username?></td>
         </tr>
         <tr>
             <th><?= __('Status') ?></th>
-            <td><?= $ticket ?></td>
+            <td><?= $ticket->status ?></td>
         </tr>
         <tr>
             <th><?= __('Title') ?></th>
-            <td><?= $title ?></td>
+            <td><?= $ticket->title?></td>
         </tr>
         <tr>
             <th><?= __('Priority') ?></th>
-            <td><?= $description ?></td>
+            <td><?= $ticket->priority->name?></td>
         </tr>
         <tr>
             <th><?= __('Description') ?></th>
-            <td><?= $description ?></td>
+            <td><?= $ticket->description?></td>
         </tr>
         <tr>
             <th><?= __('Category') ?></th>
-            <td><?= $category ?></td>
+            <td><?= $ticket->category?></td>
         </tr>
         <tr>
             <th><?= __('User') ?></th>
-            <td></td>
+            <td><?= $ticket->user->username?></td>
         </tr>
         <tr>
             <th><?= __('Ticket Type') ?></th>
-            <td><?= $type ?></td>
+            <td><?= $ticket->ticket_type?></td>
         </tr>
         <tr>
             <th><?= __('Id') ?></th>
-            <td><?= $id ?></td>
+            <td><?= $ticket->id?></td>
         </tr>
         <tr>
             <th><?= __('Total Time') ?></th>
-            <td></td>
+            <td><?= $time?></td>
         </tr>
         <tr>
             <th><?= __('Created') ?></th>
-            <td><?= $created ?></tr>
+            <td><?= $ticket->created?></tr>
         </tr>
         <tr>
             <th><?= __('Resolution Date') ?></th>
-            <td><?= $resolution_date ?></tr>
+            <td><?= $ticket->resolution_date?></tr>
         </tr>
     </table>
 </div>
- <?php break; ?>
-<?php endif; ?>
-            <?php endforeach; ?>
  
    <div class="related">
         <h4><?= __('Ticket Updates') ?></h4>
@@ -89,6 +83,8 @@
 
             <?php foreach ($results as $q): ?>
             <?php if (($q->ticket_id)== $id): ?>
+
+            <?php if (!empty($q->update_text)): ?>
             <div id="update_list">
             
             <h5><?= h($q->user->username) ?>  <?= h($q->created) ?></h5>
@@ -98,8 +94,10 @@
             </p>
             </div>
             <?php endif; ?>
+            <?php endif; ?>
             <?php endforeach; ?>
 
 
     </div>
+    <?= h($time) ?>
 </div>

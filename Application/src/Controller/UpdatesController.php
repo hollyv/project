@@ -19,7 +19,7 @@ class UpdatesController extends AppController
       public function isAuthorized($user)
     {
         // All registered users can view
-        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete'])) {
+        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete', 'ticket'])) {
           return true;
         }
         return parent::isAuthorized($user);
@@ -86,22 +86,14 @@ class UpdatesController extends AppController
         ]);
         $results->orderDesc('created');
 
-        $details = $this->Updates->find()->contain([
-            'Tickets' => function ($q) {
-                return $q
-                        ->select(['description', 'status', 'title','category', 'ticket_type', 'created','resolution_date']);
-            }
-        ]);
-
         $this->loadModel('Tickets');
-        $ticketDetails = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.id'=>$id)
-         ));
-        $ticket=$ticketDetails->first();
-        $this->set('ticket',$ticket);
-        $this->set('results', $results);
-        $this->set('details', $details);
-        $this->set('id', $id);
+        $ticket = $this->Tickets->get($id, [
+            'contain' => ['Customers', 'Priorities', 'Users', 'Updates']
+        ]);
+        $this->set(['results'=> $results,
+            'id'=> $id,
+            'ticket'=>$ticket]);
+
     }
 
     /**

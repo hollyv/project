@@ -17,37 +17,28 @@
         <?php
 
             echo $this->Form->input('customer_id', ['options' => $customers, 'empty' => true]);
-            echo 'Status';
-            echo $this->Form->select(
-                'status',
-                ['Open' => 'Open', 'Pending' => 'Pending', 'Resolved' => 'Resolved', 'Closed' => 'Closed'],
-                ['empty' => '(choose one)']
-                );
+            //echo 'Status';
+            //echo $this->Form->select(
+              //  'status',
+                //['Open' => 'Open', 'Pending' => 'Pending', 'Resolved' => 'Resolved', 'Closed' => 'Closed']);
+            echo $this->Form->hidden('status', ['value' => 'New']);
             echo $this->Form->input('title');
-            echo $this->Form->input('priority_id', ['options' => $priorities, 'empty' => true]);
+            echo $this->Form->input('priority_id', ['options' => $priorities, 'empty' => false]);
             echo $this->Form->input('description');
             echo 'Category';
             echo $this->Form->select(
                 'category',
-                ['Hardware' => 'Hardware', 'Software' => 'Software'],
-                ['empty' => '(choose one)']
-                );
-           //echo $this->Form->input('analyst_id', ['options' => $users]);
+                ['Hardware' => 'Hardware', 'Software' => 'Software']);
             $loguser = $this->request->session()->read('Auth.User.id');
             echo $this->Form->hidden('analyst_id', ['value' => $loguser]);
             echo 'Ticket Type';
              echo $this->Form->select(
                 'ticket_type',
-                ['Incident' => 'Incident', 'Request' => 'Request', 'Problem' => 'Problem Management'],
-                ['empty' => '(choose one)']
-                );
-            echo $this->Form->input('resolution_date', ['empty' => true, 'default' => '']);
-            echo $this->Form->input('total_time');
+                ['Incident' => 'Incident', 'Request' => 'Request', 'Problem' => 'Problem Management']);
             echo 'Email Customer';
              echo $this->Form->select(
                 'email_option',
-                ['Yes' => 'Yes', 'No' => 'No']               
-                );
+                ['Yes' => 'Yes', 'No' => 'No']);
         ?>
 
     </fieldset>   
