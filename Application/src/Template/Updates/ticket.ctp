@@ -20,10 +20,20 @@
 
    <div class="tickets view large-9 medium-8 columns content">
     <?= $this->Html->link(__('Assign Ticket'), ['controller' => 'Tickets', 'action' => 'assign', $id]) ?>
+    <?= $this->Html->link(__('Add to Watched Tickets'), ['controller' => 'WatchedTickets', 'action' => 'add', $id]) ?>
+    <?php if ($ticket->status == 'Pending'): 
+    echo $this->Html->link(__('Add dfasdf'), ['controller' => 'WatchedTickets', 'action' => 'add', $id]);
+    elseif($ticket->status == 'Resolved'):
+    echo $this->Html->link(__('Close Ticket'), ['controller' => 'WatchedTickets', 'action' => 'add', $id]);
+    elseif($ticket->status == 'Closed'):
+    echo $this->Html->link(__('Re Open Ticket'), ['controller' => 'WatchedTickets', 'action' => 'add', $id]);
+    endif;
+
+    ?>
     <h3><?= $ticket->title?></h3>
     
     <div id="ticket_view">
-        <h5>  Ticket Details</h5>
+        <h5>    Ticket Details</h5>
     <table class="vertical-table">
 
         <tr>
@@ -78,7 +88,7 @@
 </div>
  
    <div class="related">
-        <h4><?= __('Ticket Updates') ?></h4>
+        <h4><?= __('  Ticket Updates') ?></h4>
         <div id="update"><?= $this->Html->link(__('+ New Update'), ['controller' => 'Updates', 'action' => 'add', $id]) ?></div>
 
             <?php foreach ($results as $q): ?>

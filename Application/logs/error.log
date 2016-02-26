@@ -8252,3 +8252,35 @@ Stack Trace:
 #2 {main}
 
 
+2016-02-26 17:44:54 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\tickets\src\Template\Updates\ticket.ctp, line 110]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-26 17:44:55 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file
+Request URL: /tickets/updates/ticket/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 110)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-26 17:45:12 Error: Fatal Error (4): syntax error, unexpected 'endif' (T_ENDIF) in [C:\wamp\www\tickets\src\Template\Updates\ticket.ctp, line 26]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-02-26 17:45:12 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'endif' (T_ENDIF)
+Request URL: /tickets/updates/ticket/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 26)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

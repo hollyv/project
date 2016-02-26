@@ -13,8 +13,9 @@
     <fieldset>
         <legend><?= __('Add Watched Ticket') ?></legend>
         <?php
-            echo $this->Form->input('analyst_id', ['options' => $users]);
-            echo $this->Form->input('ticket_id', ['options' => $tickets]);
+            $loguser = $this->request->session()->read('Auth.User.id');
+            echo $this->Form->hidden('analyst_id', ['value' => $loguser]);
+            echo $this->Form->hidden('ticket_id', ['value' => $id]);
             echo $this->Form->input('comment');
         ?>
     </fieldset>

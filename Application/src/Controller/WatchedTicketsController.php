@@ -55,7 +55,7 @@ class WatchedTicketsController extends AppController
      *
      * @return void Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function add($id = null)
     {
         $watchedTicket = $this->WatchedTickets->newEntity();
         if ($this->request->is('post')) {
@@ -71,6 +71,7 @@ class WatchedTicketsController extends AppController
         $tickets = $this->WatchedTickets->Tickets->find('list', ['limit' => 200]);
         $this->set(compact('watchedTicket', 'users', 'tickets'));
         $this->set('_serialize', ['watchedTicket']);
+        $this->set('id', $id);
     }
 
     /**
