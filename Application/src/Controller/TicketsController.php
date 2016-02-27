@@ -234,9 +234,13 @@ class TicketsController extends AppController
       }
 
       public function overdue(){
-        $ticket = $this->Tickets->get($id, [
-            'contain' => ['Customers', 'Priorities', 'Users', 'Updates']
-        ]);
+         $tickets = $this->Tickets->find('all', array(
+            'conditions'=>array('Tickets.status !=' =>'Closed')
+          ));
+
+
+         $this->set('tickets', $tickets);
+
       }
 
 
