@@ -22,18 +22,18 @@
     <?= $this->Html->link(__('Assign Ticket'), ['controller' => 'Tickets', 'action' => 'assign', $id]) ?>
     <?= $this->Html->link(__('Add to Watched Tickets'), ['controller' => 'WatchedTickets', 'action' => 'add', $id]) ?>
     <?php if ($ticket->status == 'Pending'): 
-    echo $this->Html->link(__('Add dfasdf'), ['controller' => 'WatchedTickets', 'action' => 'add', $id]);
+    echo $this->Html->link(__('Resolve Ticket'), ['controller' => 'Tickets', 'action' => 'resolve', $id]);
     elseif($ticket->status == 'Resolved'):
-    echo $this->Html->link(__('Close Ticket'), ['controller' => 'WatchedTickets', 'action' => 'add', $id]);
+    echo $this->Html->link(__('Close Ticket'), ['controller' => 'Tickets', 'action' => 'close', $id]);
     elseif($ticket->status == 'Closed'):
-    echo $this->Html->link(__('Re Open Ticket'), ['controller' => 'WatchedTickets', 'action' => 'add', $id]);
+    echo $this->Html->link(__('Re Open Ticket'), ['controller' => 'Tickets', 'action' => 'open', $id]);
     endif;
 
     ?>
     <h3><?= $ticket->title?></h3>
     
     <div id="ticket_view">
-        <h5>    Ticket Details</h5>
+    <div id="title"><h5>Ticket Details</h5></div>
     <table class="vertical-table">
 
         <tr>
@@ -97,10 +97,11 @@
             <?php if (!empty($q->update_text)): ?>
             <div id="update_list">
             
-            <h5><?= h($q->user->username) ?>  <?= h($q->created) ?></h5>
-            <p>
-            <?= h($q->update_text) ?>
-            <?= h($q->time_booking) ?>
+           <h5><?php echo $q->user->username
+           . " " .
+            $q->created->format('d-M-y H:m'); 
+             ?></h5>
+             <p><?= h($q->update_text) ?>
             </p>
             </div>
             <?php endif; ?>

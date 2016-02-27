@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Mailer\Email;
+use Cake\ORM\TableRegistry;
 
 /**
  * Tickets Controller
@@ -41,33 +42,6 @@ class TicketsController extends AppController
 
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id Ticket id.
-     * @return void
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $ticket = $this->Tickets->get($id, [
-            'contain' => ['Customers', 'Priorities', 'Users', 'Updates']
-        ]);
-
-        $this->paginate = [
-            'contain' => ['Updates'],
-         ];
-
-         
-
-
-
-        $this->set('updates', $this->paginate($this->Tickets));
-        $this->set('ticket', $ticket);
-        $this->set('_serialize', ['ticket']);
-
-
-    }
 
     /**
      * Add method
@@ -211,6 +185,7 @@ class TicketsController extends AppController
           ));
 
           $this->set('tickets', $tickets);
+          return $this->redirect(['action' => 'index']);
     }
 
     public function search() {
@@ -230,12 +205,44 @@ class TicketsController extends AppController
         $this->set('_serialize', ['tickets']);
     }
 
+    public function resolve($id = null){
+      $ticketsTable = TableRegistry::get('Tickets');
+      $ticket = $ticketsTable->get($id);
+      $ticket->status = 'Resolved';
+      $ticket->resolution_date = time();
+      $ticketsTable->save($ticket);
+      $this->Flash->success(__('The ticket has been resolved.'));
+      return $this->redirect(['controller' => 'Updates','action' => 'ticket', $ticket->id]);
+      }
+
+      public function close($id = null){
+      $ticketsTable = TableRegistry::get('Tickets');
+      $ticket = $ticketsTable->get($id);
+      $ticket->status = 'Closed';
+      $ticketsTable->save($ticket);
+      $this->Flash->success(__('The ticket has been closed.'));
+      return $this->redirect(['controller' => 'Updates','action' => 'ticket', $ticket->id]);
+      }
+
+      public function open($id = null){
+      $ticketsTable = TableRegistry::get('Tickets');
+      $ticket = $ticketsTable->get($id);
+      $ticket->status = 'Pending';
+      $ticketsTable->save($ticket);
+      $this->Flash->success(__('The ticket has been re-opened.'));
+      return $this->redirect(['controller' => 'Updates','action' => 'ticket', $ticket->id]);
+      }
+
+      public function overdue(){
+        $ticket = $this->Tickets->get($id, [
+            'contain' => ['Customers', 'Priorities', 'Users', 'Updates']
+        ]);
+      }
+
+
     public function advsearch() {
 
       $ticket = $this->Tickets->newEntity();
-
-    
-
         
         $this->set('tickets', $this->paginate($this->Tickets));
         $this->set('_serialize', ['tickets']);

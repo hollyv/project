@@ -563,6 +563,13 @@ pre {
     width: 17%;
 }
 
+#title{
+    padding-left: 10px;
+    background-color: #F0F0F1;
+    padding-bottom: 1px;
+    font-size: 1.8rem;
+}
+
 .index table {
     margin-top: 0rem;
     border: 0;
@@ -572,6 +579,11 @@ pre {
     width:250px;
     float:right;
     border: 2px #B6B7BC solid;
+}
+
+#numTextLogo{
+    width: 30%;
+    height:30%;
 }
 
 table {

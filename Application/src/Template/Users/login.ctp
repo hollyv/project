@@ -39,7 +39,7 @@ $description = 'Helpdesk Portal';
 
     <header>
         <div class="header-image">
-            <?= $this->Html->image('numtext.png', array('alt' => 'Numatic International text', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false')) ?>
+            <?= $this->Html->image('numtext.png', array('alt' => 'Numatic International text', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'id'=> 'numTextLogo' )) ?>
     
             <h1>Helpdesk Portal</h1>
         <?= $this->Html->image('homecare_group.png', array('alt' => 'Numatic International text', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false')) ?>
