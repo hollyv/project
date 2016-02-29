@@ -14,65 +14,96 @@
         <ul id="ticket_list">
             <li>
             <?= 
-            $this->Html->link('My Tickets', [
-            'controller' => 'Tickets',
-            'action' => 'users',
-            $loguser = $this->request->session()->read('Auth.User.username'),
+            $this->Html->link('All Tickets', ['controller' => 'Tickets','action' => 'index',
             ]); ?></li>
-
             <li>
             <?= 
-            $this->Html->link('All Unclosed Tickets', [
-            'controller' => 'Tickets',
-            'action' => 'status',
-            ]); ?></li>
-
-            <li>
-            <?= 
-            $this->Html->link('My Watched Tickets', [
-            'controller' => 'WatchedTickets',
-            'action' => 'search',
+            $this->Html->link('My Tickets', ['controller' => 'Tickets','action' => 'users',
             $loguser = $this->request->session()->read('Auth.User.id'),
-            ]); ?></lI>
+            ]); ?></li>
+            <li>
+            <?= 
+            $this->Html->link('All Unclosed Tickets', ['controller' => 'Tickets','action' => 'status']); ?></li>
+            <li>
+            <?= 
+            $this->Html->link('My Watched Tickets', ['controller' => 'WatchedTickets', 'action' => 'search',
+            $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>
+            <li>
+            <?= 
+            $this->Html->link('Overdue Tickets', ['controller' => 'Tickets', 'action' => 'overdue']); ?></li>
         </ul>
     </div>
     </div>
-
+<div class="tickets index large-9 medium-8 columns content">
 <section>
-    <fieldset>
-        <article>
-        <h3>
-            Tickets
-            <?= $this->Text->toList($users) ?>
-        </h3>
-        <table cellpadding="0" cellspacing="0">
-  
-          <tr>
-                <th><?= __('Id') ?></th>
-                <th><?= __('Priority') ?></th>
-                <th><?= __('Title') ?></th>
-                <th><?= __('Description') ?></th>
-                <th><?= __('Customer') ?></th>
-                <th><?= __('Actions') ?></th>
+    <h3><?= __('My Unclosed Tickets') ?></h3>
+    <li><?= $this->Html->link(__('+ New Ticket'), ['action' => 'add']) ?></li>
+ <table cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th><?= $this->Paginator->sort('id') ?></th>
+                <th><?= $this->Paginator->sort('title') ?></th>
+                <th><?= $this->Paginator->sort('priority_id') ?></th>
+                <th><?= $this->Paginator->sort('status') ?></th>
+                <th><?= $this->Paginator->sort('customer_id') ?></th>
+                <th><?= $this->Paginator->sort('ticket_type') ?></th>
+                <th><?= $this->Paginator->sort('analyst_id') ?></th>
+                <th><?= $this->Paginator->sort('created') ?></th>
+                <th class="actions"><?= __('Actions') ?></th>
             </tr>
+        </thead>
+        <tbody>
             <?php foreach ($tickets as $ticket): ?>
             <tr>
-                <td><?= h($ticket->id) ?></td>
-                <td><?= h($ticket->priority_id) ?></td>
+                <td><?= $this->Number->format($ticket->id) ?></td>
                 <td><?= h($ticket->title) ?></td>
-                <td><?= h($ticket->description) ?></td>
-                <td><?= h($ticket->customer_id) ?></td>
-                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $ticket->id]) ?>
+                <?php 
+                if($ticket->priority->id == 1){
+                    $color = "#FF0000";
+                }
+                elseif($ticket->priority->id == 2){
+                    $color = "#FFA500";
+                }
+                elseif($ticket->priority->id == 3){
+                    $color = "#329932";
+                }
+                else{
+                   $color = "#3232FF"; 
+                }
+            
+                ?>
+                <td><div id="priorityCircle"style="background-color:<?php echo $color ?>" ></div>
+                    <?= $ticket->has('priority') ? $this->Html->link($ticket->priority->name, ['controller' => 'Priorities', 'action' => 'view', $ticket->priority->id]) : '' ?></td><td><?= h($ticket->status) ?></td>
+                <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->username, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
+                
+                <td><?= h($ticket->ticket_type) ?></td>
+                <td><?= h($ticket->user->username) ?></td>
+                <td><?= h($ticket->created->format('d-M-y')) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Updates','action' => 'ticket', $ticket->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $ticket->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $ticket->id], ['confirm' => __('Are you sure you want to delete # {0}?', $ticket->id)]) ?>
                 </td>
-                     
             </tr>
             <?php endforeach; ?>
-        </table>
-        <!-- Use the TextHelper to format text -->
-  
-        </article>
-    </fieldset>
+        </tbody>
+    </table>
+    <div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('next') . ' >') ?>
+        </ul>
+        <p><?= $this->Paginator->counter() ?></p>
+    </div> 
+    <div id="search">
+       <div id="search_contents">
+    <form action="/tickets/tickets/search" method="post">
+    <div id="search_text"> Search Tickets: </div>
+    <div id="searchbar"><input type="text" name="search" placeholder="Enter a ticket id / keyword" ></div>
+    <div id="search_button"><input type="submit" value="Go"></div>
+    </div>
+    </form> 
+    <br>
+    </div>
 </section>

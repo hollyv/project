@@ -134,11 +134,12 @@ class UpdatesController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $update = $this->Updates->get($id);
+        $ticket = $update->ticket_id;
         if ($this->Updates->delete($update)) {
             $this->Flash->success(__('The update has been deleted.'));
         } else {
             $this->Flash->error(__('The update could not be deleted. Please, try again.'));
         }
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect(['action' => 'ticket', $ticket]);
     }
 }

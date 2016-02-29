@@ -33,7 +33,7 @@
     <h3><?= $ticket->title?></h3>
     
     <div id="ticket_view">
-    <div id="title"><h5>Ticket Details</h5></div>
+    <div id="ticket_title"><h5>Ticket Details</h5></div>
     <table class="vertical-table">
 
         <tr>
@@ -78,12 +78,15 @@
         </tr>
         <tr>
             <th><?= __('Created') ?></th>
-            <td><?= $ticket->created?></tr>
+            <td><?= $ticket->created->format('d-M-y H:m') ?></tr>
         </tr>
         <tr>
             <th><?= __('Resolution Date') ?></th>
-            <td><?= $ticket->resolution_date?></tr>
+            <td><?= $ticket->resolution_date ?></tr>
         </tr>
+        <tr>
+            <?= $this->Html->link(__('Edit'), ['controller' => 'Tickets','action' => 'edit', $ticket->id]) ?>
+        </tr>            
     </table>
 </div>
  
@@ -96,13 +99,18 @@
 
             <?php if (!empty($q->update_text)): ?>
             <div id="update_list">
-            
+            <div id="update_info">
            <h5><?php echo $q->user->username
            . " " .
             $q->created->format('d-M-y H:m'); 
-             ?></h5>
+             ?></h5><div id="update_actions">
+                <?= $this->Html->link(__('Edit'), ['controller' => 'Updates', 'action' => 'edit', $q->id]) ?>
+                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Updates', 'action' => 'delete', $q->id], ['confirm' => __('Are you sure you want to the update # {0}?', $q->id)]) ?>
+            </div>
              <p><?= h($q->update_text) ?>
             </p>
+        </div>
+            
             </div>
             <?php endif; ?>
             <?php endif; ?>

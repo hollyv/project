@@ -563,11 +563,21 @@ pre {
     width: 17%;
 }
 
-#title{
+#ticket_title{
     padding-left: 10px;
     background-color: #F0F0F1;
     padding-bottom: 1px;
     font-size: 1.8rem;
+}
+
+#update_info{
+    padding-left: 10px;
+}
+
+#update_actions{
+    float:right;
+    display: inline-block;
+    padding-right: 10px;
 }
 
 .index table {

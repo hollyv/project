@@ -47,7 +47,7 @@
 <?php foreach ($foundTickets as $foundTicket): ?>
     <div id="search_results">
         <!-- Use the HtmlHelper to create a link -->
-        <h4><?= $this->Html->link($foundTicket ->title,['controller' => 'Tickets', 'action' => 'view', $foundTicket->id]) ?></h4>
+        <h4><?= $this->Html->link($foundTicket ->title,['controller' => 'Updates', 'action' => 'ticket', $foundTicket->id]) ?></h4>
         <h5><?= $foundTicket->description ?></h5>
        
 

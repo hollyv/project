@@ -139,18 +139,18 @@ class TicketsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    public function users(){
-        //getting all passed parameters
-        $users = $this->request->params['pass'];
-
-        // Use the TicketsTable to find tickets by users.
-        $tickets = $this->Tickets->find('assigned', [
-        'users' => $users
-    ]);
-        $this->set([
-        'tickets' => $tickets,
-        'users' => $users
-    ]);
+    //assigned method
+    public function users($id = null){
+    
+          $this->paginate = [
+            'contain' => ['Customers', 'Priorities', 'Users'],
+            'conditions'=>array('Tickets.analyst_id' => $id,
+                                'Tickets.status !=' => 'Closed'),
+            'limit' => 8
+        ];
+        $this->set('tickets', $this->paginate($this->Tickets));
+        $this->set('_serialize', ['tickets']);
+    
     }
 
     public function assign($id = null){
@@ -162,7 +162,7 @@ class TicketsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
             if ($this->Tickets->save($ticket)) {
-                $this->Flash->success(__('The ticket has been saved.'));
+                $this->Flash->success(__('The ticket has been assigned.'));
                 //email confirmation
                  $email = new Email('default');
                  $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk Application'])
@@ -183,22 +183,24 @@ class TicketsController extends AppController
 
     public function status() {
 
-          $tickets = $this->Tickets->find('all', array(
-            'conditions'=>array('Tickets.status !=' =>'Closed')
-          ));
+            $this->paginate = [
+            'contain' => ['Customers', 'Priorities', 'Users'],
+            'conditions'=>array('Tickets.status !=' =>'Closed'),
+            'limit' => 8
+        ];
+        $this->set('tickets', $this->paginate($this->Tickets));
+        $this->set('_serialize', ['tickets']);
+    }
 
-          $query = $this->Tickets->find()->contain([
-                'Priorities',
-                'Users',
-                'Customers' => function ($q) {
-                               return $q
-                                    ->select('username')
-                                    ->where(['Tickets.status !='=> 'Closed']);
-                            }
-                        ]);
-                    
-          $this->set('query', $query);
-          $this->set('tickets', $tickets);
+    public function watched($id = null) {
+        $this->loadModel('WatchedTickets');
+            $this->paginate = [
+            'contain' => ['Customers', 'WatchedTickets', 'Priorities', 'Users'],
+            'conditions'=>array('WatchedTickets.analyst_id' => $id),
+            'limit' => 8
+        ];
+        $this->set('tickets', $this->paginate($this->Tickets));
+        $this->set('_serialize', ['tickets']);
     }
 
     public function search() {
