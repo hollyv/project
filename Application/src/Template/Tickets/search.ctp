@@ -52,7 +52,7 @@
        
 
         <!-- Use the TextHelper to format text -->
-  	</div>
+  	</div><p>
 <?php endforeach; ?>
 <div class="paginator">
         <ul class="pagination">

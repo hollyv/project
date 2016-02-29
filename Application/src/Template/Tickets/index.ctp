@@ -14,26 +14,21 @@
         <ul id="ticket_list">
             <li>
             <?= 
-            $this->Html->link('My Tickets', [
-            'controller' => 'Tickets',
-            'action' => 'users',
+            $this->Html->link('My Tickets', ['controller' => 'Tickets','action' => 'users',
             $loguser = $this->request->session()->read('Auth.User.username'),
             ]); ?></li>
 
             <li>
             <?= 
-            $this->Html->link('All Unclosed Tickets', [
-            'controller' => 'Tickets',
-            'action' => 'status',
-            ]); ?></li>
+            $this->Html->link('All Unclosed Tickets', ['controller' => 'Tickets','action' => 'status']); ?></li>
 
             <li>
             <?= 
-            $this->Html->link('My Watched Tickets', [
-            'controller' => 'WatchedTickets',
-            'action' => 'search',
-            $loguser = $this->request->session()->read('Auth.User.id'),
-            ]); ?></lI>
+            $this->Html->link('My Watched Tickets', ['controller' => 'WatchedTickets', 'action' => 'search',
+            $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>
+            <li>
+            <?= 
+            $this->Html->link('Overdue Tickets', ['controller' => 'Tickets', 'action' => 'overdue']); ?></li>
         </ul>
     </div>
     </div>

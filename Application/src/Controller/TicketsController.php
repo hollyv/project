@@ -32,9 +32,10 @@ class TicketsController extends AppController
 
     public function index()
     {
+
         $this->paginate = [
             'contain' => ['Customers', 'Priorities', 'Users'],
-            'limit' => 10
+            'limit' => 8
         ];
         $this->set('tickets', $this->paginate($this->Tickets));
 
@@ -53,10 +54,12 @@ class TicketsController extends AppController
         $ticket = $this->Tickets->newEntity();
         if ($this->request->is('post')) {
             $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
+            //if ticket saves correctly then alert success and email the customer if user selected email option
             if ($this->Tickets->save($ticket)) {
                 $this->Flash->success(__('The ticket has been saved.'));
                       if ($this->request->data('email_option') == "Yes"){
-                      $query = $this->Tickets->find()->contain([
+                        //query to get customer email address
+                        $query = $this->Tickets->find()->contain([
                             'Customers' => function ($q) {
                                return $q
                                     ->select(['email'])
@@ -184,21 +187,32 @@ class TicketsController extends AppController
             'conditions'=>array('Tickets.status !=' =>'Closed')
           ));
 
+          $query = $this->Tickets->find()->contain([
+                'Priorities',
+                'Users',
+                'Customers' => function ($q) {
+                               return $q
+                                    ->select('username')
+                                    ->where(['Tickets.status !='=> 'Closed']);
+                            }
+                        ]);
+                    
+          $this->set('query', $query);
           $this->set('tickets', $tickets);
-          return $this->redirect(['action' => 'index']);
     }
 
     public function search() {
-
+      //getting entered variable and putting wildcards around it
       $entered = $_POST["search"];
       $wildcardVar = "%" . $entered . "%";
 
+        //looking for search variable in the id, title and description fields.
         $foundTickets = $this->Tickets->find()
           ->where(['Tickets.id'=>$entered])
           ->orWhere(['Tickets.title LIKE' => $wildcardVar])
           ->orWhere(['Tickets.description LIKE' => $wildcardVar]);
 
-
+        //setting variables 
         $this->set(['foundTickets' => $foundTickets,
                     'entered'=>$entered]);
         $this->set('tickets', $this->paginate($this->Tickets));
@@ -206,6 +220,8 @@ class TicketsController extends AppController
     }
 
     public function resolve($id = null){
+      //editing ticket details to update the status to resolved and adding resolution date with timestamp.
+      //once done, it flashes success and redirects user to the previous page.
       $ticketsTable = TableRegistry::get('Tickets');
       $ticket = $ticketsTable->get($id);
       $ticket->status = 'Resolved';
@@ -216,6 +232,8 @@ class TicketsController extends AppController
       }
 
       public function close($id = null){
+      //editing ticket details to update the status to closed.
+      //once done, it flashes success and redirects user to the previous page.
       $ticketsTable = TableRegistry::get('Tickets');
       $ticket = $ticketsTable->get($id);
       $ticket->status = 'Closed';
@@ -225,6 +243,8 @@ class TicketsController extends AppController
       }
 
       public function open($id = null){
+      //editing ticket details to update the status to open.
+      //once done, it flashes success and redirects user to the previous page.
       $ticketsTable = TableRegistry::get('Tickets');
       $ticket = $ticketsTable->get($id);
       $ticket->status = 'Pending';
@@ -239,13 +259,49 @@ class TicketsController extends AppController
           ));
 
 
-         $this->set('tickets', $tickets);
+        $i = 0;
+        $overdue = array ();
+        $diffence = array ();
+
+        foreach ($tickets as $t):
+
+
+        
+
+        if ($t->priority_id == 1) {       
+          $dueDate = date_add($t->created,date_interval_create_from_date_string("24 hours"));
+        }
+        elseif($t->priority_id == 2){
+          $dueDate = date_add($t->created,date_interval_create_from_date_string("1 week"));
+        }
+        else{
+          $dueDate = date_add($t->created,date_interval_create_from_date_string("1 month"));
+        }
+
+        $current = date('m/d/Y', time());
+        
+        
+
+        if(strtotime($dueDate) < strtotime($current))
+        {
+        
+          $overdue[$i] = $t;
+
+        }
+
+
+        $i = $i + 1;
+
+        endforeach;
+        $this->set(['tickets'=> $tickets,
+                    'overdue'=> $overdue,
+                    'diffence'=> $diffence ]);
 
       }
 
 
     public function advsearch() {
-
+      //need to do.
       $ticket = $this->Tickets->newEntity();
         
         $this->set('tickets', $this->paginate($this->Tickets));
@@ -340,20 +396,6 @@ class TicketsController extends AppController
                 ]);
 
     }
-
-    public function kpi(){
-    
-
-        $email = new Email('default');
-        $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk Application'])
-        ->to('holly.voysey@students.plymouth.ac.uk')
-        ->subject('test')
-        ->send('My message');
-    
-
-    }
-
-     
 
     public function countQuery(){
      $query = $tickets->find('all', [

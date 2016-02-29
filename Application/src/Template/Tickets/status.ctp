@@ -68,7 +68,12 @@
                      
             </tr>
             <?php endforeach; ?>
+
+
         </table>
+<?php foreach ($query as $q): 
+echo "|||||" . $q;
+ endforeach; ?></p>
 
         </article>
     </fieldset>
