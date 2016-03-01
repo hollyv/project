@@ -81,10 +81,6 @@ class TicketsTable extends Table
             ->add('resolution_date', 'valid', ['rule' => 'date'])
             ->allowEmpty('resolution_date');
 
-        $validator
-            ->add('total_time', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('total_time');
-
         return $validator;
     }
 
@@ -102,21 +98,5 @@ class TicketsTable extends Table
         $rules->add($rules->existsIn(['analyst_id'], 'Users'));
         return $rules;
     }
-
-    public function findAssigned(Query $query, array $options)
-    {
-        return $this->find()
-            ->distinct(['Tickets.id'])
-            ->matching('Users', function ($q) use ($options) {
-                if (empty($options['users'])) {
-                   return $q->where(['Users.username IS' => 'tester']);
-                }
-            return $q->where(['Users.username IN' => $options['users']]);
-        });
-    }
-
- 
-
-
 
 }

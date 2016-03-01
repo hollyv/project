@@ -25,15 +25,22 @@
             <?= 
             $this->Html->link('All Unclosed Tickets', ['controller' => 'Tickets','action' => 'status']); ?></li>
             <li>
-            <?= 
-            $this->Html->link('My Watched Tickets', ['controller' => 'WatchedTickets', 'action' => 'search',
+            <u><?= 
+            $this->Html->link('My Watched Tickets', ['controller' => 'Tickets', 'action' => 'watched',
             $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>
-            <li>
+            </u><li>
             <?= 
             $this->Html->link('Overdue Tickets', ['controller' => 'Tickets', 'action' => 'overdue']); ?></li>
         </ul>
     </div>
     </div>
+        <?php
+        $watchedInfo = array ();
+        $i = 0;
+        foreach ($watched as $w): 
+            $watchedInfo[$i] = $w->id;
+            $i = $i + 1;
+        endforeach; ?>
 
 <div class="tickets index large-9 medium-8 columns content">
 
@@ -55,11 +62,12 @@
             </tr>
         </thead>
         <tbody>
+            <?php  $j = 0; ?>
             <?php foreach ($tickets as $ticket): ?>
             <tr>
                 <td><?= $this->Number->format($ticket->id) ?></td>
                 <td><?= h($ticket->title) ?></td>
-                <?php 
+                     <?php 
                 if($ticket->priority->id == 1){
                     $color = "#FF0000";
                 }
@@ -84,13 +92,13 @@
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Updates','action' => 'ticket', $ticket->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $ticket->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $ticket->id], ['confirm' => __('Are you sure you want to delete # {0}?', $ticket->id)]) ?>
+                    <?= $this->Form->postLink(__('Delete from watched'), ['controller' => 'WatchedTickets','action' => 'delete', $watchedInfo[$j]], ['confirm' => __('Are you sure you want to delete # {0}?', $ticket->id)]) ?>
                 </td>
             </tr>
+            <?php $j = $j + 1; ?>
             <?php endforeach; ?>
         </tbody>
     </table>
-
 
     <div id="search">
        <div id="search_contents">
@@ -101,4 +109,5 @@
     </div>
     </form> 
     <br>
+   
 </div>

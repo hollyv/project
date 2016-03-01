@@ -14,26 +14,23 @@
         <ul id="ticket_list">
             <li>
             <?= 
-            $this->Html->link('My Tickets', [
-            'controller' => 'Tickets',
-            'action' => 'users',
-            $loguser = $this->request->session()->read('Auth.User.username'),
+            $this->Html->link('All Tickets', ['controller' => 'Tickets','action' => 'index',
             ]); ?></li>
-
             <li>
             <?= 
-            $this->Html->link('All Unclosed Tickets', [
-            'controller' => 'Tickets',
-            'action' => 'status',
-            ]); ?></li>
-
-            <li>
-            <?= 
-            $this->Html->link('My Watched Tickets', [
-            'controller' => 'WatchedTickets',
-            'action' => 'search',
+            $this->Html->link('My Tickets', ['controller' => 'Tickets','action' => 'users',
             $loguser = $this->request->session()->read('Auth.User.id'),
-            ]); ?></lI>
+            ]); ?></li>
+            <li>
+            <?= 
+            $this->Html->link('All Unclosed Tickets', ['controller' => 'Tickets','action' => 'status']); ?></li>
+            <li>
+            <u><?= 
+            $this->Html->link('My Watched Tickets', ['controller' => 'Tickets', 'action' => 'watched',
+            $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>
+            </u><li>
+            <?= 
+            $this->Html->link('Overdue Tickets', ['controller' => 'Tickets', 'action' => 'overdue']); ?></li>
         </ul>
     </div>
     </div>
@@ -44,11 +41,11 @@
 </h2>
 
 <section>
-<?php foreach ($foundTickets as $foundTicket): ?>
+<?php foreach ($foundTickets as $ticket): ?>
     <div id="search_results">
         <!-- Use the HtmlHelper to create a link -->
-        <h4><?= $this->Html->link($foundTicket ->title,['controller' => 'Updates', 'action' => 'ticket', $foundTicket->id]) ?></h4>
-        <h5><?= $foundTicket->description ?></h5>
+        <h4><?= $this->Html->link($ticket ->title,['controller' => 'Updates', 'action' => 'ticket', $ticket->id]) ?></h4>
+        <h5><?= $ticket->description ?></h5>
        
 
         <!-- Use the TextHelper to format text -->

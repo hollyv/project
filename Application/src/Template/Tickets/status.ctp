@@ -26,7 +26,7 @@
             $this->Html->link('All Unclosed Tickets', ['controller' => 'Tickets','action' => 'status']); ?></li>
             </u><li>
             <?= 
-            $this->Html->link('My Watched Tickets', ['controller' => 'WatchedTickets', 'action' => 'search',
+            $this->Html->link('My Watched Tickets', ['controller' => 'Tickets', 'action' => 'watched',
             $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>
             <li>
             <?= 

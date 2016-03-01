@@ -25,8 +25,6 @@ class TicketsController extends AppController
           return true;
         return parent::isAuthorized($user);
     }
-
-
     return parent::isAuthorized($user);
 }     
 
@@ -40,7 +38,6 @@ class TicketsController extends AppController
         $this->set('tickets', $this->paginate($this->Tickets));
 
         $this->set('_serialize', ['tickets']);
-
     }
 
 
@@ -153,6 +150,13 @@ class TicketsController extends AppController
     
     }
 
+    public function advanced(){
+          $ticket = $this->Tickets->newEntity();
+    if ($this->request->is('post')) {
+            $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
+          }
+    }
+
     public function assign($id = null){
       $ticket = $this->Tickets->get($id, [
             'contain' => []
@@ -193,12 +197,13 @@ class TicketsController extends AppController
     }
 
     public function watched($id = null) {
+      //loading watchedTickets model and finding all watched tickets for user
         $this->loadModel('WatchedTickets');
-
         $watched = $this->WatchedTickets->find('all', array(
             'conditions'=>array('WatchedTickets.analyst_id'=>$id)
         ));
 
+        //for every watched ticket get ticket info
         $i = 0;
         $tickets = array ();
         foreach ($watched as $w) {
@@ -208,8 +213,8 @@ class TicketsController extends AppController
             $tickets[$i] = $ticket;
             $i = $i + 1; 
         }
-        $this->set('tickets', $tickets);
-
+        $this->set(['tickets'=> $tickets,
+                    'watched'=> $watched]);
     }
 
     public function search() {
@@ -265,45 +270,45 @@ class TicketsController extends AppController
       }
 
       public function overdue(){
-         $tickets = $this->Tickets->find('all', array(
+
+        $results = $this->Tickets->find('all', array(
             'conditions'=>array('Tickets.status !=' =>'Closed')
           ));
-
 
         $i = 0;
         $overdue = array ();
         $diffence = array ();
+        $j = 0;
+        $tickets = array ();
+        foreach ($results as $t):
 
-        foreach ($tickets as $t):
+              if ($t->priority_id == 1) {       
+                $dueDate = date_add($t->created,date_interval_create_from_date_string("24 hours"));
+              }
+              elseif($t->priority_id == 2){
+                $dueDate = date_add($t->created,date_interval_create_from_date_string("1 week"));
+              }
+              else{
+                $dueDate = date_add($t->created,date_interval_create_from_date_string("1 month"));
+              }
 
-
-        
-
-        if ($t->priority_id == 1) {       
-          $dueDate = date_add($t->created,date_interval_create_from_date_string("24 hours"));
-        }
-        elseif($t->priority_id == 2){
-          $dueDate = date_add($t->created,date_interval_create_from_date_string("1 week"));
-        }
-        else{
-          $dueDate = date_add($t->created,date_interval_create_from_date_string("1 month"));
-        }
-
-        $current = date('m/d/Y', time());
-        
-        
-
-        if(strtotime($dueDate) < strtotime($current))
-        {
-        
-          $overdue[$i] = $t;
-
-        }
-
-
-        $i = $i + 1;
+              $current = date('m/d/Y', time());
+              
+              $date2=date_create("2013/03/15");
+              //$diff=date_diff($date2,$current);
+              if(strtotime($dueDate) < strtotime($current))
+              {
+                 $ticketDetails = $this->Tickets->get($t->id, [
+                  'contain' => ['Customers', 'Priorities', 'Users']
+                  ]);
+                  $tickets[$j] = $ticketDetails;
+                  $j = $j + 1; 
+                $overdue[$i] = $t;
+              }
+              $i = $i + 1;
 
         endforeach;
+
         $this->set(['tickets'=> $tickets,
                     'overdue'=> $overdue,
                     'diffence'=> $diffence ]);
@@ -313,10 +318,9 @@ class TicketsController extends AppController
 
     public function advsearch() {
       //need to do.
-      $ticket = $this->Tickets->newEntity();
+     
         
-        $this->set('tickets', $this->paginate($this->Tickets));
-        $this->set('_serialize', ['tickets']);
+
     }
   
 

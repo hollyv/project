@@ -19,19 +19,10 @@ class WatchedTicketsController extends AppController
       public function isAuthorized($user)
     {
         // All registered users can view
-        if (in_array($this->request->action, ['index','add','edit', 'delete','search'])) {
+        if (in_array($this->request->action, ['add', 'delete'])) {
           return true;
         }
         return parent::isAuthorized($user);
-    }
-
-    public function index()
-    {
-        $this->paginate = [
-            'contain' => ['Users', 'Tickets']
-        ];
-        $this->set('watchedTickets', $this->paginate($this->WatchedTickets));
-        $this->set('_serialize', ['watchedTickets']);
     }
 
     /**
@@ -59,33 +50,6 @@ class WatchedTicketsController extends AppController
     }
 
     /**
-     * Edit method
-     *
-     * @param string|null $id Watched Ticket id.
-     * @return void Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function edit($id = null)
-    {
-        $watchedTicket = $this->WatchedTickets->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $watchedTicket = $this->WatchedTickets->patchEntity($watchedTicket, $this->request->data);
-            if ($this->WatchedTickets->save($watchedTicket)) {
-                $this->Flash->success(__('The watched ticket has been saved.'));
-                return $this->redirect(['action' => 'index']);
-            } else {
-                $this->Flash->error(__('The watched ticket could not be saved. Please, try again.'));
-            }
-        }
-        $users = $this->WatchedTickets->Users->find('list', ['limit' => 200]);
-        $tickets = $this->WatchedTickets->Tickets->find('list', ['limit' => 200]);
-        $this->set(compact('watchedTicket', 'users', 'tickets'));
-        $this->set('_serialize', ['watchedTicket']);
-    }
-
-    /**
      * Delete method
      *
      * @param string|null $id Watched Ticket id.
@@ -97,11 +61,11 @@ class WatchedTicketsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $watchedTicket = $this->WatchedTickets->get($id);
         if ($this->WatchedTickets->delete($watchedTicket)) {
-            $this->Flash->success(__('The watched ticket has been deleted.'));
+            $this->Flash->success(__('The ticket has been removed from your watched tickets.'));
         } else {
             $this->Flash->error(__('The watched ticket could not be deleted. Please, try again.'));
         }
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect(['controller' => 'Tickets','action' => 'watched', $this->request->session()->read('Auth.User.id')]);
     }
 
 }
