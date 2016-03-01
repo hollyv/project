@@ -13,10 +13,8 @@
 <div id="ticketbar">
     <div id="ticketbar_links">
         <ul id="ticket_list">
-            <li>
-            <?= 
-            $this->Html->link('All Tickets', ['controller' => 'Tickets','action' => 'index',
-            ]); ?></li>
+            <li><u>
+            <?= $this->Html->link('All Tickets', ['controller' => 'Tickets','action' => 'index',]); ?></u></li>
             <li>
             <?= 
             $this->Html->link('My Tickets', ['controller' => 'Tickets','action' => 'users',

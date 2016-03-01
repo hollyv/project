@@ -194,13 +194,22 @@ class TicketsController extends AppController
 
     public function watched($id = null) {
         $this->loadModel('WatchedTickets');
-            $this->paginate = [
-            'contain' => ['Customers', 'WatchedTickets', 'Priorities', 'Users'],
-            'conditions'=>array('WatchedTickets.analyst_id' => $id),
-            'limit' => 8
-        ];
-        $this->set('tickets', $this->paginate($this->Tickets));
-        $this->set('_serialize', ['tickets']);
+
+        $watched = $this->WatchedTickets->find('all', array(
+            'conditions'=>array('WatchedTickets.analyst_id'=>$id)
+        ));
+
+        $i = 0;
+        $tickets = array ();
+        foreach ($watched as $w) {
+             $ticket = $this->Tickets->get($w->ticket_id, [
+            'contain' => ['Customers', 'Priorities', 'Users']
+            ]);
+            $tickets[$i] = $ticket;
+            $i = $i + 1; 
+        }
+        $this->set('tickets', $tickets);
+
     }
 
     public function search() {
@@ -398,15 +407,5 @@ class TicketsController extends AppController
                 ]);
 
     }
-
-    public function countQuery(){
-     $query = $tickets->find('all', [
-        'conditions' => ['Tickets.priority_id IS' => 'High']
-    ]);
-    $number = $query->count();
-    return $number;
-    }
-
-
 
 }

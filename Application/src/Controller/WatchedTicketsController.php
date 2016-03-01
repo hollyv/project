@@ -19,7 +19,7 @@ class WatchedTicketsController extends AppController
       public function isAuthorized($user)
     {
         // All registered users can view
-        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete','search'])) {
+        if (in_array($this->request->action, ['index','add','edit', 'delete','search'])) {
           return true;
         }
         return parent::isAuthorized($user);
@@ -35,22 +35,6 @@ class WatchedTicketsController extends AppController
     }
 
     /**
-     * View method
-     *
-     * @param string|null $id Watched Ticket id.
-     * @return void
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $watchedTicket = $this->WatchedTickets->get($id, [
-            'contain' => ['Users', 'Tickets']
-        ]);
-        $this->set('watchedTicket', $watchedTicket);
-        $this->set('_serialize', ['watchedTicket']);
-    }
-
-    /**
      * Add method
      *
      * @return void Redirects on successful add, renders view otherwise.
@@ -61,8 +45,8 @@ class WatchedTicketsController extends AppController
         if ($this->request->is('post')) {
             $watchedTicket = $this->WatchedTickets->patchEntity($watchedTicket, $this->request->data);
             if ($this->WatchedTickets->save($watchedTicket)) {
-                $this->Flash->success(__('The watched ticket has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                $this->Flash->success(__('The ticket has been saved as a watched ticket.'));
+                return $this->redirect(['controller' => 'Updates','action' => 'ticket', $id]);
             } else {
                 $this->Flash->error(__('The watched ticket could not be saved. Please, try again.'));
             }
@@ -120,12 +104,4 @@ class WatchedTicketsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    public function search($id = null) {
-        
-        $watchedTickets = $this->WatchedTickets->find('all', array(
-            'conditions'=>array('WatchedTickets.analyst_id'=>$id)
-            ));
-        
-        $this->set('watchedTickets', $watchedTickets);
-    }
 }
