@@ -121,6 +121,17 @@ ul#adminMenu li{
 
 }
 
+#ticket_actions{
+    border: 2px #B6B7BC solid;
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+}
+
+#actions{
+    padding: 5px;
+}
+
 #chart_div{
     float: right;
 }
@@ -577,6 +588,7 @@ pre {
 
 #update_info{
     padding-left: 10px;
+    margin-top: 20px;
 }
 
 #update_actions{
@@ -752,8 +764,7 @@ div.message.hidden {
 
 .content h3 {
     color: #be140b;
-    padding-bottom: 0.5rem;
-    margin-bottom: 20px;
+    display: inline-block;
 }
 
 .content h4 {

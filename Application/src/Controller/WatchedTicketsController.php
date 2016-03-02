@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\ORM\TableRegistry;
 /**
  * WatchedTickets Controller
  *
@@ -26,30 +26,6 @@ class WatchedTicketsController extends AppController
     }
 
     /**
-     * Add method
-     *
-     * @return void Redirects on successful add, renders view otherwise.
-     */
-    public function add($id = null)
-    {
-        $watchedTicket = $this->WatchedTickets->newEntity();
-        if ($this->request->is('post')) {
-            $watchedTicket = $this->WatchedTickets->patchEntity($watchedTicket, $this->request->data);
-            if ($this->WatchedTickets->save($watchedTicket)) {
-                $this->Flash->success(__('The ticket has been saved as a watched ticket.'));
-                return $this->redirect(['controller' => 'Updates','action' => 'ticket', $id]);
-            } else {
-                $this->Flash->error(__('The watched ticket could not be saved. Please, try again.'));
-            }
-        }
-        $users = $this->WatchedTickets->Users->find('list', ['limit' => 200]);
-        $tickets = $this->WatchedTickets->Tickets->find('list', ['limit' => 200]);
-        $this->set(compact('watchedTicket', 'users', 'tickets'));
-        $this->set('_serialize', ['watchedTicket']);
-        $this->set('id', $id);
-    }
-
-    /**
      * Delete method
      *
      * @param string|null $id Watched Ticket id.
@@ -68,4 +44,25 @@ class WatchedTicketsController extends AppController
         return $this->redirect(['controller' => 'Tickets','action' => 'watched', $this->request->session()->read('Auth.User.id')]);
     }
 
-}
+    /**
+     * Add method
+     *
+     * @return void Redirects on successful add, renders view otherwise.
+     */
+    public function add($id = null){
+      //editing ticket details to update the status to closed.
+      //once done, it flashes success and redirects user to the previous page.
+      $watchedTicketsTable = TableRegistry::get('Watched_Tickets');
+      $watchedTicket = $watchedTicketsTable->newEntity();
+      $watchedTicket->ticket_id = $id;
+      $watchedTicket->analyst_id = $this->request->session()->read('Auth.User.id');
+       if ($this->WatchedTickets->save($watchedTicket)) {
+                $this->Flash->success(__('The ticket has been added as a watched ticket.'));
+                return $this->redirect(['controller' => 'Updates','action' => 'ticket', $id]);
+            } else {
+                $this->Flash->error(__('The watched ticket could not be saved. Please, try again.'));
+            }
+        }
+      }
+
+

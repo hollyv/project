@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\ORM\TableRegistry;
 /**
  * Updates Controller
  *
@@ -19,7 +19,7 @@ class UpdatesController extends AppController
       public function isAuthorized($user)
     {
         // All registered users can view
-        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete', 'ticket'])) {
+        if (in_array($this->request->action, ['index','add','edit', 'delete', 'ticket'])) {
           return true;
         }
         return parent::isAuthorized($user);
@@ -34,21 +34,6 @@ class UpdatesController extends AppController
         $this->set('_serialize', ['updates']);
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id Update id.
-     * @return void
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $update = $this->Updates->get($id, [
-            'contain' => ['Tickets', 'Users']
-        ]);
-        $this->set('update', $update);
-        $this->set('_serialize', ['update']);
-    }
 
     /**
      * Add method
@@ -57,11 +42,22 @@ class UpdatesController extends AppController
      */
     public function add($id = null)
     {
+        //get ticket details 
+        $this->loadModel('Tickets');
+        $ticket = $this->Tickets->get($id, [
+        ]);
         $update = $this->Updates->newEntity();
         if ($this->request->is('post')) {
             $update = $this->Updates->patchEntity($update, $this->request->data);
+            //if ticket has the new status then change to pending when update is saved
             if ($this->Updates->save($update)) {
-                $this->Flash->success(__('The update has been saved.'));
+                if($ticket->status == 'New'){
+                    $ticketsTable = TableRegistry::get('Tickets');
+                    $ticket = $ticketsTable->get($id);
+                    $ticket->status = 'Pending';
+                    $ticketsTable->save($ticket);
+                }
+                $this->Flash->success(__('The ticket has been updated'));
                 return $this->redirect(['controller' => 'Updates', 'action' => 'ticket', $id]);
             } else {
                 $this->Flash->error(__('The update could not be saved. Please, try again.'));
