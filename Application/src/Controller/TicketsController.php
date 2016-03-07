@@ -70,7 +70,9 @@ class TicketsController extends AppController
                  ->emailFormat('both')
                  ->template('ticket', 'ticket')
                  ->subject('Numatic Helpdesk System - New Ticket')
-                 ->viewVars(['value' => $this->request->data('title')])
+                 ->viewVars(['created' => $ticket->created->format('d-M-y H:i'),
+                             'ticket' => $this->request->data,
+                             'user' => $this->request->session()->read('Auth.User.username')])
                  ->send();
                  
                                   

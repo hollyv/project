@@ -91,7 +91,7 @@
         </tr>
         <tr>
             <th><?= __('Created') ?></th>
-            <td><?= $ticket->created->format('d-M-y H:m') ?></tr>
+            <td><?= $ticket->created->format('d-M-y H:i') ?></tr>
         </tr>
         <tr>
             <th><?= __('Resolution Date') ?></th>

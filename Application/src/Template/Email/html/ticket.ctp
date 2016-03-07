@@ -17,13 +17,38 @@
 $content = explode("\n", $content);
 ' The follwing ticket has been created:'.
 'Ticket id:';
-echo 'New Ticket has been created ';
-
+echo 'The following new ticket was raised on the ' .  $created;
 ?>
 </br>
 <?php 
-echo "\r\n";
 echo '======================================================================';
-echo "\r\n";
-echo 'Title ' . $value;
+?>
+</br></br>
+<?php 
+echo 'Title: ' . $ticket['title'];
+?>
+</br></br>
+<?php 
+echo 'Description: ' . $ticket['description'];
+?>
+</br></br>
+<?php 
+echo 'Analyst: ' . $user;
+?>
+</br></br>
+<?php 
+echo 'Ticket Type: ' . $ticket['ticket_type'];
+?>
+</br></br>
+<?php 
+echo 'Status: ' . $ticket['status'];
+?>
+</br></br>
+<?php 
+echo 'Category: ' . $ticket['category'];
+?>
+
+</br></br>
+<?php 
+echo 'Please contact the helpdesk on ext. 245 if you would like to discuss the following ticket';
 ?>
