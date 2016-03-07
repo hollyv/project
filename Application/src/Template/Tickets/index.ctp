@@ -73,7 +73,7 @@
             
                 ?>
                 <td><div id="priorityCircle"style="background-color:<?php echo $color ?>" ></div>
-                    <?= $ticket->has('priority') ? $this->Html->link($ticket->priority->name, ['controller' => 'Priorities', 'action' => 'view', $ticket->priority->id]) : '' ?></td><td><?= h($ticket->status) ?></td>
+                    <?= $ticket->has('priority') ? $this->Html->link($ticket->priority->name, ['controller' => 'Tickets', 'action' => 'priority', $ticket->priority->id]) : '' ?></td><td><?= h($ticket->status) ?></td>
                 <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->username, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
                 
                 <td><?= h($ticket->ticket_type) ?></td>

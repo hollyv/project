@@ -73,7 +73,7 @@
             
                 ?>
                 <td><div id="priorityCircle"style="background-color:<?php echo $color ?>" ></div>
-                    <?= $ticket->has('priority') ? $this->Html->link($ticket->priority->name, ['controller' => 'Priorities', 'action' => 'view', $ticket->priority->id]) : '' ?></td><td><?= h($ticket->status) ?></td>
+                    <?= $ticket->has('priority') ? $this->Html->link($ticket->priority->name, ['controller' => 'Tickets', 'action' => 'priority', $ticket->priority->id]) : '' ?></td><td><?= h($ticket->status) ?></td>
                 <td><?= $ticket->has('customer') ? $this->Html->link($ticket->customer->username, ['controller' => 'Customers', 'action' => 'view', $ticket->customer->id]) : '' ?></td>
                 
                 <td><?= h($ticket->ticket_type) ?></td>
@@ -82,7 +82,6 @@
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Updates','action' => 'ticket', $ticket->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $ticket->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $ticket->id], ['confirm' => __('Are you sure you want to delete # {0}?', $ticket->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

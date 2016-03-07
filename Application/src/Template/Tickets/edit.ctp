@@ -23,13 +23,17 @@
         <legend><?= __('Edit Ticket') ?></legend>
         <?php
             echo $this->Form->input('customer_id', ['options' => $customers, 'empty' => true]);
-            echo $this->Form->input('status');
             echo $this->Form->input('title');
-            echo $this->Form->input('priority_id', ['options' => $priorities, 'empty' => true]);
+            echo $this->Form->input('priority_id', ['options' => $priorities, 'empty' => false]);
             echo $this->Form->input('description');
-            echo $this->Form->input('category');
-            echo $this->Form->input('analyst_id', ['options' => $users]);
-            echo $this->Form->input('ticket_type');
+            echo 'Category';
+            echo $this->Form->select(
+                'category',
+                ['Hardware' => 'Hardware', 'Software' => 'Software']);
+            echo 'Ticket Type';
+             echo $this->Form->select(
+                'ticket_type',
+                ['Incident' => 'Incident', 'Request' => 'Request', 'Problem' => 'Problem Management']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

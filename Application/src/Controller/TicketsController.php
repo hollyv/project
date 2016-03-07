@@ -196,6 +196,25 @@ class TicketsController extends AppController
         $this->set('_serialize', ['tickets']);
     }
 
+    public function priority($id = null) {
+
+            $this->paginate = [
+            'contain' => ['Customers', 'Priorities', 'Users'],
+            'conditions'=>array('Tickets.priority_id' => $id),
+            'limit' => 8
+        ];
+
+        $this->loadModel('Priorities');
+        $priorityDetails = $this->Priorities->find('all', array(
+            'conditions'=>array('Priorities.id'=>$id)
+        ));
+
+        $row = $priorityDetails->first();
+        $this->set('tickets', $this->paginate($this->Tickets));
+        $this->set('row', $row);
+        $this->set('_serialize', ['tickets']);
+    }
+
     public function watched($id = null) {
       //loading watchedTickets model and finding all watched tickets for user
         $this->loadModel('WatchedTickets');
