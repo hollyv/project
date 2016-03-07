@@ -13,17 +13,4 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-<?php
-$content = explode("\n", $content);
-' The follwing ticket has been created:'.
-'Ticket id:';
-echo 'New Ticket has been created ';
-
-?>
-</br>
-<?php 
-echo "\r\n";
-echo '======================================================================';
-echo "\r\n";
-echo 'Title ' . $value;
-?>
+<?= $this->fetch('content') ?>

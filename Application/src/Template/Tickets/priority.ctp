@@ -21,10 +21,10 @@
             $this->Html->link('My Tickets', ['controller' => 'Tickets','action' => 'users',
             $loguser = $this->request->session()->read('Auth.User.id'),
             ]); ?></li>
-            <li><u>
+            <li>
             <?= 
             $this->Html->link('All Unclosed Tickets', ['controller' => 'Tickets','action' => 'status']); ?></li>
-            </u><li>
+            <li>
             <?= 
             $this->Html->link('My Watched Tickets', ['controller' => 'Tickets', 'action' => 'watched',
             $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>

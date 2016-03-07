@@ -40,12 +40,6 @@ class TicketsController extends AppController
         $this->set('_serialize', ['tickets']);
     }
 
-
-    /**
-     * Add method
-     *
-     * @return void Redirects on successful add, renders view otherwise.
-     */
     public function add()
     {
         $ticket = $this->Tickets->newEntity();
@@ -68,12 +62,18 @@ class TicketsController extends AppController
 
                 $emailadd = $row->customer->email;
                 //email
-                $email = new Email('default');
+                //$email = new Email('default');
+                 $email = new Email();
+                 $email->viewVars(['emailadd' => $emailadd]);
                  $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk'])
                  ->to($emailadd)
+                 ->emailFormat('both')
+                 ->template('ticket', 'ticket')
                  ->subject('Numatic Helpdesk System - New Ticket')
+                 ->viewVars(['value' => $this->request->data('title')])
                  ->send();
                  
+                                  
                }
                 return $this->redirect(['action' => 'index']);
             } else {
@@ -161,20 +161,33 @@ class TicketsController extends AppController
       $ticket = $this->Tickets->get($id, [
             'contain' => []
         ]);
-      $user = $ticket["analyst_id"];
+      //$user = $ticket["analyst_id"];   
 
+        //saving ticket update (the new user assigned)
         if ($this->request->is(['patch', 'post', 'put'])) {
             $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
             if ($this->Tickets->save($ticket)) {
-                $this->Flash->success(__('The ticket has been assigned.'));
-                //email confirmation
-                 $email = new Email('default');
-                 $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk Application'])
-                 ->to('holly.voysey@students.plymouth.ac.uk')
-                 ->subject('test')
-                 ->send('request data' );
-                return $this->redirect(['action' => 'index']);
-            } else {
+
+              //getting new assigned username
+              $this->loadModel('Users');
+              $userDetails = $this->Users->find('all', array(
+                                'conditions'=>array('id'=>$ticket->analyst_id)
+              ));
+              $row = $userDetails->first();
+
+              //creating new update with details of who ticket has been assigned to 
+              $updatesTable = TableRegistry::get('Updates');
+              $newUpdate = $updatesTable->newEntity();
+              $newUpdate->ticket_id = $id;
+              $newUpdate->analyst_id = $this->request->session()->read('Auth.User.id');
+              $newUpdate->update_text = "SYSTEM: Ticket assigned to " . $row->username;
+              $updatesTable->save($newUpdate);
+
+              //flash success message 
+              $this->Flash->success(__('The ticket has been assigned.'));
+              return $this->redirect(['controller' => 'Updates','action' => 'ticket', $id ]);
+            } 
+            else {
                 $this->Flash->error(__('The ticket could not be saved. Please, try again.'));
             }
         }
@@ -262,6 +275,14 @@ class TicketsController extends AppController
       $ticket->status = 'Resolved';
       $ticket->resolution_date = time();
       $ticketsTable->save($ticket);
+
+      $updatesTable = TableRegistry::get('Updates');
+      $newUpdate = $updatesTable->newEntity();
+      $newUpdate->ticket_id = $id;
+      $newUpdate->analyst_id = $this->request->session()->read('Auth.User.id');
+      $newUpdate->update_text = "SYSTEM: Ticket Resolved";
+      $updatesTable->save($newUpdate);
+
       $this->Flash->success(__('The ticket has been resolved.'));
       return $this->redirect(['controller' => 'Updates','action' => 'ticket', $ticket->id]);
       }
@@ -273,8 +294,17 @@ class TicketsController extends AppController
       $ticket = $ticketsTable->get($id);
       $ticket->status = 'Closed';
       $ticketsTable->save($ticket);
+      
+      $updatesTable = TableRegistry::get('Updates');
+      $newUpdate = $updatesTable->newEntity();
+      $newUpdate->ticket_id = $id;
+      $newUpdate->analyst_id = $this->request->session()->read('Auth.User.id');
+      $newUpdate->update_text = "SYSTEM: Ticket Closed";
+      $updatesTable->save($newUpdate);
+
       $this->Flash->success(__('The ticket has been closed.'));
       return $this->redirect(['controller' => 'Updates','action' => 'ticket', $ticket->id]);
+        
       }
 
       public function open($id = null){
@@ -284,6 +314,14 @@ class TicketsController extends AppController
       $ticket = $ticketsTable->get($id);
       $ticket->status = 'Pending';
       $ticketsTable->save($ticket);
+
+      $updatesTable = TableRegistry::get('Updates');
+      $newUpdate = $updatesTable->newEntity();
+      $newUpdate->ticket_id = $id;
+      $newUpdate->analyst_id = $this->request->session()->read('Auth.User.id');
+      $newUpdate->update_text = "SYSTEM: Ticket re-opened";
+      $updatesTable->save($newUpdate);
+
       $this->Flash->success(__('The ticket has been re-opened.'));
       return $this->redirect(['controller' => 'Updates','action' => 'ticket', $ticket->id]);
       }

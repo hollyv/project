@@ -29,7 +29,7 @@
                 <td><?= h($priority->name) ?></td>
                 <td><?= h($priority->resolution_time) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $priority->id]) ?>
+                    <?= $this->Html->link(__('View'), ['controller' => 'Tickets','action' => 'priority', $priority->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $priority->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $priority->id], ['confirm' => __('Are you sure you want to delete # {0}?', $priority->id)]) ?>
                 </td>
