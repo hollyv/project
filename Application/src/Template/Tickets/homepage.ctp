@@ -2,7 +2,7 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <div id= "current"><li><?= $this->Html->link(__('Home'), ['controller' => 'Tickets','action' => 'homepage']) ?></li></div>
-        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'homepage']) ?></li>
+        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'reports']) ?></li>
         <li><?= $this->Html->link('Tickets', ['controller' => 'Tickets','action' => 'users', $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>
         <li><?= $this->Html->link(__('Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Analysts'), ['controller' => 'Users', 'action' => 'index']) ?></li>
@@ -66,8 +66,8 @@
 
             // Create the data table.
             var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');    
-            data.addColumn('number', 'Slices');
+            data.addColumn('string', 'Priority');    
+            data.addColumn('number', 'Number of tickets');
             data.addRows([
           	  ['On Going', <?= h($ongoing) ?> ],
         	  ['High',<?= h($high) ?>],
@@ -76,8 +76,8 @@
             ]);
             // Create the data table.
             var data2 = new google.visualization.DataTable();
-            data2.addColumn('string', 'Topping');
-            data2.addColumn('number', 'Slices');
+            data2.addColumn('string', 'Ticket Type');
+            data2.addColumn('number', 'Number of tickets');
             data2.addRows([
               ['Incident', <?= h($incident) ?> ],
               ['Request', <?= h($request) ?> ],

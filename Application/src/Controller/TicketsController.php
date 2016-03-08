@@ -376,10 +376,71 @@ class TicketsController extends AppController
 
 
     public function advsearch() {
-      //need to do.
+       $ticket = $this->Tickets->newEntity();
+        if ($this->request->is('post')) {
+            $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
+            //if ticket saves correctly then alert success and email the customer if user selected email option
+
+        }
+
+        $wildcardVar = $ticket['title'];
+
+        $foundTickets = $this->Tickets->find()
+          ->where(['Tickets.title LIKE' => $wildcardVar]);
+
+
+        $customers = $this->Tickets->Customers->find('list', ['limit' => 200]);
+        $priorities = $this->Tickets->Priorities->find('list', ['limit' => 200]);
+        $users = $this->Tickets->Users->find('list', ['limit' => 200]);
+        $this->set(compact('ticket', 'customers', 'priorities', 'users'));
+        $this->set('_serialize', ['ticket']);
      
         
 
+    }
+
+    public function reports(){
+        $this->loadModel('Users');
+        $analysts = $this->Users->find();
+        $analysts->select(['id', 'username'])
+                 ->distinct(['username']);
+/**
+        foreach ($analysts as $a) {
+        $this->loadModel('Updates');
+       //$conditions =  array( "Updates.created >=" => date('d-m-Y', strtotime("-1 day"))
+        //); 
+        //$query = $this->Updates->find('all',array('conditions'=>$conditions)); 
+        $user = $this->Updates->find('all', array(
+          'conditions'=>array('Updates.analyst_id'=>$a['id'])
+        ));
+        $total = 0;
+        $arr = array();
+        $i = 0;
+       foreach ($user as $u) {
+         //$query->select(['sum' => $q->func()->sum('time_booking')]);
+        
+
+        if ($u->created >= date('d-m-Y', strtotime("-1 day")))
+        {
+          $total = $total + $u->time_booking;
+        }
+
+        $i = $i + 1;
+       }
+         //$query->select(['sum' => $query->func()->sum('time_booking')]);
+        $analystsTime[$a->username] = $total;
+  
+        }
+                              //      'Updates.created >' => date('Y-m-d', strtotime("-1 weeks")
+        
+        $updated = $this->Updates->find('all', array(
+            'conditions'=>array('WatchedTickets.analyst_id'=>$id)
+        ));
+**/
+
+        $this->set(['analysts'=> $analysts]);
+        //$this->set('query', $query);
+        //$this->set('analystsTime', $analystsTime);
     }
   
 
