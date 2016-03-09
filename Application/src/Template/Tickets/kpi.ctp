@@ -15,7 +15,7 @@
 <h3>Ticket Key Performance Indicators </h3>
 
  	<div id="priority_kpi">
-		<h5>My Tickets by Priority</h5>
+		<h5>Common Issue Category</h5>
 
 
 	</div>

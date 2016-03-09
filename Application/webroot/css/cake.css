@@ -148,12 +148,34 @@ ul#adminMenu li{
     padding-right: 3px;
     border-bottom: 2px #B6B7BC solid;
     background-color: #D9F0FB;
+    
 }
 
+
+#overdueItems{
+    background-color: #FFC5C5;
+    border-bottom: 2px #B6B7BC solid;
+    padding-left:3px;
+    width:100%;
+    display: inline-block;
+}
+
+#overdueText{
+    padding-left: 27%;
+    padding-top: 5%;
+}
 
 #chart_div2{
     float: right;
     margin-right: 3%;
+}
+
+#chart_div{
+    display: inline-block;
+}
+
+#chart_div1{
+    display: inline-block;
 }
 
 #chart_div3{

@@ -402,7 +402,7 @@ class TicketsController extends AppController
     }
 
     public function allReports(){
-      
+
     }
 
     public function reports(){
@@ -563,7 +563,8 @@ class TicketsController extends AppController
                 'myLow'=>$myLow,
                 'myOngoing'=>$myOngoing,
                 'sysUpdates'=>$sysUpdates,
-                'overdueTickets'=>$overdueTickets
+                'overdueTickets'=>$overdueTickets,
+                'overdue' => $overdue
                 ]);
 
     }

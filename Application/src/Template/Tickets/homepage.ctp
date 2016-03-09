@@ -67,31 +67,30 @@
         <!--<div id="chart_div3"></div>-->
         <div id="notifications">
         <div id="ticket_title">Latest Notifications</div>
-
         <?php foreach ($sysUpdates as $s): ?>
         <div id='singleUpdate'>
-          <h5 style="text-align:left;float:left;"><?= $s->update_text . ' (Ticket id: ' .$s->ticket_id . ')' ?></h5>
+          <h5 style="text-align:left;float:left;"><?= $s->update_text . ' (id: ' .$s->ticket_id . ')' ?></h5>
           <h5 style="text-align:right;float:right;"><?= $s->created->format('d-M-y H:i') ?></h5>
         </br>
         <p ><?= $this->Html->link('View',['controller' => 'Updates', 'action' => 'ticket', $s->ticket_id]) ?></p>  
         </div>
         <?php endforeach; ?>
-
-        
-        </div>
-
+  </div>
+  
         <div id="notifications">
-        <div id="ticket_title">Your Overdue Tickets</div>
+        <div id="ticket_title">Tickets Requiring Your Attention</div>
         <?php if($overdueTickets == null): ?>
         <h4>You have no overdue tickets. </h4>
         <?php else: ?>
          <?php foreach ($overdueTickets as $t): ?>
-        <div id='singleUpdate'>
-          <h5 ><?= $t->title . ' (id: ' .$t->id . ')' . '  ' . $t->priority->name ?></h5>
+        <div id='overdueItems'>
+          <h5 ><?= $t->title . ' (id: ' .$t->id . ')' . '  ' . $t->priority->name . ' Priority' ?></h5>
+          Overdue - Created: <?= $t->created->format('d-M-y') ?> 
         </div>
         <?php endforeach; ?>
+        <div id="overdueText">
         <p ><?= $this->Html->link('View all overdue tickets',['controller' => 'Tickets', 'action' => 'overdue']) ?></p>  
-        </div>
+        </div></div>
 
         <div id="priority_kpi">
         <div id="ticket_title">Latest Issues</div>
