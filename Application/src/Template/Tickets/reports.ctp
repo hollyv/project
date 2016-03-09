@@ -21,31 +21,18 @@
 			<th>Anaylst</th>
 			<th>Time booking</th>
 		</tr>
+    
+    <?php foreach ($analysts as $a): ?>
 		<tr>
-			<td>High:</td>
-			<td></td>
+			<td><?= h($a->username) ?></td>
+			<td>1</td>
 		</tr>
+  
+  <?php endforeach; ?>
 	</table>
 	</div>	
 
  <html>
- <?php 
- foreach ($analysts as $a) {
-   echo $a;
-   echo $a->id;
- }
-
-
- // $current = date('d/m/Y H:i:s', time());
- // echo $current;
- //   echo date($current, strtotime("+2 weeks"));
- //   echo '||' . date('d-m-Y', strtotime("-1 day"));
-   
- //    foreach ($query as $q) {
- //   echo $q;
- //   echo $analystsTime['hollyv'];
- //}
-?>
  
       <head>
       	
@@ -68,15 +55,19 @@
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Topping');    
             data.addColumn('number', 'Slices');
+            <?php $i = 0; ?>
             <?php foreach ($analysts as $a): ?>
             <?php $name = $a->username;?>
-            data.addRows([[ '<?= h($a->username) ?>', <?= h($a->id) ?> ]]);
+            data.addRows([[ '<?= h($a->username) ?>', <?= h($numTickets[$i]) ?> ]]);
             // Create the data table.
+            <?php $i = $i + 1; ?>
             <?php endforeach; ?>
             // Set chart options
             var options = {'title':'Number of tickets open per Analyst',
-                           'width':600,
-                           'height':500};
+                           'width':440,
+                           'height':440,
+                           'is3D': true
+                            };
 
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
@@ -92,7 +83,19 @@
         <div id="chart_div"></div>
         <div id="chart_div2"></div>
         <!--<div id="chart_div3"></div>-->
+
+        <div class="tickets form large-9 medium-8 columns content">
+        <?= $this->Form->create() ?>
+        <legend><?= __('Get Anaylst Updates') ?></legend>
+        <?php
+            echo $this->Form->input('users');
+            //$form->input('users');
+        ?>
+        <?= $this->Form->button(__('Submit')) ?>
+        <?= $this->Form->end() ?>
+</div>
       </body>
+
     </html>
 </fieldset> 
 </section>

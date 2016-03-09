@@ -404,6 +404,22 @@ class TicketsController extends AppController
         $analysts = $this->Users->find();
         $analysts->select(['id', 'username'])
                  ->distinct(['username']);
+
+        $numTickets = array();
+        $i=0;
+        foreach ($analysts as $a) {          
+            $ticket = $this->Tickets->find('all', array(
+                  'conditions'=>array('Tickets.analyst_id'=> $a->id)
+            ));
+            $ticketCount = $ticket->count();
+            $numTickets[$i] = $ticketCount;
+            //$numTickets = array($i =>$a->username ,$ticketCount);
+            $i = $i + 1;
+        }  
+
+        $users = $this->Users->find('list');
+        $this->set(compact('users'));
+    
 /**
         foreach ($analysts as $a) {
         $this->loadModel('Updates');
@@ -438,7 +454,8 @@ class TicketsController extends AppController
         ));
 **/
 
-        $this->set(['analysts'=> $analysts]);
+        $this->set(['analysts'=> $analysts,
+                    'numTickets' => $numTickets]);
         //$this->set('query', $query);
         //$this->set('analystsTime', $analystsTime);
     }
@@ -446,10 +463,57 @@ class TicketsController extends AppController
 
     public function homepage() {
     $loguser = $this->request->session()->read('Auth.User.id');
+   
+    $myTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.analyst_id'=>$loguser,
+                           'Tickets.status !=' =>'Closed')
+    ));
+
+    $myHighTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.analyst_id'=>$loguser,
+                            'Tickets.priority_id'=>'1',
+                            'Tickets.status !=' =>'Closed')
+    ));
+
+    $myMedTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.analyst_id'=>$loguser,
+                            'Tickets.priority_id'=>'2',
+                            'Tickets.status !=' =>'Closed')
+    ));
+
+    $myLowTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.analyst_id'=>$loguser,
+                            'Tickets.priority_id'=>'3',
+                            'Tickets.status !=' =>'Closed')
+    ));
+
+    $myOngoingTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.analyst_id'=>$loguser,
+                            'Tickets.priority_id'=>'4',
+                            'Tickets.status !=' =>'Closed')
+    ));
+
+    $mytotal = $myTickets->count();
+    $myHigh = $myHighTickets->count();
+    $myMed = $myMedTickets->count();
+    $myLow = $myLowTickets->count();
+    $myOngoing = $myOngoingTickets->count();
+
+    $this->set(['mytotal'=>$mytotal,
+                'myHigh'=>$myHigh,
+                'myMed'=>$myMed,
+                'myLow'=>$myLow,
+                'myOngoing'=>$myOngoing
+                ]);
+
+    }
+
+        public function kpi() {
+    $loguser = $this->request->session()->read('Auth.User.id');
     $totalTickets = $this->Tickets->find('all');
 
     $highTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.priority_id'=>'1')
+       'conditions'=>array('Tickets.priority_id'=>'1',)
     ));
 
     $medTickets = $this->Tickets->find('all', array(
@@ -462,30 +526,6 @@ class TicketsController extends AppController
 
     $ongoingTickets = $this->Tickets->find('all', array(
        'conditions'=>array('Tickets.priority_id'=>'4')
-    ));
-
-    $myTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.analyst_id'=>$loguser)
-    ));
-
-    $myHighTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.analyst_id'=>$loguser,
-                            'Tickets.priority_id'=>'1')
-    ));
-
-    $myMedTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.analyst_id'=>$loguser,
-                            'Tickets.priority_id'=>'2')
-    ));
-
-    $myLowTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.analyst_id'=>$loguser,
-                            'Tickets.priority_id'=>'3')
-    ));
-
-    $myOngoingTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.analyst_id'=>$loguser,
-                            'Tickets.priority_id'=>'4')
     ));
 
     $incidentTickets = $this->Tickets->find('all', array(
@@ -506,11 +546,6 @@ class TicketsController extends AppController
     $low = $lowTickets->count();
     $ongoing = $ongoingTickets->count();
     $total = $totalTickets->count();
-    $mytotal = $myTickets->count();
-    $myHigh = $myHighTickets->count();
-    $myMed = $myMedTickets->count();
-    $myLow = $myLowTickets->count();
-    $myOngoing = $myOngoingTickets->count();
     $incident = $incidentTickets->count();
     $problem = $problemTickets->count();
     $request = $requestTickets->count();
@@ -520,11 +555,6 @@ class TicketsController extends AppController
                 'low' => $low,
                 'ongoing' => $ongoing,
                 'total'=> $total,
-                'mytotal'=>$mytotal,
-                'myHigh'=>$myHigh,
-                'myMed'=>$myMed,
-                'myLow'=>$myLow,
-                'myOngoing'=>$myOngoing,
                 'incident'=>$incident,
                 'problem'=>$problem,
                 'request'=>$request

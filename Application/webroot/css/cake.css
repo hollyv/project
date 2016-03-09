@@ -132,12 +132,19 @@ ul#adminMenu li{
     padding: 5px;
 }
 
-#chart_div{
+#notifications{
+    border: solid 5px #B6B7BC;
+    width:40%;
     float: right;
+    height:370px;
+    margin-right: 20%;
 }
+
+
 
 #chart_div2{
     float: right;
+    margin-right: 3%;
 }
 
 #chart_div3{
@@ -153,9 +160,11 @@ ul#adminMenu li{
 #priority_kpi{
     color: #000000;
     border: solid 5px #B6B7BC;
-    width: 30%;
-    padding: 10px;
+    padding-top: 2%;
+    padding-left: 3%;
+    padding-bottom: 1%;
     float: left;
+    height: 370px;
 }
 
 #current{
