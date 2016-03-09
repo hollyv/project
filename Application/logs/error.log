@@ -22121,3 +22121,667 @@ Stack Trace:
 #2 {main}
 
 
+2016-03-09 12:06:48 Error: Fatal Error (4): syntax error, unexpected '%' in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 498]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 12:06:49 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '%'
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 498)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 12:06:49 Error: Fatal Error (4): syntax error, unexpected '%' in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 498]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 12:06:49 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '%'
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 498)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 12:35:10 Error: Fatal Error (4): syntax error, unexpected ''Updates.update_text LIKE'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 499]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 12:35:11 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ''Updates.update_text LIKE'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 499)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 12:35:11 Error: Fatal Error (4): syntax error, unexpected ''Updates.update_text LIKE'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 499]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 12:35:12 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ''Updates.update_text LIKE'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 499)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 12:37:53 Error: Fatal Error (4): syntax error, unexpected ''%'' (T_CONSTANT_ENCAPSED_STRING) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 466]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 12:37:54 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ''%'' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 466)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 12:37:54 Error: Fatal Error (4): syntax error, unexpected ''%'' (T_CONSTANT_ENCAPSED_STRING) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 466]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 12:37:55 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ''%'' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 466)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 12:44:54 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 74]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 12:44:55 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '<'
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 74)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 12:45:11 Error: Fatal Error (4): syntax error, unexpected '?>', expecting ']' in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 75]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 12:45:12 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>', expecting ']'
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 75)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 12:45:19 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 75]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 12:45:19 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 75)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 12:49:34 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 70]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 70
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 14:41:34 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 14:41:35 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /tickets/tickets/priority/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 14)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 14:41:35 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 14:41:35 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /tickets/tickets/priority/2
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 14)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 14:43:27 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 14:44:07 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 14:44:08 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 14:45:45 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 14:47:37 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 374]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 14:47:37 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 374)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 14:47:38 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 374]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 14:47:38 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 374)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 14:47:44 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 14:49:02 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 14:53:04 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 14:53:10 Error: Fatal Error (1): Call to a member function write() on a non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 371]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 14:53:10 Error: [Cake\Error\FatalErrorException] Call to a member function write() on a non-object
+Request URL: /tickets/tickets/overdue
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 371)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 14:59:52 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 15:00:16 Error: [LogicException] Controller action can only return an instance of Response
+Request URL: /tickets/tickets/overdue
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#1 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 {main}
+
+
+2016-03-09 15:04:47 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\overdue.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\overdue.ctp, line 58
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 15:04:48 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\overdue.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\overdue.ctp, line 58
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 15:08:40 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 15:09:53 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 15:10:14 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 84
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-09 15:17:36 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 100]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 15:17:36 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 100)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 15:25:17 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 92]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 15:25:17 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 92)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 15:25:31 Error: [Cake\Controller\Exception\MissingActionException] Action UpdatesController::overdue() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UpdatesController',
+  'action' => 'overdue',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/updates/overdue
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-09 15:57:59 Error: Fatal Error (4): syntax error, unexpected 'endif' (T_ENDIF) in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 82]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-09 15:57:59 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'endif' (T_ENDIF)
+Request URL: /tickets/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 82)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-09 16:13:38 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\ticket_reports.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\ticket_reports.ctp',
+)
+Request URL: /tickets/tickets/ticketReports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-09 16:13:54 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\ticket_reports.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\ticket_reports.ctp',
+)
+Request URL: /tickets/tickets/ticketReports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-09 16:14:10 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\ticket_reports.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\ticket_reports.ctp',
+)
+Request URL: /tickets/tickets/ticketReports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-09 16:14:18 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\ticket_reports.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\ticket_reports.ctp',
+)
+Request URL: /tickets/tickets/ticketReports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-09 16:14:39 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\ticket_reports.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\ticket_reports.ctp',
+)
+Request URL: /tickets/tickets/ticketReports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-09 16:15:08 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::reports() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'reports',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/reports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-09 16:15:19 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\reports.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\reports.ctp',
+)
+Request URL: /tickets/tickets/reports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-09 16:16:33 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::allReport() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'allReport',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/allReport
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-09 16:16:36 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tickets\all_reports.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tickets\\all_reports.ctp',
+)
+Request URL: /tickets/tickets/allReports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\View\View.php(575): Cake\View\View->_getViewFileName(NULL)
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#4 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-09 17:12:37 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::all_reports() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'all_reports',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/all_reports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-09 17:13:17 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::all_reports() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'all_reports',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/all_reports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-09 17:13:22 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::all_reports() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'all_reports',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/all_reports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+

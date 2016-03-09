@@ -10,6 +10,7 @@ use Cake\ORM\TableRegistry;
  *
  * @property \App\Model\Table\TicketsTable $Tickets
  */
+
 class TicketsController extends AppController
 {
 
@@ -338,7 +339,7 @@ class TicketsController extends AppController
         $overdue = array ();
         $diffence = array ();
         $j = 0;
-        $tickets = array ();
+        $overdueTickets = array ();
         foreach ($results as $t):
 
               if ($t->priority_id == 1) {       
@@ -360,17 +361,18 @@ class TicketsController extends AppController
                  $ticketDetails = $this->Tickets->get($t->id, [
                   'contain' => ['Customers', 'Priorities', 'Users']
                   ]);
-                  $tickets[$j] = $ticketDetails;
+                  $overdueTickets[$j] = $ticketDetails;
                   $j = $j + 1; 
                 $overdue[$i] = $t;
               }
               $i = $i + 1;
 
         endforeach;
-
-        $this->set(['tickets'=> $tickets,
+        $this->set(['overdueTickets'=> $overdueTickets,
                     'overdue'=> $overdue,
                     'diffence'=> $diffence ]);
+
+
 
       }
 
@@ -397,6 +399,10 @@ class TicketsController extends AppController
      
         
 
+    }
+
+    public function allReports(){
+      
     }
 
     public function reports(){
@@ -463,7 +469,49 @@ class TicketsController extends AppController
 
     public function homepage() {
     $loguser = $this->request->session()->read('Auth.User.id');
-   
+    $user = '%' . $this->request->session()->read('Auth.User.username') . '%';
+
+       $results = $this->Tickets->find('all', array(
+            'conditions'=>array('Tickets.status !=' =>'Closed',
+                                'Tickets.analyst_id' => $loguser)
+          ));
+
+        $i = 0;
+        $overdue = array ();
+        $diffence = array ();
+        $j = 0;
+        $overdueTickets = array ();
+        foreach ($results as $t):
+
+              if ($t->priority_id == 1) {       
+                $dueDate = date_add($t->created,date_interval_create_from_date_string("24 hours"));
+              }
+              elseif($t->priority_id == 2){
+                $dueDate = date_add($t->created,date_interval_create_from_date_string("1 week"));
+              }
+              else{
+                $dueDate = date_add($t->created,date_interval_create_from_date_string("1 month"));
+              }
+
+              $current = date('m/d/Y', time());
+              
+              $date2=date_create("2013/03/15");
+              //$diff=date_diff($date2,$current);
+              if(strtotime($dueDate) < strtotime($current))
+              {
+                 $ticketDetails = $this->Tickets->get($t->id, [
+                  'contain' => ['Customers', 'Priorities', 'Users']
+                  ]);
+                  $overdueTickets[$j] = $ticketDetails;
+                  $j = $j + 1; 
+                $overdue[$i] = $t;
+              }
+              $i = $i + 1;
+        endforeach;
+
+
+
+
     $myTickets = $this->Tickets->find('all', array(
        'conditions'=>array('Tickets.analyst_id'=>$loguser,
                            'Tickets.status !=' =>'Closed')
@@ -493,17 +541,29 @@ class TicketsController extends AppController
                             'Tickets.status !=' =>'Closed')
     ));
 
+    $this->loadModel('Updates');
+    $sysUpdates = $this->Updates->find('all', array(
+          'conditions'=>array('Updates.update_text LIKE'=> '%SYSTEM%',
+                              'Updates.update_text LIKE'=> $user ),
+          'limit' => 4
+    ));
+    $sysUpdates->orderDesc('created');
+
     $mytotal = $myTickets->count();
     $myHigh = $myHighTickets->count();
     $myMed = $myMedTickets->count();
     $myLow = $myLowTickets->count();
     $myOngoing = $myOngoingTickets->count();
 
+    $overdue = $this->overdueTickets;
+
     $this->set(['mytotal'=>$mytotal,
                 'myHigh'=>$myHigh,
                 'myMed'=>$myMed,
                 'myLow'=>$myLow,
-                'myOngoing'=>$myOngoing
+                'myOngoing'=>$myOngoing,
+                'sysUpdates'=>$sysUpdates,
+                'overdueTickets'=>$overdueTickets
                 ]);
 
     }

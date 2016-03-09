@@ -55,7 +55,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($tickets as $ticket): ?>
+            <?php foreach ($overdueTickets as $ticket): ?>
             <tr>
                 <td><?= $this->Number->format($ticket->id) ?></td>
                 <td><?= h($ticket->title) ?></td>

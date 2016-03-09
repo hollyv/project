@@ -2,7 +2,7 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <div id= "current"><li><?= $this->Html->link(__('Home'), ['controller' => 'Tickets','action' => 'homepage']) ?></li></div>
-        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'reports']) ?></li>
+        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'allReports']) ?></li>
         <li><?= $this->Html->link('Tickets', ['controller' => 'Tickets','action' => 'users', $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>
         <li><?= $this->Html->link(__('Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Analysts'), ['controller' => 'Users', 'action' => 'index']) ?></li>
@@ -12,7 +12,7 @@
 </nav>
 <section>
 <fieldset>
-<h3>Welcome <?= h($this->request->session()->read('Auth.User.username')) ?> </h3>
+<h3 style="margin-left: 5%;">Welcome <?= h($this->request->session()->read('Auth.User.username')) ?> </h3>
  <html>
        <head>    	
         <!--Load the AJAX API-->
@@ -60,21 +60,43 @@
       <body>
         <!--Divs that will hold the charts-->
         <div id="priority_kpi">
+        <div id="margin">
         <div id="chart_div"></div>
         <b>Total Tickets Open: <?= h($mytotal) ?></b>
-        </div>
+        </div></div>
         <!--<div id="chart_div3"></div>-->
         <div id="notifications">
-        <div id="ticket_title">Notifications</div>
+        <div id="ticket_title">Latest Notifications</div>
+
+        <?php foreach ($sysUpdates as $s): ?>
+        <div id='singleUpdate'>
+          <h5 style="text-align:left;float:left;"><?= $s->update_text . ' (Ticket id: ' .$s->ticket_id . ')' ?></h5>
+          <h5 style="text-align:right;float:right;"><?= $s->created->format('d-M-y H:i') ?></h5>
+        </br>
+        <p ><?= $this->Html->link('View',['controller' => 'Updates', 'action' => 'ticket', $s->ticket_id]) ?></p>  
+        </div>
+        <?php endforeach; ?>
+
+        
         </div>
 
         <div id="notifications">
-        <div id="ticket_title">Needs Attention</div>
+        <div id="ticket_title">Your Overdue Tickets</div>
+        <?php if($overdueTickets == null): ?>
+        <h4>You have no overdue tickets. </h4>
+        <?php else: ?>
+         <?php foreach ($overdueTickets as $t): ?>
+        <div id='singleUpdate'>
+          <h5 ><?= $t->title . ' (id: ' .$t->id . ')' . '  ' . $t->priority->name ?></h5>
+        </div>
+        <?php endforeach; ?>
+        <p ><?= $this->Html->link('View all overdue tickets',['controller' => 'Tickets', 'action' => 'overdue']) ?></p>  
         </div>
 
         <div id="priority_kpi">
-        <div id="ticket_title">Hot Issues</div>
+        <div id="ticket_title">Latest Issues</div>
         </div>
+      <?php endif ?>
 
       </body>
     </html>

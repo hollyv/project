@@ -70,7 +70,7 @@
                             };
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div1'));
             chart.draw(data, options);
 
 
@@ -80,7 +80,7 @@
 
       <body>
         <!--Divs that will hold the charts-->
-        <div id="chart_div"></div>
+        <div id="chart_div1"></div>
         <div id="chart_div2"></div>
         <!--<div id="chart_div3"></div>-->
 
