@@ -92,6 +92,31 @@ class UpdatesController extends AppController
 
     }
 
+    public function analyst()
+    {
+        $loguser = $this->request->session()->read('Auth.User.id');
+
+        $this->paginate = [
+            'contain' => ['Tickets'],
+            'conditions'=>array('Updates.analyst_id' => $loguser,
+                                'Updates.update_text NOT LIKE' => 'SYSTEM%'),
+            'limit' => 8
+        ];
+        
+       $query = $this->Updates->find()->innerJoinWith(
+           'Tickets', function ($q) {
+           return $q->where(['Updates.analyst_id' => 7]);
+           }
+        );
+
+       $this->set('updates', $this->paginate($this->Updates));
+        $this->set('_serialize', ['updates']);
+
+        $this->set([
+            'query'=> $query]);
+
+    }
+
     /**
      * Edit method
      *

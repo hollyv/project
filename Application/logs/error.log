@@ -22785,3 +22785,454 @@ Stack Trace:
 #3 {main}
 
 
+2016-03-10 15:54:33 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:54:33 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 99)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:54:34 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:54:34 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 99)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:55:11 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:55:12 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 99)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:55:12 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:55:12 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 99)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:55:34 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:55:35 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 99)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:55:35 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:55:35 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 99)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:55:42 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:55:42 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 99)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:55:42 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:55:43 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 99)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:56:30 Error: Fatal Error (4): syntax error, unexpected '$query' (T_VARIABLE) in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 100]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:56:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$query' (T_VARIABLE)
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 100)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:56:30 Error: Fatal Error (4): syntax error, unexpected '$query' (T_VARIABLE) in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 100]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:56:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$query' (T_VARIABLE)
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 100)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:56:49 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 100]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:56:49 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 100)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:56:50 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 100]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:56:50 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 100)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:59:08 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 100]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:59:08 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 100)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:59:08 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 100]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:59:09 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 100)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:59:22 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 100]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:59:23 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 100)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:59:23 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 100]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 15:59:23 Error: [Cake\Error\FatalErrorException] Call to a member function find() on a non-object
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\tic...', 100)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 15:59:47 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UpdatesController.php(116): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UpdatesController->analyst()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-10 15:59:47 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UpdatesController.php(116): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UpdatesController->analyst()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-10 16:04:26 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UpdatesController.php(116): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UpdatesController->analyst()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-10 16:04:27 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UpdatesController.php(116): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UpdatesController->analyst()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-10 16:04:52 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UpdatesController.php(116): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UpdatesController->analyst()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-10 16:04:52 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UpdatesController.php(116): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UpdatesController->analyst()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-10 16:05:13 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UpdatesController.php(116): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UpdatesController->analyst()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-10 16:05:13 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UpdatesController.php(116): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UpdatesController->analyst()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-10 16:05:23 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UpdatesController.php(116): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UpdatesController->analyst()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-10 16:05:23 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tickets" with primary key [NULL]
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\src\Controller\UpdatesController.php(116): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UpdatesController->analyst()
+#2 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#5 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-10 16:08:15 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Updates\analyst.ctp, line 39]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Updates\analyst.ctp, line 39
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-10 16:08:15 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\wamp\www\tickets\src\Template\Updates\analyst.ctp, line 51]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Updates\analyst.ctp, line 51
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-10 20:08:58 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::analyst() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'analyst',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-10 21:22:04 Error: Fatal Error (4): syntax error, unexpected '%' in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 102]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 21:22:04 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '%'
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 102)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-10 21:22:04 Error: Fatal Error (4): syntax error, unexpected '%' in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 102]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-10 21:22:04 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '%'
+Request URL: /tickets/updates/analyst
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 102)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
