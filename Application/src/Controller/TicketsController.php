@@ -84,7 +84,6 @@ class TicketsController extends AppController
             }
         }
 
-
         $customers = $this->Tickets->Customers->find('list', ['limit' => 200]);
         $priorities = $this->Tickets->Priorities->find('list', ['limit' => 200]);
         $users = $this->Tickets->Users->find('list', ['limit' => 200]);
@@ -270,6 +269,16 @@ class TicketsController extends AppController
         $this->set('_serialize', ['tickets']);
     }
 
+    public function individual(){
+      $this->loadModel('Users');
+      $users = $this->Users->find('list');
+        $this->set(compact('users'));
+
+        if ($this->request->is('post')) {
+          $this->redirect(['controller' => 'Updates','action' => 'analyst', $this->request->data('users')]);
+        }
+    }
+
     public function resolve($id = null){
       //editing ticket details to update the status to resolved and adding resolution date with timestamp.
       //once done, it flashes success and redirects user to the previous page.
@@ -423,8 +432,16 @@ class TicketsController extends AppController
             $i = $i + 1;
         }  
 
-        $users = $this->Users->find('list');
-        $this->set(compact('users'));
+        $query = $this->Tickets->find()->contain([
+                      'Users' => function ($q) {
+                              return $q
+                                  ->select(['supportteam'])
+                                  ->where(['Users.supportteam'=> 'DBA']);
+                            }
+                        ]);
+        $dba = $query->count();
+
+
     
 /**
         foreach ($analysts as $a) {
@@ -461,7 +478,8 @@ class TicketsController extends AppController
 **/
 
         $this->set(['analysts'=> $analysts,
-                    'numTickets' => $numTickets]);
+                    'numTickets' => $numTickets,
+                    'dba' => $dba]);
         //$this->set('query', $query);
         //$this->set('analystsTime', $analystsTime);
     }

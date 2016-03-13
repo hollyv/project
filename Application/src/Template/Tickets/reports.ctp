@@ -25,7 +25,7 @@
     <?php foreach ($analysts as $a): ?>
 		<tr>
 			<td><?= h($a->username) ?></td>
-			<td>1</td>
+			<td><?= h($dba) ?></td>
 		</tr>
   
   <?php endforeach; ?>
@@ -62,6 +62,20 @@
             // Create the data table.
             <?php $i = $i + 1; ?>
             <?php endforeach; ?>
+
+            var data2 = new google.visualization.DataTable();
+            data2.addColumn('string', 'Ticket Type');
+            data2.addColumn('number', 'Number of tickets');
+            data2.addRows([
+              ['Business Systems', 1 ],
+              ['DBA', 3 ],
+              ['Functional Support', 2 ],
+              ['Infrastructure', 3 ],
+              ['Network Support', 2 ],
+              ['Projects and Admin', 2 ]
+            ]);
+
+
             // Set chart options
             var options = {'title':'Number of tickets open per Analyst',
                            'width':440,
@@ -72,6 +86,9 @@
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.PieChart(document.getElementById('chart_div1'));
             chart.draw(data, options);
+
+            var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));
+            chart2.draw(data2, options);
 
 
           }
@@ -84,16 +101,7 @@
         <div id="chart_div2"></div>
         <!--<div id="chart_div3"></div>-->
 
-        <div class="tickets form large-9 medium-8 columns content">
-        <?= $this->Form->create() ?>
-        <legend><?= __('Get Anaylst Updates') ?></legend>
-        <?php
-            echo $this->Form->input('users');
-            //$form->input('users');
-        ?>
-        <?= $this->Form->button(__('Submit')) ?>
-        <?= $this->Form->end() ?>
-</div>
+        
       </body>
 
     </html>

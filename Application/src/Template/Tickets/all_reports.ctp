@@ -15,7 +15,7 @@
 
   <div id="greyContent">
   <h3> All Reports: </h3>
-
+</br>
   <div id="reportLink">
     <div id="linkImage">
       <?php echo $this->Html->image('stats.png', array('alt' => 'Numatic Logo', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'style' => 'margin-left: 20px;')); ?></div>
@@ -35,7 +35,7 @@
     <div id="linkImage">
       <?php echo $this->Html->image('user.png', array('alt' => 'Numatic Logo', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'style' => 'margin-left: 20px;')); ?>
     </div>
-   <h3><?= $this->Html->link(__('Individual Analyst Timebookings'), ['controller' => 'Tickets', 'action' => 'index']) ?></h3> 
+   <h3><?= $this->Html->link(__('Individual Analyst Timebookings'), ['controller' => 'Tickets', 'action' => 'individual']) ?></h3> 
    <h5>Individual analyst timebookings and updates</h5>
   </div>
   
@@ -43,7 +43,7 @@
     <div id="linkImage">
       <?php echo $this->Html->image('avatar.png', array('alt' => 'Numatic Logo', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'style' => 'margin-left: 20px;')); ?>
     </div>
-   <h3><?= $this->Html->link(__('My Timebookings'), ['controller' => 'Updates', 'action' => 'analyst']) ?></h3> 
+   <h3><?= $this->Html->link(__('My Timebookings'), ['controller' => 'Updates', 'action' => 'analyst', $this->request->session()->read('Auth.User.id')]) ?></h3> 
    <h5>My timebookings and updates</h5>
   </div>
 

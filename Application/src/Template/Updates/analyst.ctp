@@ -12,8 +12,8 @@
 </nav>
 <?= $this->Html->link(__('All Reports'), ['controller' => 'Tickets', 'action' => 'allReports']) ?>
 <fieldset> 
-
-        <h4><?= __('All Timebookings and Updates - ' . $this->request->session()->read('Auth.User.username')) ?></h4>
+    
+        <h4><?= __('All Timebookings and Updates - ' . h($user->username)) ?></h4>
 
             <table >
             <tr>
