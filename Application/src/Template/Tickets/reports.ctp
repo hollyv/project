@@ -67,12 +67,12 @@
             data2.addColumn('string', 'Ticket Type');
             data2.addColumn('number', 'Number of tickets');
             data2.addRows([
-              ['Business Systems', 1 ],
-              ['DBA', 3 ],
-              ['Functional Support', 2 ],
-              ['Infrastructure', 3 ],
-              ['Network Support', 2 ],
-              ['Projects and Admin', 2 ]
+              ['Business Systems', <?= h($bs) ?> ],
+              ['DBA', <?= h($dba) ?> ],
+              ['Functional Support', <?= h($fs) ?> ],
+              ['Infrastructure', <?= h($infa) ?> ],
+              ['Network Support', <?= h($ns) ?>],
+              ['Projects and Admin', <?= h($ps) ?> ]
             ]);
 
 

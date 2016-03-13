@@ -441,6 +441,50 @@ class TicketsController extends AppController
                         ]);
         $dba = $query->count();
 
+        $bsquery = $this->Tickets->find()->contain([
+                      'Users' => function ($q) {
+                              return $q
+                                  ->select(['supportteam'])
+                                  ->where(['Users.supportteam'=> 'Business Systems']);
+                            }
+                        ]);
+        $bs = $bsquery->count();
+
+        $fsquery = $this->Tickets->find()->contain([
+                      'Users' => function ($q) {
+                              return $q
+                                  ->select(['supportteam'])
+                                  ->where(['Users.supportteam'=> 'Functional Support']);
+                            }
+                        ]);
+        $fs = $fsquery->count();
+
+        $infaQuery = $this->Tickets->find()->contain([
+                      'Users' => function ($q) {
+                              return $q
+                                  ->select(['supportteam'])
+                                  ->where(['Users.supportteam'=> 'Infastructure']);
+                            }
+                        ]);
+        $infa = $infaQuery->count();
+
+        $nsQuery = $this->Tickets->find()->contain([
+                      'Users' => function ($q) {
+                              return $q
+                                  ->select(['supportteam'])
+                                  ->where(['Users.supportteam'=> 'Network Support']);
+                            }
+                        ]);
+        $ns = $nsQuery->count();
+
+        $psQuery = $this->Tickets->find()->contain([
+                      'Users' => function ($q) {
+                              return $q
+                                  ->select(['supportteam'])
+                                  ->where(['Users.supportteam'=> 'Projects and Admin']);
+                            }
+                        ]);
+        $ps = $psQuery->count();
 
     
 /**
@@ -479,7 +523,12 @@ class TicketsController extends AppController
 
         $this->set(['analysts'=> $analysts,
                     'numTickets' => $numTickets,
-                    'dba' => $dba]);
+                    'dba' => $dba,
+                    'bs' => $bs,
+                    'fs' => $fs,
+                    'infa' => $infa,
+                    'ps' => $ps,
+                    'ns' => $ns]);
         //$this->set('query', $query);
         //$this->set('analystsTime', $analystsTime);
     }
@@ -515,7 +564,7 @@ class TicketsController extends AppController
               
               $date2=date_create("2013/03/15");
               //$diff=date_diff($date2,$current);
-              if(strtotime($dueDate) < strtotime($current))
+              if((strtotime($dueDate) < strtotime($current)) && ($j < 4))
               {
                  $ticketDetails = $this->Tickets->get($t->id, [
                   'contain' => ['Customers', 'Priorities', 'Users']
@@ -563,7 +612,7 @@ class TicketsController extends AppController
     $sysUpdates = $this->Updates->find('all', array(
           'conditions'=>array('Updates.update_text LIKE'=> '%SYSTEM%',
                               'Updates.update_text LIKE'=> $user ),
-          'limit' => 4
+          'limit' => 7
     ));
     $sysUpdates->orderDesc('created');
 

@@ -45,9 +45,10 @@
             // Set chart options
             var options = {'title':'My Tickets by Priority',
                            'width':300,
-                           'height':300,
+                           'height':280,
                            'is3D': true,
-                           'chartArea': {'width': '100%', 'height': '90%'}};
+                           'sliceVisibilityThreshold' :0,
+                           'chartArea': {'width': '100%', 'height': '85%'}};
 
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
@@ -60,43 +61,44 @@
       <body>
         <!--Divs that will hold the charts-->
         <div id="priority_kpi">
-        <div id="margin">
-        <div id="chart_div"></div>
-        <b>Total Tickets Open: <?= h($mytotal) ?></b>
-        </div></div>
+          <div id="margin">
+            <div id="chart_div"></div></br>
+          <b>Total Tickets Open: <?= h($mytotal) ?></b>
+          </div>
+        </div>
         <!--<div id="chart_div3"></div>-->
         <div id="notifications">
-        <div id="ticket_title">Latest Notifications</div>
-        <?php foreach ($sysUpdates as $s): ?>
-        <div id='singleUpdate'>
-          <h5 style="text-align:left;float:left;"><?= $s->update_text . ' (id: ' .$s->ticket_id . ')' ?></h5>
-          <h5 style="text-align:right;float:right;"><?= $s->created->format('d-M-y H:i') ?></h5>
-        </br>
-        <p ><?= $this->Html->link('View',['controller' => 'Updates', 'action' => 'ticket', $s->ticket_id]) ?></p>  
-        </div>
-        <?php endforeach; ?>
-  </div>
+          <div id="ticket_title">Latest Notifications</div>
+          <?php foreach ($sysUpdates as $s): ?>
+            <div id='singleUpdate'>
+            <h5 style="text-align:left;float:left;"><?=  ' Ticket (id: ' .$this->Html->link($s->ticket_id,['controller' => 'Updates', 'action' => 'ticket', $s->ticket_id]) . ') was assigned to you' ?></h5>
+            <h5 style="text-align:right;float:right;"><?= $s->created->format('d-M-y H:i') ?></h5>
+            </br> 
+            </div>
+            <?php endforeach; ?>
+          </div>
   
         <div id="notifications">
-        <div id="ticket_title">Tickets Requiring Your Attention</div>
-        <?php if($overdueTickets == null): ?>
-        <h4>You have no overdue tickets. </h4>
-        <?php else: ?>
-         <?php foreach ($overdueTickets as $t): ?>
-        <div id='overdueItems'>
-          <h5 ><?= $t->title . ' (id: ' .$t->id . ')' . '  ' . $t->priority->name . ' Priority' ?></h5>
-          Overdue - Created: <?= $t->created->format('d-M-y') ?> 
+          <div id="ticket_title">Tickets Requiring Your Attention</div>
+            <?php if($overdueTickets == null): ?>
+               <h4>You have no overdue tickets. </h4>
+            <?php else: ?>
+               <?php foreach ($overdueTickets as $t): ?>
+                  <div id='overdueItems'>
+                  <h5 ><?= $t->title . ' (id: ' .$this->Html->link($s->ticket_id,['controller' => 'Updates', 'action' => 'ticket', $s->ticket_id]) . ')' . '  ' . $t->priority->name . ' Priority' ?></h5>
+                          Overdue - Created: <?= $t->created->format('d-M-y') ?> 
+                  </div>
+               <?php endforeach; ?>
+              <div id="overdueText">
+              <p ><?= $this->Html->link('View all overdue tickets',['controller' => 'Tickets', 'action' => 'overdue']) ?></p>  
+            <?php endif ?>
+          </div>
         </div>
-        <?php endforeach; ?>
-        <div id="overdueText">
-        <p ><?= $this->Html->link('View all overdue tickets',['controller' => 'Tickets', 'action' => 'overdue']) ?></p>  
-        </div></div>
-
-        <div id="priority_kpi">
-        <div id="ticket_title">Latest Issues</div>
+     
+      <div id="priority_kpi">
+      <div id="ticket_title">Latest Issues</div>
+        hello
         </div>
-      <?php endif ?>
-
       </body>
     </html>
 </fieldset> 

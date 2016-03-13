@@ -138,7 +138,7 @@ ul#adminMenu li{
     border: solid 5px #B6B7BC;
     width:40%;
     float: right;
-    height:370px;
+    height:350px;
     margin-right: 15%;
     margin-bottom: 10px;
 }
@@ -148,12 +148,13 @@ ul#adminMenu li{
     padding-right: 3px;
     border-bottom: 2px #B6B7BC solid;
     background-color: #D9F0FB;
-    
+    display: inline-block;
+    width: 100%;  
 }
 
 
 #overdueItems{
-    background-color: #FFC5C5;
+    background-color: #ffd9d9;
     border-bottom: 2px #B6B7BC solid;
     padding-left:3px;
     width:100%;
@@ -161,8 +162,8 @@ ul#adminMenu li{
 }
 
 #overdueText{
-    padding-left: 27%;
-    padding-top: 5%;
+    padding-left: 30%;
+    padding-top: 2%;
 }
 
 #chart_div2{
@@ -191,10 +192,9 @@ ul#adminMenu li{
 #priority_kpi{
     color: #000000;
     border: solid 5px #B6B7BC;
-
     padding-bottom: 1%;
     float: left;
-    height: 370px;
+    height: 350px;
     width: 30%;
     margin-left: 5%;
 }
@@ -650,6 +650,7 @@ pre {
     background-color: #F0F0F1;
     padding-bottom: 1px;
     font-size: 1.8rem;
+    color: #323232;
 }
 
 #update_info{
