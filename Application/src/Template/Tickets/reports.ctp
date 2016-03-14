@@ -25,7 +25,7 @@
     <?php foreach ($analysts as $a): ?>
 		<tr>
 			<td><?= h($a->username) ?></td>
-			<td><?= h($dba) ?></td>
+			<td><?= h($ns) ?></td>
 		</tr>
   
   <?php endforeach; ?>
@@ -81,6 +81,14 @@
                            'width':300,
                            'height':300,
                            'is3D': true,
+                           'sliceVisibilityThreshold' :0,
+                           'chartArea': {'width': '90%', 'height': '85%'}};
+
+            var options2 = {'title':'Number of tickets open per Support Team ',
+                           'width':300,
+                           'height':300,
+                           'is3D': true,
+                           'sliceVisibilityThreshold' :0,
                            'chartArea': {'width': '90%', 'height': '85%'}};
 
             // Instantiate and draw our chart, passing in some options.
@@ -88,7 +96,7 @@
             chart.draw(data, options);
 
             var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));
-            chart2.draw(data2, options);
+            chart2.draw(data2, options2);
 
 
           }

@@ -60179,3 +60179,1655 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-03-14 16:59:39 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 87]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 87
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 17:01:02 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\homepage.ctp, line 87]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\homepage.ctp, line 87
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:11:11 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:37 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:37 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:37 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:37 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:37 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:37 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:37 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:37 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:37 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:37 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:38 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:38 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:38 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:38 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:38 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:38 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:38 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:38 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:38 Notice: Notice (8): Undefined variable: d in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:13:38 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 709]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 709
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 713
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:15 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:15 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:15 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:15 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:15 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:15 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:15 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:15 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:15 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:15 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:32 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:32 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:32 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:32 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:32 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:33 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:33 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:33 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:33 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:18:33 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:20:46 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:20:46 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:20:46 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:20:46 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:20:46 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:20:47 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:20:47 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:20:47 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:20:47 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:20:47 Notice: Notice (8): Undefined variable: id in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 711]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+App\Controller\TicketsController::App\Controller\{closure}() - APP/Controller\TicketsController.php, line 711
+Cake\ORM\Association::attachTo() - CORE\src\ORM\Association.php, line 539
+Cake\ORM\EagerLoader::attachAssociations() - CORE\src\ORM\EagerLoader.php, line 343
+Cake\ORM\Query::_transformQuery() - CORE\src\ORM\Query.php, line 897
+Cake\ORM\Query::sql() - CORE\src\ORM\Query.php, line 853
+Cake\Database\Driver\Mysql::prepare() - CORE\src\Database\Driver\Mysql.php, line 121
+Cake\Database\Connection::prepare() - CORE\src\Database\Connection.php, line 216
+Cake\Database\Connection::run() - CORE\src\Database\Connection.php, line 268
+Cake\Database\Query::execute() - CORE\src\Database\Query.php, line 174
+Cake\ORM\Query::_performCount() - CORE\src\ORM\Query.php, line 743
+Cake\ORM\Query::count() - CORE\src\ORM\Query.php, line 700
+App\Controller\TicketsController::kpi() - APP/Controller\TicketsController.php, line 715
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:29:15 Notice: Notice (8): Undefined variable: dep in [C:\wamp\www\tickets\src\Template\Tickets\kpi.ctp, line 19]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\kpi.ctp, line 19
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:30:10 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\kpi.ctp, line 21]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\kpi.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:30:10 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\kpi.ctp, line 21]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\kpi.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:30:10 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\kpi.ctp, line 21]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\kpi.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:30:10 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\kpi.ctp, line 21]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\kpi.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-14 21:30:10 Notice: Notice (8): Trying to get property of non-object in [C:\wamp\www\tickets\src\Template\Tickets\kpi.ctp, line 21]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 138
+include - APP/Template\Tickets\kpi.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 970
+Cake\View\View::_render() - CORE\src\View\View.php, line 930
+Cake\View\View::render() - CORE\src\View\View.php, line 578
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+

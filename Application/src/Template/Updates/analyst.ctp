@@ -55,8 +55,11 @@
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
     </div>
-
-    <h5>Total Time Booked: <?= h($total->sum) ?> </h5>
-
+    <?php if($total->sum > 60): ?>
+        <?php  $total->sum = $total->sum / 60 ; ?>
+        <h5>Total Time Booked: <?= round(h($total->sum),2) ?> hr </h5>
+    <?php else: ?>
+        <h5>Total Time Booked: <?= round(h($total->sum),2) ?> mins </h5>
+    <?php endif ?>
 </div>
 </fieldset> 

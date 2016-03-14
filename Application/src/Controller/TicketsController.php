@@ -648,7 +648,8 @@ class TicketsController extends AppController
                 'overdueTickets'=>$overdueTickets,
                 'overdue' => $overdue,
                 'cat'=>$cat,
-                'cat2'=>$cat2
+                'cat2'=>$cat2, 
+                'results'=>$results
                 ]);
 
     }
@@ -658,31 +659,38 @@ class TicketsController extends AppController
     $totalTickets = $this->Tickets->find('all');
 
     $highTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.priority_id'=>'1',)
+       'conditions'=>array('Tickets.priority_id'=>'1',
+                           'Tickets.status !=' =>'Closed')
     ));
 
     $medTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.priority_id'=>'2')
+       'conditions'=>array('Tickets.priority_id'=>'2',
+                           'Tickets.status !=' =>'Closed')
     ));
 
     $lowTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.priority_id'=>'3')
+       'conditions'=>array('Tickets.priority_id'=>'3',
+                           'Tickets.status !=' =>'Closed')
     ));
 
     $ongoingTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.priority_id'=>'4')
+       'conditions'=>array('Tickets.priority_id'=>'4',
+                            'Tickets.status !=' =>'Closed')
     ));
 
     $incidentTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.ticket_type'=>'Incident')
+       'conditions'=>array('Tickets.ticket_type'=>'Incident',
+                            'Tickets.status !=' =>'Closed')
     ));
 
     $requestTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.ticket_type'=>'Request')
+       'conditions'=>array('Tickets.ticket_type'=>'Request',
+                            'Tickets.status !=' =>'Closed')
     ));
 
     $problemTickets = $this->Tickets->find('all', array(
-       'conditions'=>array('Tickets.ticket_type'=>'Problem')
+       'conditions'=>array('Tickets.ticket_type'=>'Problem',
+                            'Tickets.status !=' =>'Closed')
     ));
 
 
@@ -695,6 +703,24 @@ class TicketsController extends AppController
     $problem = $problemTickets->count();
     $request = $requestTickets->count();
 
+
+    $this->loadModel('Departments');
+    $dep = $this->Departments->find('all');
+
+    foreach ($dep as $d){
+
+      $this->paginate = [
+            'contain' => ['Customers', 'Priorities', 'Users'],
+            'conditions'=>array('Customers.department_id' => $d->id,
+                                'Tickets.status !=' =>'Closed'),
+        ];
+        $tickets = $this->paginate($this->Tickets);
+
+        $count = $tickets->count();
+        $depInfo[$d->name] = $count;
+    }
+
+    arsort($depInfo);
     $this->set(['high'=> $high,
                 'medium' => $medium,
                 'low' => $low,
@@ -702,7 +728,8 @@ class TicketsController extends AppController
                 'total'=> $total,
                 'incident'=>$incident,
                 'problem'=>$problem,
-                'request'=>$request
+                'request'=>$request,
+                'depInfo'=>$depInfo 
                 ]);
 
     }

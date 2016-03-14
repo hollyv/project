@@ -161,6 +161,13 @@ ul#adminMenu li{
     display: inline-block;
 }
 
+#nonOverdueItems{
+    border-bottom: 2px #B6B7BC solid;
+    padding-left:3px;
+    width:100%;
+    display: inline-block;
+}
+
 #overdueText{
     padding-left: 30%;
     padding-top: 2%;

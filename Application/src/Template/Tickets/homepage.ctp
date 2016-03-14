@@ -63,7 +63,7 @@
         <div id="priority_kpi">
           <div id="margin">
             <div id="chart_div"></div></br>
-          <b>Total Tickets Open: <?= h($mytotal) ?></b>
+          <b>Number of tickets you have open: <?= h($mytotal) ?></b>
           </div>
         </div>
         <!--<div id="chart_div3"></div>-->
@@ -81,7 +81,14 @@
         <div id="notifications">
           <div id="ticket_title">Tickets Requiring Your Attention</div>
             <?php if($overdueTickets == null): ?>
-               <h4>You have no overdue tickets. </h4>
+               <?php foreach ($results as $r): ?>
+                  <div id='nonOverdueItems'>
+                  <h5 ><?= $r->title ?></h5>
+                          Within SLA - Created: <?= $r->created->format('d-M-y') ?> 
+                  </div>
+               <?php endforeach; ?>
+               <div id="overdueText">
+              <p ><?= $this->Html->link('View all your tickets',['controller' => 'Tickets', 'action' => 'assigned', $this->request->session()->read('Auth.User.id') ]) ?></p>  
             <?php else: ?>
                <?php foreach ($overdueTickets as $t): ?>
                   <div id='overdueItems'>

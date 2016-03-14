@@ -109,7 +109,7 @@ class UpdatesController extends AppController
                      ));
         $updateSum->select(['sum' => $updateSum->func()->sum('time_booking')]);
         $total = $updateSum->first();
-        $total->sum = $total->sum / 60 ;
+       
 
         $this->loadModel('Users');
          $query = $this->Users->find('all', array(

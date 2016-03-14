@@ -15,8 +15,12 @@
 <h3>Ticket Key Performance Indicators </h3>
 
  	<div id="priority_kpi">
-		<h5>Common Issue Category</h5>
+		<h5>Current most problematic departments</h5>
+    <?php foreach ($depInfo as $a=>$a_value): ?>
+    <?= h($a) ?> (<?= h($a_value) ?> Tickets) </br>
 
+  
+  <?php endforeach; ?>
 
 	</div>
  <html>
