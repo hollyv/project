@@ -28,7 +28,7 @@
             echo 'Category';
             echo $this->Form->select(
                 'category',
-                ['Hardware' => 'Hardware', 'Software' => 'Software']);
+                ['Computer Set Up' => 'Computer Set Up', 'E-mail' => 'E-mail', 'Hardware' => 'Hardware','Intranet' => 'Intranet', 'Internet' => 'Internet','Network' => 'Network', 'Phones' => 'Phones', 'Printers' => 'Printers', 'Scanners' => 'Scanners','Software' => 'Software', 'Virus' => 'Virus', 'Other' => 'Other']);
             $loguser = $this->request->session()->read('Auth.User.id');
             echo $this->Form->hidden('analyst_id', ['value' => $loguser]);
             echo 'Ticket Type';

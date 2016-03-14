@@ -56,5 +56,7 @@
         <p><?= $this->Paginator->counter() ?></p>
     </div>
 
+    <h5>Total Time Booked: <?= h($total->sum) ?> </h5>
+
 </div>
 </fieldset> 

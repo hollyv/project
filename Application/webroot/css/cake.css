@@ -138,7 +138,7 @@ ul#adminMenu li{
     border: solid 5px #B6B7BC;
     width:40%;
     float: right;
-    height:350px;
+    height:340px;
     margin-right: 15%;
     margin-bottom: 10px;
 }
@@ -166,9 +166,35 @@ ul#adminMenu li{
     padding-top: 2%;
 }
 
+#items_trending{
+    float: left;
+    display: inline-block;
+    padding-bottom:2px;
+}
+
 #chart_div2{
     float: right;
     margin-right: 3%;
+}
+
+#highTrending{
+    /*background-color: #ffd9d9;*/
+    padding-left: 2%;
+    float: left;
+    width: 100%;
+    border-bottom: 2px #B6B7BC solid;
+}
+
+#trendingIcon{
+    float: right;
+    margin-right: 5%;
+}
+
+#lowTrending{
+    /*background-color: #C5E2C5;*/
+    padding-left: 2%;
+    float: left;
+    width: 100%;
 }
 
 #chart_div{
@@ -194,7 +220,7 @@ ul#adminMenu li{
     border: solid 5px #B6B7BC;
     padding-bottom: 1%;
     float: left;
-    height: 350px;
+    height: 340px;
     width: 30%;
     margin-left: 5%;
 }

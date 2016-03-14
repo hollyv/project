@@ -12,7 +12,7 @@
 </nav>
 <section>
 <fieldset>
-<h1>Anaylst Comparision </h1>
+<h3>Anaylst Comparision </h3>
 
  	<div id="priority_kpi">
 		<h4>Time bookings per analyst</h4>
@@ -78,10 +78,10 @@
 
             // Set chart options
             var options = {'title':'Number of tickets open per Analyst',
-                           'width':440,
-                           'height':440,
-                           'is3D': true
-                            };
+                           'width':300,
+                           'height':300,
+                           'is3D': true,
+                           'chartArea': {'width': '90%', 'height': '85%'}};
 
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.PieChart(document.getElementById('chart_div1'));

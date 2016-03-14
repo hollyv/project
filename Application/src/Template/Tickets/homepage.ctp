@@ -43,9 +43,9 @@
           
 
             // Set chart options
-            var options = {'title':'My Tickets by Priority',
+            var options = {'title':'Your Tickets by Priority',
                            'width':300,
-                           'height':280,
+                           'height':260,
                            'is3D': true,
                            'sliceVisibilityThreshold' :0,
                            'chartArea': {'width': '100%', 'height': '85%'}};
@@ -96,9 +96,35 @@
         </div>
      
       <div id="priority_kpi">
-      <div id="ticket_title">Latest Issues</div>
-        hello
+      <div id="ticket_title">Trending Issues</div>
+      <div id="highTrending">
+        <h5 >Most problematic ticket categories: </h5> 
+        <div id="items_trending">
+          <?php $i = 0; ?>
+            <?php foreach ($cat as $c=>$c_value): ?>
+              <?php if($i < 5): ?>
+                <?= $c ?> (<?= $c_value ?> tickets) </br>
+                <?php $i = $i + 1; ?>
+              <?php endif ?>
+            <?php endforeach; ?>
         </div>
+        <div id="trendingIcon"> <?php echo $this->Html->image('redUp.png', array('alt' => 'Numatic Logo', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'style' => 'margin-left: 20px;')); ?></div>
+      </div>
+        <div id="lowTrending">
+          <h5 >Least problematic ticket categories: </h5> 
+          <div id="items_trending">
+            <?php $i = 0; ?>
+            <?php foreach ($cat2 as $c2=>$c2_value): ?>
+              <?php if($i < 5): ?>
+                <?= $c2 ?> (<?= $c2_value ?> tickets) </br>
+                <?php $i = $i + 1; ?>
+              <?php endif ?>
+            <?php endforeach; ?>
+          </div>
+          <div id="trendingIcon"> <?php echo $this->Html->image('greenDown.png', array('alt' => 'Numatic Logo', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'style' => 'margin-left: 20px;')); ?></div>
+        </div>
+      </div>
+      </div>
       </body>
     </html>
 </fieldset> 

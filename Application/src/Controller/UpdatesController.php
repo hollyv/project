@@ -86,6 +86,7 @@ class UpdatesController extends AppController
         $ticket = $this->Tickets->get($id, [
             'contain' => ['Customers', 'Priorities', 'Users', 'Updates']
         ]);
+
         $this->set(['results'=> $results,
             'id'=> $id,
             'ticket'=>$ticket]);
@@ -101,7 +102,15 @@ class UpdatesController extends AppController
                                 'Updates.update_text NOT LIKE' => 'SYSTEM%'),
             'limit' => 8
         ];
-        
+
+        // Calculating the sum of all timebookings 
+        $updateSum = $this->Updates->find('all', array(
+                    'conditions'=>array('Updates.analyst_id' => $id )
+                     ));
+        $updateSum->select(['sum' => $updateSum->func()->sum('time_booking')]);
+        $total = $updateSum->first();
+        $total->sum = $total->sum / 60 ;
+
         $this->loadModel('Users');
          $query = $this->Users->find('all', array(
             'conditions'=>array('id' => $id)
@@ -111,7 +120,8 @@ class UpdatesController extends AppController
 
         $this->set('updates', $this->paginate($this->Updates));
         $this->set('_serialize', ['updates']);
-        $this->set('user', $user);
+        $this->set(['user'=> $user,
+                   'total' => $total]);
 
 
     }

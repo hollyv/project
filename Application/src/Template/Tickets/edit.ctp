@@ -29,7 +29,7 @@
             echo 'Category';
             echo $this->Form->select(
                 'category',
-                ['Hardware' => 'Hardware', 'Software' => 'Software']);
+                ['Computer Set Up' => 'Computer Set Up', 'E-mail' => 'E-mail', 'Hardware' => 'Hardware','Intranet' => 'Intranet', 'Internet' => 'Internet','Network' => 'Network', 'Phones' => 'Phones', 'Printers' => 'Printers', 'Scanners' => 'Scanners','Software' => 'Software', 'Virus' => 'Virus', 'Other' => 'Other']);
             echo 'Ticket Type';
              echo $this->Form->select(
                 'ticket_type',

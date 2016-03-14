@@ -621,8 +621,23 @@ class TicketsController extends AppController
     $myMed = $myMedTickets->count();
     $myLow = $myLowTickets->count();
     $myOngoing = $myOngoingTickets->count();
-
     $overdue = $this->overdueTickets;
+
+
+    $cat=array("Computer Set Up"=>null, "E-mail"=>null, "Hardware"=>null, "Intranet"=>null, "Internet"=>null, "Network"=>null,
+               "Phones"=>null, "Printers"=>null, "Scanners"=>null, "Software"=>null, "Virus"=>null, "Other"=>null);
+
+    foreach($cat as $x=>$x_value){
+      $catTickets = $this->Tickets->find('all', array(
+                    'conditions'=>array('Tickets.category'=>$x,
+                           'Tickets.status !=' =>'Closed')
+                    ));
+      $count = $catTickets->count();
+      $cat[$x] = $count;
+    }
+    arsort($cat);
+    $cat2 = $cat;
+    asort($cat2);
 
     $this->set(['mytotal'=>$mytotal,
                 'myHigh'=>$myHigh,
@@ -631,7 +646,9 @@ class TicketsController extends AppController
                 'myOngoing'=>$myOngoing,
                 'sysUpdates'=>$sysUpdates,
                 'overdueTickets'=>$overdueTickets,
-                'overdue' => $overdue
+                'overdue' => $overdue,
+                'cat'=>$cat,
+                'cat2'=>$cat2
                 ]);
 
     }
