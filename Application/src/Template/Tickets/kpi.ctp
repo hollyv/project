@@ -10,7 +10,7 @@
         <li><?= $this->Html->link(__('Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?></li>
      </ul>
 </nav>
-<?= $this->Html->link(__('All Reports'), ['controller' => 'Tickets', 'action' => 'allReports']) ?>
+<div id="all"><?= $this->Html->link(__('All Reports'), ['controller' => 'Tickets', 'action' => 'allReports']) ?></h5></div>
 <section>
 <fieldset>
 <h3 style="margin-left: 5%;">Key Performance Indicators - Tickets </h3>

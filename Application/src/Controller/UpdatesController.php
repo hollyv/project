@@ -95,17 +95,22 @@ class UpdatesController extends AppController
 
     public function analyst($id=null)
     {
+        //Working out the date on the last month 
+        $new_time = date('Y-m-d', strtotime('-30 days'));
+
         //Get all Updates per analyst
         $this->paginate = [
             'contain' => ['Tickets'],
             'conditions'=>array('Updates.analyst_id' => $id,
-                                'Updates.update_text NOT LIKE' => 'SYSTEM%'),
+                                'Updates.update_text NOT LIKE' => 'SYSTEM%',
+                                'Updates.created >=' => $new_time),
             'limit' => 8
         ];
 
         // Calculating the sum of all timebookings 
         $updateSum = $this->Updates->find('all', array(
-                    'conditions'=>array('Updates.analyst_id' => $id )
+                    'conditions'=>array('Updates.analyst_id' => $id,
+                                        'Updates.created >=' => $new_time)
                      ));
         $updateSum->select(['sum' => $updateSum->func()->sum('time_booking')]);
         $total = $updateSum->first();
@@ -117,11 +122,11 @@ class UpdatesController extends AppController
             ));
         $user = $query->first();
 
-
         $this->set('updates', $this->paginate($this->Updates));
         $this->set('_serialize', ['updates']);
         $this->set(['user'=> $user,
-                   'total' => $total]);
+                   'total' => $total,
+                   'new_time' => $new_time]);
 
 
     }

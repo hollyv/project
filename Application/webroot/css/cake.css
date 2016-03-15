@@ -240,6 +240,18 @@ ul#adminMenu li{
     margin-top: 2%;
 }
 
+#ticket_chart5{
+    float: right;
+    margin-right: 15%;
+    margin-top: 5%;
+}
+
+#all{
+    padding-left: 5%;
+    display: inline-block;
+    padding-top: 2px;
+}
+
 #ticket_chart4{
     display: inline-block;
     float: right;

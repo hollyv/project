@@ -415,6 +415,8 @@ class TicketsController extends AppController
     }
 
     public function reports(){
+
+      //getting data for number of tickets per analyst chart
         $this->loadModel('Users');
         $analysts = $this->Users->find();
         $analysts->select(['id', 'username'])
@@ -424,19 +426,21 @@ class TicketsController extends AppController
         $i=0;
         foreach ($analysts as $a) {          
             $ticket = $this->Tickets->find('all', array(
-                  'conditions'=>array('Tickets.analyst_id'=> $a->id)
+                  'conditions'=>array('Tickets.analyst_id'=> $a->id,
+                                      'Tickets.status !=' =>'Closed')
             ));
             $ticketCount = $ticket->count();
             $numTickets[$i] = $ticketCount;
-            //$numTickets = array($i =>$a->username ,$ticketCount);
             $i = $i + 1;
         }  
 
+        //Getting data for number of tickets per dept chart
         $query = $this->Tickets->find()->contain([
                       'Users' => function ($q) {
                               return $q
                                   ->select(['supportteam'])
-                                  ->where(['Users.supportteam'=> 'DBA']);
+                                  ->where(['Users.supportteam'=> 'DBA',
+                                           'Tickets.status !=' =>'Closed']);
                             }
                         ]);
         $dba = $query->count();
@@ -445,7 +449,8 @@ class TicketsController extends AppController
                       'Users' => function ($q) {
                               return $q
                                   ->select(['supportteam'])
-                                  ->where(['Users.supportteam'=> 'Business Systems']);
+                                  ->where(['Users.supportteam'=> 'Business Systems',
+                                           'Tickets.status !=' =>'Closed']);
                             }
                         ]);
         $bs = $bsquery->count();
@@ -454,7 +459,8 @@ class TicketsController extends AppController
                       'Users' => function ($q) {
                               return $q
                                   ->select(['supportteam'])
-                                  ->where(['Users.supportteam'=> 'Functional Support']);
+                                  ->where(['Users.supportteam'=> 'Functional Support',
+                                           'Tickets.status !=' =>'Closed']);
                             }
                         ]);
         $fs = $fsquery->count();
@@ -463,7 +469,8 @@ class TicketsController extends AppController
                       'Users' => function ($q) {
                               return $q
                                   ->select(['supportteam'])
-                                  ->where(['Users.supportteam'=> 'Infastructure']);
+                                  ->where(['Users.supportteam'=> 'Infastructure',
+                                            'Tickets.status !=' =>'Closed']);
                             }
                         ]);
         $infa = $infaQuery->count();
@@ -472,7 +479,8 @@ class TicketsController extends AppController
                       'Users' => function ($q) {
                               return $q
                                   ->select(['supportteam'])
-                                  ->where(['Users.supportteam'=> 'Network Support']);
+                                  ->where(['Users.supportteam'=> 'Network Support',
+                                           'Tickets.status !=' =>'Closed']);
                             }
                         ]);
         $ns = $nsQuery->count();
@@ -481,45 +489,54 @@ class TicketsController extends AppController
                       'Users' => function ($q) {
                               return $q
                                   ->select(['supportteam'])
-                                  ->where(['Users.supportteam'=> 'Projects and Admin']);
+                                  ->where(['Users.supportteam'=> 'Projects and Admin',
+                                            'Tickets.status !=' =>'Closed']);
                             }
                         ]);
         $ps = $psQuery->count();
 
-    
-/**
+
+      $new_time = date('Y-m-d', strtotime('-30 days'));
+      //Working out timebookings per analyst
+      $this->loadModel('Updates');
         foreach ($analysts as $a) {
-        $this->loadModel('Updates');
-       //$conditions =  array( "Updates.created >=" => date('d-m-Y', strtotime("-1 day"))
-        //); 
-        //$query = $this->Updates->find('all',array('conditions'=>$conditions)); 
+        
         $user = $this->Updates->find('all', array(
-          'conditions'=>array('Updates.analyst_id'=>$a['id'])
+          'conditions'=>array('Updates.analyst_id'=>$a['id'],
+                              'Updates.created >=' => $new_time)
         ));
-        $total = 0;
-        $arr = array();
-        $i = 0;
-       foreach ($user as $u) {
-         //$query->select(['sum' => $q->func()->sum('time_booking')]);
-        
+        $user->select(['time_booking' => $user->func()->sum('time_booking')]);
+        $total = $user->first();
+        $booking[$a->username] = $total;
+      
+      }
 
-        if ($u->created >= date('d-m-Y', strtotime("-1 day")))
-        {
-          $total = $total + $u->time_booking;
-        }
+      //Working out resolution time per analyst
+      foreach ($analysts as $a) {          
+            $resolved = $this->Tickets->find('all', array(
+                  'conditions'=>array('Tickets.analyst_id'=> $a->id,
+                    'Tickets.resolution_date !='=> 'null')
+            ));
+            $countResolved = $resolved->count();
+          $i = 0;
+          $diffArray = array();
+          foreach ($resolved as $r) {
+              $diff=date_diff($r->created,$r->resolution_date);
+              $diff = $diff->format("%a");
+              $diffArray[$i] = $diff;
+              $i = $i + 1;
+          }
+          
+          if (count($diffArray) > 0){
+          $average =  array_sum($diffArray) /count($diffArray);
+          }
+          else{
+            $average = 0;
+          }
 
-        $i = $i + 1;
-       }
-         //$query->select(['sum' => $query->func()->sum('time_booking')]);
-        $analystsTime[$a->username] = $total;
-  
-        }
-                              //      'Updates.created >' => date('Y-m-d', strtotime("-1 weeks")
-        
-        $updated = $this->Updates->find('all', array(
-            'conditions'=>array('WatchedTickets.analyst_id'=>$id)
-        ));
-**/
+          $avgTime[$a->username] = $average;
+        }  
+
 
         $this->set(['analysts'=> $analysts,
                     'numTickets' => $numTickets,
@@ -528,9 +545,9 @@ class TicketsController extends AppController
                     'fs' => $fs,
                     'infa' => $infa,
                     'ps' => $ps,
-                    'ns' => $ns]);
-        //$this->set('query', $query);
-        //$this->set('analystsTime', $analystsTime);
+                    'ns' => $ns,
+                    'avgTime'=> $avgTime,
+                    'booking'=> $booking]);
     }
   
 
@@ -575,8 +592,6 @@ class TicketsController extends AppController
               }
               $i = $i + 1;
         endforeach;
-
-
 
 
     $myTickets = $this->Tickets->find('all', array(

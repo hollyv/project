@@ -10,10 +10,10 @@
         <li><?= $this->Html->link(__('Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?></li>
     </ul>
 </nav>
-<?= $this->Html->link(__('All Reports'), ['controller' => 'Tickets', 'action' => 'allReports']) ?>
+<div id="all"><?= $this->Html->link(__('All Reports'), ['controller' => 'Tickets', 'action' => 'allReports']) ?></div>
 <fieldset> 
     
-        <h4><?= __('All Timebookings and Updates - ' . h($user->username)) ?></h4>
+        <h4><?= __('All Timebookings and Updates (Since: '. date('d-M-y', strtotime('-30 days'))  .') - ' . h($user->username)) ?></h4>
 
             <table >
             <tr>
@@ -25,12 +25,8 @@
             <th>Update Text</th>
             <th>Timebooking</th>
             </tr>
-           
-
-
 
             <?php foreach ($updates as $q): ?>
-
 
             <tr>
             <td><?= h($q->ticket->id) ?></td>

@@ -10,26 +10,25 @@
         <li><?= $this->Html->link(__('Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?></li>
      </ul>
 </nav>
+<div id="all"><?= $this->Html->link(__('All Reports'), ['controller' => 'Tickets', 'action' => 'allReports']) ?></h5></div>
 <section>
 <fieldset>
-<h3>Anaylst Comparision </h3>
+<h3 style="margin-left: 5%;">Anaylst Comparision </h3>
 
  	<div id="priority_kpi">
-		<h4>Time bookings per analyst</h4>
-	<table>
-		<tr>
-			<th>Anaylst</th>
-			<th>Time booking</th>
-		</tr>
-    
-    <?php foreach ($analysts as $a): ?>
-		<tr>
-			<td><?= h($a->username) ?></td>
-			<td><?= h($ns) ?></td>
-		</tr>
+		<div id="ticket_title">Time bookings per analyst</div>
+    <h5>Bookings for the past month (<?= date('d-M-y', strtotime('-30 days'))?>): </h5> 
+  <?php foreach ($booking as $b=>$b_value): ?>
+
+    <div id="singleUpdate">
+    <?= h($b) ?>: 
+    <?php if($b_value->time_booking == null): ?>
+    0 </br><?php else: ?>
+    <?= h($b_value->time_booking) ?> </br>
+  <?php endif ?>
+</div>
   
-  <?php endforeach; ?>
-	</table>
+  <?php  endforeach; ?>
 	</div>	
 
  <html>
@@ -54,10 +53,20 @@
             // Create the data table.
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Topping');    
-            data.addColumn('number', 'Slices');
+            data.addColumn('number', 'Number of tickets');
             <?php $i = 0; ?>
             <?php foreach ($analysts as $a): ?>
             data.addRows([[ '<?= h($a->username) ?>', <?= h($numTickets[$i]) ?> ]]);
+            // Create the data table.
+            <?php $i = $i + 1; ?>
+            <?php endforeach; ?>
+
+            var data3 = new google.visualization.DataTable();
+            data3.addColumn('string', 'Topping');    
+            data3.addColumn('number', 'Number of tickets');
+            <?php $i = 0; ?>
+            <?php foreach ($avgTime as $avg=>$avg_value): ?>
+            data3.addRows([[ '<?= h($avg) ?>', <?= h($avg_value) ?> ]]);
             // Create the data table.
             <?php $i = $i + 1; ?>
             <?php endforeach; ?>
@@ -78,25 +87,40 @@
             // Set chart options
             var options = {'title':'Number of tickets open per Analyst',
                            'width':500,
-                           'height':300,
-                           'is3D': true,
+                           'height':340,
                            'sliceVisibilityThreshold' :0,
+                           'vAxis': {title: 'Num of Tickets'},
+                           'xAxis': {title: 'Department'},
+                           'legend': {position: 'none'},
+                           'colors': ['#029eea'],
                            'chartArea': {'width': '90%', 'height': '85%'}};
 
-            var options2 = {'title':'Number of tickets open per Support Team ',
-                           'width':300,
-                           'height':300,
+              var options2 = {'title':'Number of tickets open per Support Team ',
+                           'width':500,
+                           'height':340,
                            'is3D': true,
                            'sliceVisibilityThreshold' :0,
-                           'chartArea': {'width': '90%', 'height': '85%'}};
+                           'chartArea': {'width': '60%', 'height': '60%'}};
+
+              var options3 = {'title':'Average resolution time per analyst',
+                           'width':500,
+                           'height':340,
+                           'sliceVisibilityThreshold' :0,
+                           'vAxis': {title: 'Avg Time (Days)'},
+                           'xAxis': {title: 'Analyst'},
+                           'legend': {position: 'none'},
+                           'colors': ['#029eea'],
+                           'chartArea': {'width': '80%', 'height': '85%'}};
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div1'));
+            var chart = new google.visualization.ColumnChart(document.getElementById('ticket_chart4'));
             chart.draw(data, options);
 
-            var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));
+            var chart2 = new google.visualization.PieChart(document.getElementById('ticket_chart5'));
             chart2.draw(data2, options2);
 
+            var chart3 = new google.visualization.ColumnChart(document.getElementById('ticket_chart1'));
+            chart3.draw(data3, options3);
 
           }
         </script>
@@ -104,9 +128,9 @@
 
       <body>
         <!--Divs that will hold the charts-->
-        <div id="chart_div1"></div>
-        <div id="chart_div2"></div>
-        <!--<div id="chart_div3"></div>-->
+        <div id="ticket_chart4"></div>
+        <div id="ticket_chart5"></div>
+        <div id="ticket_chart1"></div>
 
         
       </body>
