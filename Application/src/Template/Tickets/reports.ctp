@@ -57,7 +57,6 @@
             data.addColumn('number', 'Slices');
             <?php $i = 0; ?>
             <?php foreach ($analysts as $a): ?>
-            <?php $name = $a->username;?>
             data.addRows([[ '<?= h($a->username) ?>', <?= h($numTickets[$i]) ?> ]]);
             // Create the data table.
             <?php $i = $i + 1; ?>
@@ -78,7 +77,7 @@
 
             // Set chart options
             var options = {'title':'Number of tickets open per Analyst',
-                           'width':300,
+                           'width':500,
                            'height':300,
                            'is3D': true,
                            'sliceVisibilityThreshold' :0,
@@ -92,7 +91,7 @@
                            'chartArea': {'width': '90%', 'height': '85%'}};
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div1'));
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div1'));
             chart.draw(data, options);
 
             var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));

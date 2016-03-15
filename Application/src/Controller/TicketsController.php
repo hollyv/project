@@ -693,6 +693,18 @@ class TicketsController extends AppController
                             'Tickets.status !=' =>'Closed')
     ));
 
+    $newTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.status' =>'New')
+    ));
+
+    $pendingTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.status' =>'Pending')
+    ));
+
+    $resolvedTickets = $this->Tickets->find('all', array(
+       'conditions'=>array('Tickets.status' =>'Resolved')
+    ));
+
 
     $high = $highTickets->count();
     $medium = $medTickets->count();
@@ -702,7 +714,9 @@ class TicketsController extends AppController
     $incident = $incidentTickets->count();
     $problem = $problemTickets->count();
     $request = $requestTickets->count();
-
+    $new = $newTickets->count();
+    $pending = $pendingTickets->count();
+    $resolved = $resolvedTickets->count();
 
     $this->loadModel('Departments');
     $dep = $this->Departments->find('all');
@@ -716,11 +730,29 @@ class TicketsController extends AppController
         ];
         $tickets = $this->paginate($this->Tickets);
 
+        if (strpos($d->name, '&') !== false) {
+          $d->name = 'R\u0026D';
+        }
+
         $count = $tickets->count();
         $depInfo[$d->name] = $count;
     }
 
-    arsort($depInfo);
+    $cat=array("Computer Set Up"=>null, "E-mail"=>null, "Hardware"=>null, "Intranet"=>null, "Internet"=>null, "Network"=>null,
+               "Phones"=>null, "Printers"=>null, "Scanners"=>null, "Software"=>null, "Virus"=>null, "Other"=>null);
+
+    foreach($cat as $x=>$x_value){
+      $catTickets = $this->Tickets->find('all', array(
+                    'conditions'=>array('Tickets.category'=>$x,
+                           'Tickets.status !=' =>'Closed')
+                    ));
+      $count = $catTickets->count();
+      $cat[$x] = $count;
+    }
+    arsort($cat);
+    $cat2 = $cat;
+    asort($cat2);
+
     $this->set(['high'=> $high,
                 'medium' => $medium,
                 'low' => $low,
@@ -729,7 +761,12 @@ class TicketsController extends AppController
                 'incident'=>$incident,
                 'problem'=>$problem,
                 'request'=>$request,
-                'depInfo'=>$depInfo 
+                'depInfo'=>$depInfo,
+                'new'=> $new,
+                'pending'=> $pending,
+                'resolved'=>$resolved,
+                'cat'=>$cat,
+                'cat2'=>$cat2
                 ]);
 
     }

@@ -10,17 +10,40 @@
         <li><?= $this->Html->link(__('Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?></li>
      </ul>
 </nav>
+<?= $this->Html->link(__('All Reports'), ['controller' => 'Tickets', 'action' => 'allReports']) ?>
 <section>
 <fieldset>
-<h3>Ticket Key Performance Indicators </h3>
+<h3 style="margin-left: 5%;">Key Performance Indicators - Tickets </h3>
 
  	<div id="priority_kpi">
-		<h5>Current most problematic departments</h5>
-    <?php foreach ($depInfo as $a=>$a_value): ?>
-    <?= h($a) ?> (<?= h($a_value) ?> Tickets) </br>
-
-  
-  <?php endforeach; ?>
+    <div id="ticket_title">Trending Issues</div>
+    <div id="highTrending">
+        <h5 >Most problematic ticket categories: </h5> 
+        <div id="items_trending">
+          <?php $i = 0; ?>
+            <?php foreach ($cat as $c=>$c_value): ?>
+              <?php if($i < 5): ?>
+                <?= $c ?> (<?= $c_value ?> tickets) </br>
+                <?php $i = $i + 1; ?>
+              <?php endif ?>
+            <?php endforeach; ?>
+        </div>
+        <div id="trendingIcon"> <?php echo $this->Html->image('redUp.png', array('alt' => 'Numatic Logo', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'style' => 'margin-left: 20px;')); ?></div>
+      </div>
+        <div id="lowTrending">
+          <h5 >Least problematic ticket categories: </h5> 
+          <div id="items_trending">
+            <?php $i = 0; ?>
+            <?php foreach ($cat2 as $c2=>$c2_value): ?>
+              <?php if($i < 5): ?>
+                <?= $c2 ?> (<?= $c2_value ?> tickets) </br>
+                <?php $i = $i + 1; ?>
+              <?php endif ?>
+            <?php endforeach; ?>
+          </div>
+          <div id="trendingIcon"> <?php echo $this->Html->image('greenDown.png', array('alt' => 'Numatic Logo', 'border' => '0', 'data-src' => 'holder.js/100%x100', 'draggable' => 'false', 'style' => 'margin-left: 20px;')); ?></div>
+        </div>
+      </div>
 
 	</div>
  <html>
@@ -62,42 +85,64 @@
               ['Request', <?= h($request) ?> ],
               ['Problem', <?= h($problem) ?> ]
             ]);
-            /**
+
             var data3 = new google.visualization.DataTable();
-            data3.addColumn('string', 'Year');
-            data3.addColumn('number', 'Sales');
-            data3.addColumn('number', 'Expenses');
+            data3.addColumn('string', 'Ticket Status');
+            data3.addColumn('number', 'Number of tickets');
             data3.addRows([
-              ['2004', 1000, 400],
-              ['2005', 1170, 460],
-              ['2006',  860, 580],
-              ['2007', 1030, 540]
-            ]);**/
+              ['New', <?= h($new) ?> ],
+              ['Pending', <?= h($pending) ?> ],
+              ['Resolved', <?= h($resolved) ?> ]
+            ]);
+
+            var data4 = new google.visualization.DataTable();
+            data4.addColumn('string', 'Ticket Status');
+            data4.addColumn('number', 'Number of tickets');
+            <?php foreach ($depInfo as $a=>$a_value): ?>
+            data4.addRows([[ '<?= h($a) ?>', <?= h($a_value) ?> ]]);
+            <?php endforeach ?>
+
 
             // Set chart options
-            var options = {'title':'All Tickets by Priority',
-                           'width':350,
-                           'height':350,
+            var options = {'title':'All Open Tickets by Priority',
+                           'width':300,
+                           'height':300,
                            'is3D': true,
                            'chartArea': {'width': '90%', 'height': '90%'}};
             // Set chart options
-            var options2 = {'title':'All Tickets by Type',
-                           'width':350,
-                           'height':350,
+            var options2 = {'title':'All Open Tickets by Type',
+                           'width':300,
+                           'height':300,
                            'is3D': true,
+                           'colors': ['#E67300', '#3B3EAC', '#329262', '#f3b49f', '#f6c7b6'],
                            'chartArea': {'width': '90%', 'height': '90%'}};
-            /** Set chart options
-            var options3 = {'title':'Line chart',
-                           'width':400,
-                           'height':300};
-            **/
+            // Set chart options
+            var options3 = {'title':'All Open Tickets by Status',
+                           'width':300,
+                           'height':300,
+                           'is3D': true,
+                           'colors': ['#316395', '#66AA00', '#B82E2E', '#994499'],
+                           'chartArea': {'width': '90%', 'height': '90%'}};
+
+            var options4 = {'title':'All Open Tickets by Department',
+                           'width':500,
+                           'height':340,
+                           'is3D': true,
+                           'colors': ['#029eea', '#B82E2E', '#994499'],
+                           'vAxis': {title: 'Num of Tickets'},
+                           'xAxis': {title: 'Department'},
+                           'legend': {position: 'none'},
+                           'chartArea': {'width': '90%', 'height': '70%'}};
+            
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.PieChart(document.getElementById('ticket_chart1'));
             chart.draw(data, options);
-            var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));
+            var chart2 = new google.visualization.PieChart(document.getElementById('ticket_chart2'));
             chart2.draw(data2, options2);
-            //var chart3 = new google.visualization.LineChart(document.getElementById('chart_div3'));
-            //chart3.draw(data3, options3);
+            var chart3 = new google.visualization.PieChart(document.getElementById('ticket_chart3'));
+            chart3.draw(data3, options3);
+            var chart4 = new google.visualization.ColumnChart(document.getElementById('ticket_chart4'));
+            chart4.draw(data4, options4);
 
           }
         </script>
@@ -105,9 +150,11 @@
 
       <body>
         <!--Divs that will hold the charts-->
-        <div id="chart_div"></div>
-        <div id="chart_div2"></div>
-        <!--<div id="chart_div3"></div>-->
+        <div id="ticket_chart4"></div>
+        <div id="ticket_chart1"></div>
+        <div id="ticket_chart2"></div>
+        <div id="ticket_chart3"></div>
+        
 
       </body>
     </html>
