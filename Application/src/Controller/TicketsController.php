@@ -22,11 +22,15 @@ class TicketsController extends AppController
         public function isAuthorized($user)
     {
         // All registered users can view
-        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete','homepage','assign','search','status','users'])) {
+        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete','homepage','assign','search','status','users', 'allReports', 'kpi'])) {
           return true;
+        }
+
+           if ($user['role'] !== 'Manager'){
+            $this->Flash->error(__('You do not have permission to perform this action.'));
+        }
         return parent::isAuthorized($user);
-    }
-    return parent::isAuthorized($user);
+   
 }     
 
     public function index()
@@ -150,13 +154,6 @@ class TicketsController extends AppController
         $this->set('tickets', $this->paginate($this->Tickets));
         $this->set('_serialize', ['tickets']);
     
-    }
-
-    public function advanced(){
-          $ticket = $this->Tickets->newEntity();
-    if ($this->request->is('post')) {
-            $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
-          }
     }
 
     public function assign($id = null){

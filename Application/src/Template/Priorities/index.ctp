@@ -1,18 +1,18 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+ <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Home'), ['controller' => 'Tickets','action' => 'homepage']) ?></li>
-        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'homepage']) ?></li>
-        <li><?= $this->Html->link(__('Tickets'), ['controller' => 'Tickets','action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'allReports']) ?></li>
+        <li><?= $this->Html->link('Tickets', ['controller' => 'Tickets','action' => 'users', $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>
         <li><?= $this->Html->link(__('Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Analysts'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Departments'), ['controller' => 'Departments', 'action' => 'index']) ?></li>
         <div id= "current"><li><?= $this->Html->link(__('Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?></li></div>
-    </ul>
+     </ul>
 </nav>
 <div class="priorities index large-9 medium-8 columns content">
     <h3><?= __('Priorities') ?></h3>
-    <li><?= $this->Html->link(__('New Priority'), ['action' => 'add']) ?></li>
+    <li><?= $this->Html->link(__('+ New Priority'), ['action' => 'add']) ?></li>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>

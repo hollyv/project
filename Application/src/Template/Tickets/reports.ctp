@@ -1,8 +1,8 @@
  <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <div id= "current"><li><?= $this->Html->link(__('Home'), ['controller' => 'Tickets','action' => 'homepage']) ?></li></div>
-        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'homepage']) ?></li>
+        <li><?= $this->Html->link(__('Home'), ['controller' => 'Tickets','action' => 'homepage']) ?></li>
+        <div id= "current"><li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'allReports']) ?></li></div>
         <li><?= $this->Html->link('Tickets', ['controller' => 'Tickets','action' => 'users', $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>
         <li><?= $this->Html->link(__('Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Analysts'), ['controller' => 'Users', 'action' => 'index']) ?></li>
@@ -23,9 +23,15 @@
     <div id="singleUpdate">
     <?= h($b) ?>: 
     <?php if($b_value->time_booking == null): ?>
-    0 </br><?php else: ?>
-    <?= h($b_value->time_booking) ?> </br>
-  <?php endif ?>
+      0 </br>
+    <?php elseif($b_value->time_booking > 60): ?>
+    <?php $new = $b_value->time_booking / 60; ?>
+    <?= round(h($new),2) ?> hr </br>
+    <?php else: ?>
+      <?= h($b_value->time_booking) ?> mins </br>
+    <?php endif ?>   
+
+
 </div>
   
   <?php  endforeach; ?>

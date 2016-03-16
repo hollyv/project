@@ -19,21 +19,11 @@ class UpdatesController extends AppController
       public function isAuthorized($user)
     {
         // All registered users can view
-        if (in_array($this->request->action, ['index','add','edit', 'delete', 'ticket'])) {
+        if (in_array($this->request->action, ['add','edit', 'delete', 'ticket', 'analyst'])) {
           return true;
         }
         return parent::isAuthorized($user);
     }
-
-    public function index()
-    {
-        $this->paginate = [
-            'contain' => ['Tickets', 'Users']
-        ];
-        $this->set('updates', $this->paginate($this->Updates));
-        $this->set('_serialize', ['updates']);
-    }
-
 
     /**
      * Add method
@@ -147,7 +137,7 @@ class UpdatesController extends AppController
             $update = $this->Updates->patchEntity($update, $this->request->data);
             if ($this->Updates->save($update)) {
                 $this->Flash->success(__('The update has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Updates', 'action' => 'ticket', $this->request->data['ticket_id']]);
             } else {
                 $this->Flash->error(__('The update could not be saved. Please, try again.'));
             }

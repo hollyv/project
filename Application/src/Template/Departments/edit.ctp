@@ -1,14 +1,14 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+ <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Home'), ['controller' => 'Tickets','action' => 'homepage']) ?></li>
-        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'homepage']) ?></li>
-        <li><?= $this->Html->link(__('Tickets'), ['controller' => 'Tickets','action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'allReports']) ?></li>
+        <li><?= $this->Html->link('Tickets', ['controller' => 'Tickets','action' => 'users', $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>
         <li><?= $this->Html->link(__('Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Analysts'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <div id= "current"><li><?= $this->Html->link(__('Departments'), ['controller' => 'Departments', 'action' => 'index']) ?></li></div>
         <li><?= $this->Html->link(__('Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?></li>
-    </ul>
+     </ul>
 </nav>
 <div class="departments form large-9 medium-8 columns content">
     <?= $this->Form->create($department) ?>
@@ -18,12 +18,7 @@
             echo $this->Form->input('name');
             echo $this->Form->input('building');
         ?>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $department->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $department->id)]
-            )
-        ?></li>
+        
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>

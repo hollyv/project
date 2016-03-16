@@ -1,14 +1,14 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+ <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Home'), ['controller' => 'Tickets','action' => 'homepage']) ?></li>
-        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'homepage']) ?></li>
-        <div id= "current"><li><?= $this->Html->link(__('Tickets'), ['controller' => 'Tickets','action' => 'index']) ?></li></div>
+        <li><?= $this->Html->link(__('Reports'), ['controller' => 'Tickets','action' => 'allReports']) ?></li>
+        <div id= "current"><li><?= $this->Html->link('Tickets', ['controller' => 'Tickets','action' => 'users', $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li></div>
         <li><?= $this->Html->link(__('Customers'), ['controller' => 'Customers', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Analysts'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Departments'), ['controller' => 'Departments', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Priorities'), ['controller' => 'Priorities', 'action' => 'index']) ?></li>
-    </ul>
+     </ul>
 </nav>
 <div id="ticketbar">
     <div id="ticketbar_links">
@@ -131,9 +131,15 @@
            <h5><?php echo $q->user->username
            . " " .
             $q->created->format('d-M-y H:m'); 
-             ?></h5><div id="update_actions">
-                <?= $this->Html->link(__('Edit'), ['controller' => 'Updates', 'action' => 'edit', $q->id]) ?>
-                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Updates', 'action' => 'delete', $q->id], ['confirm' => __('Are you sure you want to the update # {0}?', $q->id)]) ?>
+             ?></h5>
+             <div id="update_actions">
+                <?php if (strpos($q->update_text, 'SYSTEM') !== false): ?>
+                   
+                <?php else: ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Updates', 'action' => 'edit', $q->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Updates', 'action' => 'delete', $q->id], ['confirm' => __('Are you sure you want to the update # {0}?', $q->id)]) ?>
+
+                <?php endif; ?>
             </div>
              <p><?= h($q->update_text) ?>
             </p>

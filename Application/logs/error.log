@@ -24802,3 +24802,158 @@ Stack Trace:
 #2 {main}
 
 
+2016-03-16 14:59:36 Error: [Cake\Controller\Exception\MissingActionException] Action UpdatesController::tick() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UpdatesController',
+  'action' => 'tick',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/updates/tick
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-16 15:00:30 Error: [Cake\Controller\Exception\MissingActionException] Action UpdatesController::index() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UpdatesController',
+  'action' => 'index',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/updates/
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-16 17:19:26 Error: [Cake\Controller\Exception\MissingActionException] Action TicketsController::advanced() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TicketsController',
+  'action' => 'advanced',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/tickets/advanced
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-16 17:25:31 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN), expecting function (T_FUNCTION) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 34]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-16 17:25:31 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'return' (T_RETURN), expecting function (T_FUNCTION)
+Request URL: /tickets/tickets/allReports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 34)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-16 17:25:31 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN), expecting function (T_FUNCTION) in [C:\wamp\www\tickets\src\Controller\TicketsController.php, line 34]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-16 17:25:32 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'return' (T_RETURN), expecting function (T_FUNCTION)
+Request URL: /tickets/tickets/allReports
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 34)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-16 17:47:12 Error: [Cake\Controller\Exception\MissingActionException] Action UpdatesController::index() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UpdatesController',
+  'action' => 'index',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/updates
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-16 17:47:28 Error: [Cake\Controller\Exception\MissingActionException] Action UpdatesController::index() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UpdatesController',
+  'action' => 'index',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /tickets/updates
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UpdatesController))
+#2 C:\wamp\www\tickets\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-16 17:51:07 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 140]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-16 17:51:07 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /tickets/updates/edit/61
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 140)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-16 17:51:07 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [C:\wamp\www\tickets\src\Controller\UpdatesController.php, line 140]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-16 17:51:08 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /tickets/updates/edit/61
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 140)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-16 18:06:39 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\tickets\src\Template\Updates\ticket.ctp, line 136]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2016-03-16 18:06:39 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')'
+Request URL: /tickets/updates/ticket/134
+Stack Trace:
+#0 C:\wamp\www\tickets\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\tic...', 136)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

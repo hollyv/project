@@ -12,7 +12,7 @@
 </nav>
 <section>
 <fieldset>
-<h3 style="margin-left: 5%;">Welcome <?= h($this->request->session()->read('Auth.User.username')) ?> </h3>
+<h3 style="margin-left: 5%;">Welcome <?= h($this->request->session()->read('Auth.User.firstname')) ?> </h3>
  <html>
        <head>    	
         <!--Load the AJAX API-->
