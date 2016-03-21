@@ -63,15 +63,17 @@ class TicketsController extends AppController
                                     ->where(['Tickets.customer_id'=> $this->request->data('customer_id')]);
                             }
                         ]);
-                      $row = $query->first();
+                      //$row = $query->first();
 
-                $emailadd = $row->customer->email;
+                //$emailadd = $row->customer->email;
+              //cho $emailadd;
                 //email
-                //$email = new Email('default');
+                $email = new Email('default');
                  $email = new Email();
-                 $email->viewVars(['emailadd' => $emailadd]);
+                 //$email->viewVars(['emailadd' => $emailadd]);
                  $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk'])
-                 ->to($emailadd)
+                 //->to($emailadd)
+                 ->to('holly.voysey@students.plymouth.ac.uk')
                  ->emailFormat('both')
                  ->template('ticket', 'ticket')
                  ->subject('Numatic Helpdesk System - New Ticket')
@@ -82,7 +84,8 @@ class TicketsController extends AppController
                  
                                   
                }
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Tickets','action' => 'users',
+            $loguser = $this->request->session()->read('Auth.User.id')]);
             } else {
                 $this->Flash->error(__('The ticket could not be saved. Please, try again.'));
             }
@@ -111,7 +114,8 @@ class TicketsController extends AppController
             $ticket = $this->Tickets->patchEntity($ticket, $this->request->data);
             if ($this->Tickets->save($ticket)) {
                 $this->Flash->success(__('The ticket has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Tickets','action' => 'users',
+            $loguser = $this->request->session()->read('Auth.User.id')]);
             } else {
                 $this->Flash->error(__('The ticket could not be saved. Please, try again.'));
             }
@@ -466,7 +470,7 @@ class TicketsController extends AppController
                       'Users' => function ($q) {
                               return $q
                                   ->select(['supportteam'])
-                                  ->where(['Users.supportteam'=> 'Infastructure',
+                                  ->where(['Users.supportteam'=> 'Infrastructure',
                                             'Tickets.status !=' =>'Closed']);
                             }
                         ]);
@@ -493,18 +497,31 @@ class TicketsController extends AppController
         $ps = $psQuery->count();
 
 
-      $new_time = date('Y-m-d', strtotime('-30 days'));
+      $month = date('Y-m-d', strtotime('-30 days'));
+      $week = date('Y-m-d', strtotime('-7 days'));
       //Working out timebookings per analyst
       $this->loadModel('Updates');
         foreach ($analysts as $a) {
         
         $user = $this->Updates->find('all', array(
           'conditions'=>array('Updates.analyst_id'=>$a['id'],
-                              'Updates.created >=' => $new_time)
+                              'Updates.created >=' => $month)
         ));
         $user->select(['time_booking' => $user->func()->sum('time_booking')]);
         $total = $user->first();
         $booking[$a->username] = $total;
+      
+      }
+
+      foreach ($analysts as $a) {
+        
+        $user = $this->Updates->find('all', array(
+          'conditions'=>array('Updates.analyst_id'=>$a['id'],
+                              'Updates.created >=' => $week)
+        ));
+        $user->select(['time_booking' => $user->func()->sum('time_booking')]);
+        $total = $user->first();
+        $weekBooking[$a->username] = $total;
       
       }
 
@@ -544,7 +561,8 @@ class TicketsController extends AppController
                     'ps' => $ps,
                     'ns' => $ns,
                     'avgTime'=> $avgTime,
-                    'booking'=> $booking]);
+                    'booking'=> $booking,
+                    'weekBooking'=> $weekBooking]);
     }
   
 
@@ -648,8 +666,9 @@ class TicketsController extends AppController
       $cat[$x] = $count;
     }
     arsort($cat);
-    $cat2 = $cat;
-    asort($cat2);
+    $num = count($cat);
+    $num = $num -5;
+    $cat2 = array_slice($cat,$num);
 
     $this->set(['mytotal'=>$mytotal,
                 'myHigh'=>$myHigh,
@@ -762,8 +781,9 @@ class TicketsController extends AppController
       $cat[$x] = $count;
     }
     arsort($cat);
-    $cat2 = $cat;
-    asort($cat2);
+    $num = count($cat);
+    $num = $num -5;
+    $cat2 = array_slice($cat,$num);
 
     $this->set(['high'=> $high,
                 'medium' => $medium,

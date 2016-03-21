@@ -13,28 +13,44 @@
 <div id="all"><?= $this->Html->link(__('All Reports'), ['controller' => 'Tickets', 'action' => 'allReports']) ?></h5></div>
 <section>
 <fieldset>
-<h3 style="margin-left: 5%;">Anaylst Comparision </h3>
+<h3 style="margin-left: 5%;">Key Performance Indicators - Analysts </h3>
 
  	<div id="priority_kpi">
 		<div id="ticket_title">Time bookings per analyst</div>
-    <h5>Bookings for the past month (<?= date('d-M-y', strtotime('-30 days'))?>): </h5> 
-  <?php foreach ($booking as $b=>$b_value): ?>
+    
 
-    <div id="singleUpdate">
-    <?= h($b) ?>: 
-    <?php if($b_value->time_booking == null): ?>
-      0 </br>
-    <?php elseif($b_value->time_booking > 60): ?>
-    <?php $new = $b_value->time_booking / 60; ?>
-    <?= round(h($new),2) ?> hr </br>
-    <?php else: ?>
-      <?= h($b_value->time_booking) ?> mins </br>
-    <?php endif ?>   
+  <table class="timeBooking">
+            <tr>
+            <th>Analyst</th>
+            <th>In the last month </th>
+            <th>In the last week </th>
+            </tr>
 
-
-</div>
+ <?php foreach ($booking as $b=>$b_value): ?>
+            <tr>
+            <td><?= h($b) ?></td>
+            <td>
+              <?php if($b_value->time_booking == null): ?> 0 
+              <?php elseif($b_value->time_booking > 60): ?>
+              <?php $new = $b_value->time_booking / 60; ?>
+              <?= round(h($new),2) ?> hrs 
+              <?php else: ?>
+                <?= h($b_value->time_booking) ?> mins
+              <?php endif ?>   
+            </td>
+            <td>
+              <?php if($weekBooking[$b]->time_booking == null): ?> 0 
+              <?php elseif($weekBooking[$b]->time_booking > 60): ?>
+              <?php $new = $weekBooking[$b]->time_booking / 60; ?>
+              <?= round(h($new),2) ?> hrs 
+              <?php else: ?>
+                <?= h($weekBooking[$b]->time_booking) ?> mins
+              <?php endif ?>   
+            </td>
+            </tr><?php  endforeach; ?>
+     </table >       
   
-  <?php  endforeach; ?>
+  
 	</div>	
 
  <html>
@@ -58,7 +74,7 @@
 
             // Create the data table.
             var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');    
+            data.addColumn('string', 'Analyst');    
             data.addColumn('number', 'Number of tickets');
             <?php $i = 0; ?>
             <?php foreach ($analysts as $a): ?>
@@ -68,8 +84,8 @@
             <?php endforeach; ?>
 
             var data3 = new google.visualization.DataTable();
-            data3.addColumn('string', 'Topping');    
-            data3.addColumn('number', 'Number of tickets');
+            data3.addColumn('string', 'Analyst');    
+            data3.addColumn('number', 'Average resolution time (days)');
             <?php $i = 0; ?>
             <?php foreach ($avgTime as $avg=>$avg_value): ?>
             data3.addRows([[ '<?= h($avg) ?>', <?= h($avg_value) ?> ]]);
@@ -91,15 +107,16 @@
 
 
             // Set chart options
-            var options = {'title':'Number of tickets open per Analyst',
+            var options = {'title':'Number of tickets open per analyst',
                            'width':500,
                            'height':340,
                            'sliceVisibilityThreshold' :0,
-                           'vAxis': {title: 'Num of Tickets'},
+                           'vAxis': {title: 'Num of Tickets',
+                                    format: 'short'},
                            'xAxis': {title: 'Department'},
                            'legend': {position: 'none'},
                            'colors': ['#029eea'],
-                           'chartArea': {'width': '90%', 'height': '85%'}};
+                           'chartArea': {'width': '80%', 'height': '85%'}};
 
               var options2 = {'title':'Number of tickets open per Support Team ',
                            'width':500,
@@ -108,9 +125,9 @@
                            'sliceVisibilityThreshold' :0,
                            'chartArea': {'width': '60%', 'height': '60%'}};
 
-              var options3 = {'title':'Average resolution time per analyst',
+              var options3 = {'title':'Average resolution time of tickets per analyst',
                            'width':500,
-                           'height':340,
+                           'height':300,
                            'sliceVisibilityThreshold' :0,
                            'vAxis': {title: 'Avg Time (Days)'},
                            'xAxis': {title: 'Analyst'},

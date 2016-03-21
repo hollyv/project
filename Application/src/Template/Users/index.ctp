@@ -12,7 +12,7 @@
 </nav>
 <div class="users index large-9 medium-8 columns content">
     <h3><?= __('Analysts') ?></h3>
-    <li><?= $this->Html->link(__('+ New User'), ['action' => 'add']) ?></li>
+    <li><?= $this->Html->link(__('+ New Analyst'), ['action' => 'add']) ?></li>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>

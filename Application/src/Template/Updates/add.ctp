@@ -20,7 +20,8 @@
             echo $this->Form->input('update_text');
             $loguser = $this->request->session()->read('Auth.User.id');
             echo $this->Form->hidden('analyst_id', ['value' => $loguser]);
-            echo $this->Form->input('time_booking');
+            echo $this->Form->label('time Booking (mins)');
+            echo $this->Form->input('time_booking',array('label' => false));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

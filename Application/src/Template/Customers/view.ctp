@@ -13,11 +13,6 @@
 <div class="customers view large-9 medium-8 columns content">
     <h3><?= h($customer->username) ?></h3>
 
-    <div id="action_box">
-    <div id="action_heading"> Actions </div> 
-    <li><?= $this->Html->link(__('Edit Customer'), ['action' => 'edit', $customer->id]) ?> </li>
-    <li><?= $this->Form->postLink(__('Delete Customer'), ['action' => 'delete', $customer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $customer->id)]) ?> </li>
-    </div>
     
     <table class="vertical-table">
         <tr>

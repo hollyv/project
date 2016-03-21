@@ -19,13 +19,17 @@
             echo $this->Form->input('password');
             echo $this->Form->input('firstname');
             echo $this->Form->input('lastname');
-            echo $this->Form->input('role');
+            //echo $this->Form->input('role');
+            echo 'Role';
+            echo $this->Form->select(
+                'role',
+                ['Manager' => 'Manager', 'Analyst' => 'Analyst']
+                );
             //echo $this->Form->input('supportteam');
             echo 'Support Team';
-             echo $this->Form->select(
+            echo $this->Form->select(
                 'supportteam',
-                ['Business Systems' => 'Business Systems', 'DBA' => 'DBA','Functional Support' => 'Functional Support','Infrastructure' => 'Infastructure', 'Network Support' => 'Network Support', 'Projects and Admin' => 'Projects and Admin'],
-                ['empty' => '(choose one)']
+                ['Business Systems' => 'Business Systems', 'DBA' => 'DBA','Functional Support' => 'Functional Support','Infrastructure' => 'Infastructure', 'Network Support' => 'Network Support', 'Projects and Admin' => 'Projects and Admin']
                 );
         ?>
 
@@ -34,10 +38,4 @@
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 
-    <h3><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $user->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]
-            )
-        ?></h3>
 </div>

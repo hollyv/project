@@ -246,6 +246,10 @@ ul#adminMenu li{
     margin-top: 5%;
 }
 
+table.timeBooking td{
+    line-height: 0.85rem;
+}
+
 #all{
     padding-left: 5%;
     display: inline-block;

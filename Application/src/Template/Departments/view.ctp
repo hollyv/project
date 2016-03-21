@@ -12,20 +12,8 @@
 </nav>
 <div class="departments view large-9 medium-8 columns content">
     <h3><?= h($department->name) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th><?= __('Name') ?></th>
-            <td><?= h($department->name) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Id') ?></th>
-            <td><?= $this->Number->format($department->id) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Building') ?></th>
-            <td><?= $this->Number->format($department->building) ?></td>
-        </tr>
-    </table>
+    <h5> Building number: <?= h($department->building) ?></h5>
+    
     <div class="related">
         <h4><?= __('Related Customers') ?></h4>
         <?php if (!empty($department->customers)): ?>

@@ -11,12 +11,6 @@
      </ul>
 </nav>
 <div class="customers form large-9 medium-8 columns content">
-    <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $customer->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $customer->id)]
-            )
-        ?></li>
         <?= $this->Form->create($customer) ?>
 
     <fieldset>

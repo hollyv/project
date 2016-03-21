@@ -18,10 +18,6 @@
             <td><?= h($user->username) ?></td>
         </tr>
         <tr>
-            <th><?= __('Password') ?></th>
-            <td><?= h($user->password) ?></td>
-        </tr>
-        <tr>
             <th><?= __('Firstname') ?></th>
             <td><?= h($user->firstname) ?></td>
         </tr>
@@ -42,5 +38,4 @@
             <td><?= $this->Number->format($user->id) ?></td>
         </tr>
     </table>
-    <h5><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </h5>
 </div>
