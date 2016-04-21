@@ -38,8 +38,9 @@ $cakeDescription = 'Helpdesk Portal';
         <div id="user">
             <ul id="adminMenu">
                 <li>
-                    Hi,
-                    <?= $loguser = $this->request->session()->read('Auth.User.firstname'); ?>
+                    
+                    <a href="/tickets/"><font color= 'white'>Hi,
+                    <?= $loguser = $this->request->session()->read('Auth.User.firstname'); ?></a>
                 </li>
                 <li>
                     <a href="/tickets/pages/help"><font color= 'white'>Help</a>

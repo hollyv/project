@@ -26,10 +26,10 @@
             <?= 
             $this->Html->link('All Unclosed Tickets', ['controller' => 'Tickets','action' => 'status']); ?></li>
             <li>
-            <u><?= 
+            <?= 
             $this->Html->link('My Watched Tickets', ['controller' => 'Tickets', 'action' => 'watched',
             $loguser = $this->request->session()->read('Auth.User.id'),]); ?></li>
-            </u><li>
+            <li>
             <?= 
             $this->Html->link('Overdue Tickets', ['controller' => 'Tickets', 'action' => 'overdue']); ?></li>
         </ul>
@@ -45,12 +45,12 @@
 <?php foreach ($foundTickets as $ticket): ?>
     <div id="search_results">
         <!-- Use the HtmlHelper to create a link -->
-        <h4><?= $this->Html->link($ticket ->title,['controller' => 'Updates', 'action' => 'ticket', $ticket->id]) ?></h4>
-        <h5><?= $ticket->description ?></h5>
-       
+        <h4><?= $this->Html->link($ticket ->title . ' (id:'. $ticket ->id . ')' ,['controller' => 'Updates', 'action' => 'ticket', $ticket->id]) ?></h4>
+        <div id= "des"><h5><?= $ticket->description ?></h5></div>
+       <div id= "created"><h5><?= $ticket->created->format('d-M-y H:i') ?></h5></div>
 
         <!-- Use the TextHelper to format text -->
-  	</div><p>
+  	</div>
 <?php endforeach; ?>
 <div class="paginator">
         <ul class="pagination">

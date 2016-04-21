@@ -454,6 +454,16 @@ ul#ticket_list {
    background-color:#E1E2E3;
 }
 
+#des{
+    display: inline-block;
+}
+
+#created{
+    display: inline-block;
+    float: right;
+    padding-right: 2%;
+}
+
 #action_box{
     
 }

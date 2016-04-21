@@ -92,7 +92,7 @@
             <?php else: ?>
                <?php foreach ($overdueTickets as $t): ?>
                   <div id='overdueItems'>
-                  <h5 ><?= $t->title . ' (id: ' .$this->Html->link($s->ticket_id,['controller' => 'Updates', 'action' => 'ticket', $s->ticket_id]) . ')' . '  ' . $t->priority->name . ' Priority' ?></h5>
+                  <h5 ><?= $t->title . ' (id: ' .$this->Html->link($t->id,['controller' => 'Updates', 'action' => 'ticket', $t->id]) . ')' . '  ' . $t->priority->name . ' Priority' ?></h5>
                           Overdue - Created: <?= $t->created->format('d-M-y') ?> 
                   </div>
                <?php endforeach; ?>

@@ -93,7 +93,7 @@
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Updates','action' => 'ticket', $ticket->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $ticket->id]) ?>
-                    <?= $this->Form->postLink(__('Delete from watched'), ['controller' => 'WatchedTickets','action' => 'delete', $watchedInfo[$j]], ['confirm' => __('Are you sure you want to delete # {0}?', $ticket->id)]) ?>
+                    <?= $this->Form->postLink(__('Remove from watched list'), ['controller' => 'WatchedTickets','action' => 'delete', $watchedInfo[$j]], ['confirm' => __('Are you sure you want to remove # {0} from the watched ticket list?', $ticket->id)]) ?>
                 </td>
             </tr>
             <?php $j = $j + 1; ?>

@@ -99,11 +99,7 @@ class TicketsController extends AppController
     }
 
     /**
-     * Edit method
-     *
-     * @param string|null $id Ticket id.
-     * @return void Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
+     * Edit ticket method
      */
     public function edit($id = null)
     {
@@ -127,13 +123,9 @@ class TicketsController extends AppController
         $this->set('_serialize', ['ticket']);
     }
 
-    /**
-     * Delete method
-     *
-     * @param string|null $id Ticket id.
-     * @return void Redirects to index.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
+    
+    // Delete ticket method
+     
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
@@ -146,7 +138,7 @@ class TicketsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    //assigned method
+    //My tickets method - showing all unclosed tickets 
     public function users($id = null){
     
           $this->paginate = [
@@ -160,11 +152,11 @@ class TicketsController extends AppController
     
     }
 
+    // Assign ticket method 
     public function assign($id = null){
       $ticket = $this->Tickets->get($id, [
             'contain' => []
         ]);
-      //$user = $ticket["analyst_id"];   
 
         //saving ticket update (the new user assigned)
         if ($this->request->is(['patch', 'post', 'put'])) {
@@ -201,6 +193,7 @@ class TicketsController extends AppController
         $this->set('_serialize', ['ticket']);
     }
 
+    // All unclosed tickets method
     public function status() {
 
             $this->paginate = [
@@ -212,6 +205,7 @@ class TicketsController extends AppController
         $this->set('_serialize', ['tickets']);
     }
 
+    // View all tickets of certain priority method
     public function priority($id = null) {
 
             $this->paginate = [
@@ -220,6 +214,7 @@ class TicketsController extends AppController
             'limit' => 8
         ];
 
+        //load priority table
         $this->loadModel('Priorities');
         $priorityDetails = $this->Priorities->find('all', array(
             'conditions'=>array('Priorities.id'=>$id)
@@ -231,8 +226,9 @@ class TicketsController extends AppController
         $this->set('_serialize', ['tickets']);
     }
 
+    // View all watched tickets method
     public function watched($id = null) {
-      //loading watchedTickets model and finding all watched tickets for user
+      //loading watchedTickets model and finding all watched tickets for user logged in
         $this->loadModel('WatchedTickets');
         $watched = $this->WatchedTickets->find('all', array(
             'conditions'=>array('WatchedTickets.analyst_id'=>$id)
@@ -252,6 +248,7 @@ class TicketsController extends AppController
                     'watched'=> $watched]);
     }
 
+    // Method that performs search 
     public function search() {
       //getting entered variable and putting wildcards around it
       $entered = $_POST["search"];
@@ -270,6 +267,7 @@ class TicketsController extends AppController
         $this->set('_serialize', ['tickets']);
     }
 
+    // Method used to populate form on the individual timebooking reports
     public function individual(){
       $this->loadModel('Users');
       $users = $this->Users->find('list');
@@ -280,6 +278,7 @@ class TicketsController extends AppController
         }
     }
 
+    // Method to resolve ticket
     public function resolve($id = null){
       //editing ticket details to update the status to resolved and adding resolution date with timestamp.
       //once done, it flashes success and redirects user to the previous page.
@@ -300,6 +299,7 @@ class TicketsController extends AppController
       return $this->redirect(['controller' => 'Updates','action' => 'ticket', $ticket->id]);
       }
 
+      //Method to close ticket
       public function close($id = null){
       //editing ticket details to update the status to closed.
       //once done, it flashes success and redirects user to the previous page.
@@ -320,6 +320,7 @@ class TicketsController extends AppController
         
       }
 
+      // Method to re-open ticket
       public function open($id = null){
       //editing ticket details to update the status to open.
       //once done, it flashes success and redirects user to the previous page.
@@ -339,15 +340,16 @@ class TicketsController extends AppController
       return $this->redirect(['controller' => 'Updates','action' => 'ticket', $ticket->id]);
       }
 
+      // Method to work out overdue tickets 
       public function overdue(){
 
+        //get all tickets
         $results = $this->Tickets->find('all', array(
-            'conditions'=>array('Tickets.status !=' =>'Closed')
+            'conditions'=>array('Tickets.status !=' =>'Closed',
+                                'Tickets.priority_id !=' => 4)
           ));
 
         $i = 0;
-        $overdue = array ();
-        $diffence = array ();
         $j = 0;
         $overdueTickets = array ();
         foreach ($results as $t):
@@ -361,11 +363,8 @@ class TicketsController extends AppController
               else{
                 $dueDate = date_add($t->created,date_interval_create_from_date_string("1 month"));
               }
-
               $current = date('m/d/Y', time());
               
-              $date2=date_create("2013/03/15");
-              //$diff=date_diff($date2,$current);
               if(strtotime($dueDate) < strtotime($current))
               {
                  $ticketDetails = $this->Tickets->get($t->id, [
@@ -373,17 +372,11 @@ class TicketsController extends AppController
                   ]);
                   $overdueTickets[$j] = $ticketDetails;
                   $j = $j + 1; 
-                $overdue[$i] = $t;
               }
               $i = $i + 1;
 
         endforeach;
-        $this->set(['overdueTickets'=> $overdueTickets,
-                    'overdue'=> $overdue,
-                    'diffence'=> $diffence ]);
-
-
-
+        $this->set(['overdueTickets'=> $overdueTickets]);
       }
 
 
@@ -411,10 +404,11 @@ class TicketsController extends AppController
 
     }
 
+    // Method for all the reports
     public function allReports(){
-
     }
 
+    // Method for the Analyst KPIs
     public function reports(){
 
       //getting data for number of tickets per analyst chart
@@ -572,6 +566,7 @@ class TicketsController extends AppController
 
        $results = $this->Tickets->find('all', array(
             'conditions'=>array('Tickets.status !=' =>'Closed',
+                                'Tickets.priority_id !=' => 4,
                                 'Tickets.analyst_id' => $loguser)
           ));
 
