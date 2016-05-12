@@ -11,12 +11,6 @@
      </ul>
 </nav>
 <div class="tickets form large-9 medium-8 columns content">
-    <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $ticket->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $ticket->id)]
-            )
-        ?></li>
         <?= $this->Form->create($ticket) ?>
     <fieldset>
         

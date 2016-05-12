@@ -47,11 +47,11 @@ class DepartmentsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->allowEmpty('name');
+            ->notEmpty('name');
 
         $validator
             ->add('building', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('building');
+            ->notEmpty('building');
 
         return $validator;
     }

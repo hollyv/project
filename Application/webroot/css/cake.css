@@ -464,6 +464,11 @@ ul#ticket_list {
     padding-right: 2%;
 }
 
+#help{
+    float: left;
+    display: inline-block;
+}
+
 #action_box{
     
 }

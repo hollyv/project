@@ -52,17 +52,17 @@ class CustomersTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->allowEmpty('username');
+            ->notEmpty('username');
 
         $validator
-            ->allowEmpty('firstname');
+            ->notEmpty('firstname');
 
         $validator
-            ->allowEmpty('lastname');
+            ->notEmpty('lastname');
 
         $validator
             ->add('email', 'valid', ['rule' => 'email'])
-            ->allowEmpty('email');
+            ->notEmpty('email');
 
         $validator
             ->add('phone', 'valid', ['rule' => 'numeric'])

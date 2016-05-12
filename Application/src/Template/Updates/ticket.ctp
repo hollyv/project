@@ -130,7 +130,7 @@
             <div id="update_info">
            <h5><?php echo $q->user->username
            . " " .
-            $q->created->format('d-M-y H:m'); 
+            $q->created->format('d-M-y H:i'); 
              ?></h5>
              <div id="update_actions">
                 <?php if (strpos($q->update_text, 'SYSTEM') !== false): ?>

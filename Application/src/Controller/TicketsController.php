@@ -55,31 +55,26 @@ class TicketsController extends AppController
                 $this->Flash->success(__('The ticket has been saved.'));
                       if ($this->request->data('email_option') == "Yes"){
                         //query to get customer email address
-                        $query = $this->Tickets->find()->contain([
-                            'Customers' => function ($q) {
-                               return $q
-                                    ->select(['email'])
-                                    ->distinct(['email'])
-                                    ->where(['Tickets.customer_id'=> $this->request->data('customer_id')]);
-                            }
-                        ]);
-                      //$row = $query->first();
+                        $this->loadModel('Customers');
+                        $emailCustomer = $this->request->data('customer_id');
+                        $query = $this->Customers->find('all', array(
+                              'conditions'=>array('Customers.id'=> $emailCustomer)
+                        ));
 
-                //$emailadd = $row->customer->email;
-              //cho $emailadd;
+                        $row = $query->first();
+
                 //email
                 $email = new Email('default');
-                 $email = new Email();
-                 //$email->viewVars(['emailadd' => $emailadd]);
+                $email = new Email();
+                
                  $email->from(['hollyvoysey@gmail.com' => 'Numatic Helpdesk'])
-                 //->to($emailadd)
-                 ->to('holly.voysey@students.plymouth.ac.uk')
+                 ->to($row->email)
                  ->emailFormat('both')
                  ->template('ticket', 'ticket')
                  ->subject('Numatic Helpdesk System - New Ticket')
                  ->viewVars(['created' => $ticket->created->format('d-M-y H:i'),
-                             'ticket' => $this->request->data,
-                             'user' => $this->request->session()->read('Auth.User.username')])
+                              'ticket' => $this->request->data,
+                              'user' => $this->request->session()->read('Auth.User.username')])
                  ->send();
                  
                                   

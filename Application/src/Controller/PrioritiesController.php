@@ -20,8 +20,13 @@ class PrioritiesController extends AppController
       public function isAuthorized($user)
     {
         // All registered users can view
-        if (in_array($this->request->action, ['index','view', 'add','edit', 'delete'])) {
+        if (in_array($this->request->action, [])) {
           return true;
+        }
+
+        //Flash error if they don't have permission
+        if ($user['role'] !== 'Manager'){
+            $this->Flash->error(__('You do not have permission to perform this action.'));
         }
         return parent::isAuthorized($user);
     }

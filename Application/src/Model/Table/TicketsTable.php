@@ -66,7 +66,7 @@ class TicketsTable extends Table
             ->allowEmpty('status');
 
         $validator
-            ->allowEmpty('title');
+            ->notEmpty('title');
 
         $validator
             ->allowEmpty('description');
